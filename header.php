@@ -2,27 +2,28 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
     <title>Encas d'amour</title>
 </head>
 <body class="container">
 <header class="row">
-    <ul class="col-md-8 flex">
+    <ul class="col-md-6 flex nav">
         <li class=""><h1><img src="img/logo.png" alt="encasdamour"></h1></li>
-        <li class=""><a href="#">Comment ça marche ?</a></li>
-        <li class=""><a href="#">Les ambiances</a></li>
+        <li class=""><a href="#">Acceuil</a></li>
         <li class=""><a href="#">L’équipe</a></li>
-        <li class=""><a href="#">Tentez l’expérience</a></li>
+        <li class="experience"><a href="#">Tentez l’expérience</a></li>
     </ul>
-    <ul class="col-md-3 right flex">
+    <ul class="col-md-3 right flex rs">
         <li><p>Suivez-nous</p></li>
-        <li><p><img src="" alt="facebook"></p></li>
-        <li><p><img src="" alt="instagrame"></p></li>
-        <li><p><img src="" alt="twitter"></p></li>
+        <li><a href="#"><img src="img/facebook.png" alt="facebook"></a></li>
+        <li><a href="#"><img src="img/instagram.png" alt="instagram"></a></li>
+        <li><a href="#"><img src="img/twitter.png" alt="twitter"></a></li>
     </ul>
 </header>
