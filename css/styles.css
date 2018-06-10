@@ -1,0 +1,71 @@
+@font-face {
+
+}
+
+/***********************style************************/
+.flex{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.auto{
+    margin: auto;
+}
+img{
+    height: 100%;
+    width: auto;
+}
+/***********************Header************************/
+
+header ul{
+    height: 130px;
+}
+header ul li{
+    display: inline-block;
+    margin: auto;
+}
+header h1{
+    height: 80px;
+    margin: -20px 0 0 0;
+}
+
+/***********************Footer************************/
+
+footer{
+    text-align: center;
+    background-color: #f1f1f1;
+}
+footer ul li{
+    display: inline-block;
+}
+footer>ul:first-child{
+    padding: 30px;
+}
+footer>ul:first-child li{
+    width: 12%;
+}
+
+footer>ul:last-child{
+    background-color: #9b9b9b;
+    padding: 5px 0;
+}
+footer>ul:last-child li{
+    border-left: 1px solid #fff;
+}
+footer>ul:last-child a{
+    color: #fff;
+    margin: 0 5px;
+}
+footer>ul:last-child li a:first-child{
+    border: none;
+}
+
+
