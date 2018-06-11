@@ -1,0 +1,3 @@
+Options +FollowSymlinks
+RewriteEngine On
+RewriteRule ^experience pages/page_experience.php [L]
