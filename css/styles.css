@@ -184,6 +184,36 @@ header .rs li img{
     padding: 12px 20px;
 }
 
+/***********************equipe************************/
+.bloc_equipe{
+    text-align: center;
+}
+
+.bloc_equipe h2{
+    font-weight: 600;
+    font-size: 20px;
+    margin: 48px 0 24px;
+    color: #4A4A4A;
+}
+.bloc_equipe>p{
+    font-size: 12px;
+    margin-bottom: 42px;
+    color: #9B9B9B;
+}
+.bloc_equipe ul li h4{
+    font-size: 14px;
+    color: #4A4A4A;
+    font-weight: bold;
+}
+
+.bloc_equipe ul li p{
+    font-size: 14px;
+    color: #9B9B9B;
+    margin-bottom: 35px;
+}
+
+
+
 /***********************Footer************************/
 
 footer{
