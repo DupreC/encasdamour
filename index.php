@@ -20,7 +20,7 @@
         <li><a href="#">Comment ça marche ?</a></li>
         <li><a href="#">Les ambiances</a></li>
         <li><a href="#">L’équipe</a></li>
-        <li><a class="button-simple" href="#">Tentez l’expérience</a></li>
+        <li><a class="button-simple" href="choix-ambiances">Tentez l’expérience</a></li>
     </ul>
     <ul class="col-md-3 right flex rs">
         <li><p>Suivez-nous</p></li>
@@ -59,7 +59,7 @@
         </li>
     </ul>
 </div>
-<div class="bloc_explication_home bloc_ambiance_home row">
+<div class="bloc_explication_home bloc_choix-ambiances_home row">
     <h3>Pour une soirée maqigue <br><strong>Les ambiances</strong></h3>
     <p>Toutes les ambiances comprennent un menu complet et les éléments de décorations associées </p>
     <ul class="row col-md-10">
