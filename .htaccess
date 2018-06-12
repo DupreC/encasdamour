@@ -1,3 +1,5 @@
 Options +FollowSymlinks
 RewriteEngine On
-RewriteRule ^experience pages/page_experience.php [L]
+RewriteRule ^choix-ambiances pages/choix-ambiances.php [L]
+RewriteRule ^equipe pages/equipe.php [L]
+RewriteRule ^ambiance pages/ambiance.php [L]

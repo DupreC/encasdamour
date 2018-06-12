@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
     <title>Encas d'amour</title>
 </head>
@@ -16,9 +17,9 @@
 <header class="row">
     <ul class="col-md-6 flex nav">
         <li class=""><h1><img src="img/logo.png" alt="encasdamour"></h1></li>
-        <li class=""><a href="#">Acceuil</a></li>
-        <li class=""><a href="#">L’équipe</a></li>
-        <li class="experience"><a href="#">Tentez l’expérience</a></li>
+        <li class=""><a href="/">Acceuil</a></li>
+        <li class=""><a href="/equipe">L’équipe</a></li>
+        <li class=""><a class="button-simple" href="choix-ambiances">Tentez l’expérience</a></li>
     </ul>
     <ul class="col-md-3 right flex rs">
         <li><p>Suivez-nous</p></li>
