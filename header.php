@@ -19,7 +19,7 @@
         <li class=""><h1><img src="img/logo.png" alt="encasdamour"></h1></li>
         <li class=""><a href="/">Acceuil</a></li>
         <li class=""><a href="/equipe">L’équipe</a></li>
-        <li class="experience"><a href="choix-ambiances">Tentez l’expérience</a></li>
+        <li class=""><a class="button-simple" href="choix-ambiances">Tentez l’expérience</a></li>
     </ul>
     <ul class="col-md-3 right flex rs">
         <li><p>Suivez-nous</p></li>
