@@ -123,22 +123,9 @@ $ambiance = $_GET['ambiance'];
                     <button class="row second button-simple">Valider</button>
                 </form>
                 <form class="slider-form slider-three">
-                    <h2>test</h2>
-                    <div class="label-ctr">
-                        <label class="radio">
-                            <input type="radio" value="happy" name="condition">
-                            <div class="emot happy">
-                                <div class="mouth sad"></div>
-                            </div>
-                        </label>
-                        <label class="radio">
-                            <input type="radio" value="happy" name="condition">
-                            <div class="emot happy">
-                                <div class="mouth smile"></div>
-                            </div>
-                        </label>
-                    </div>
-                    <button class="third button-simple">Valider</button>
+                    <h4>Choisissez une date et un horaire</h4>
+                    <?php include 'modules/calendrier.php';?>
+                    <button class="row third button-simple">Valider</button>
                 </form>
                 <div class="slider-form slider-four">
                     <h2>Hello, <span class="yourname"></span></h2>
