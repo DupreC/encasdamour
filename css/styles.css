@@ -189,7 +189,7 @@ header .rs li img{
     color: #FF6B77;
 }
 .bloc_explication_home ul li{
-    background-color: #FBE9DD;
+    background-color: #fff;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -229,7 +229,7 @@ header .rs li img{
 /***************choix-ambiances**************/
 .bloc_choix-ambiances_home{
     background-color: transparent;
-    margin-top: 230px;
+    margin-top: 240px;
 }
 .bloc_choix-ambiances_home .background{
     position: absolute;
@@ -794,6 +794,18 @@ footer ul #mce-EMAIL{
     background: #fff;
     padding: 15px 30px;
     border-radius: 30px;
+    box-shadow: 11px 17px 13px rgba(0, 0, 0, 0.185773);
+}
+footer ul #mc_embed_signup_scroll{
+    position: relative;
+}
+footer ul .button-simple{
+    background-color: #202E77;
+    border: none;
+    position: absolute;
+    top: 55px;
+    right: 347px;
+    padding: 11px 24px;
 }
 footer ul #mc_embed_signup_scroll p{
     border: 1px solid #555555;
@@ -801,10 +813,11 @@ footer ul #mc_embed_signup_scroll p{
     margin: 5px auto 30px;
 }
 footer ul li{
-display: inline-block;
+    display: inline-block;
+    margin: 40px 30px;
 }
 footer ul li a{
-    color: #4A4A4A;
+    color: #fff;
     font-size: 12px;
     font-weight: bold;
 }
@@ -815,6 +828,16 @@ footer>ul:first-child li{
     width: 12%;
 }
 
+footer> .rs{
+    margin: auto 0 15px;
+}
+footer> .rs li{
+    margin: auto 20px;
+}
+footer> .rs li a{
+    font-size: 20px;
+    color: #fff;
+}
 footer> .last_bloc{
     background-color: #4D43B0;
     padding: 5px 0;
@@ -822,6 +845,7 @@ footer> .last_bloc{
 }
 footer> .last_bloc li{
     border-left: 1px solid #fff;
+    margin: auto;
 }
 footer> .last_bloc li:first-child{
     border-left: none;
