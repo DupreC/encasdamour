@@ -14,7 +14,8 @@
     <script type="text/javascript" src="functions/js/main.js"></script>
     <title>Encas d'amour</title>
 </head>
-<body class="container">
+<body>
+<div  class="container">
 <header class="row">
     <ul class="col-md-8 flex nav">
         <li><h1><img src="img/logo_rose1.png" alt="encasdamour"></h1></li>

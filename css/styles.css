@@ -167,7 +167,7 @@ header .rs li img{
 /***************explication**************/
 .bloc_explication_home{
     text-align: center;
-    margin-top: 210px;
+    margin: 210px auto 60px;
 }
 .bloc_explication_home .background{
     position: absolute;
@@ -189,7 +189,7 @@ header .rs li img{
     color: #FF6B77;
 }
 .bloc_explication_home ul li{
-    background-color: #fff;
+    background-color: #FBE9DD;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -235,8 +235,9 @@ header .rs li img{
     position: absolute;
     width: 100%;
     left: 0;
-    top: 1285px;
+    top: 1320px;
     z-index: -5;
+    height: 800px;
 }
 
 .bloc_choix-ambiances_home h3{
@@ -773,21 +774,26 @@ label.radio {
 footer{
     margin-top: 80px;
     text-align: center;
-    background-color: #f1f1f1;
+    background-image: url("../img/footer.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 footer ul h3{
-    font-size: 12px;
+    margin: -35px 0 25px;
+    font-size: 20px;
     font-weight: bold;
-    margin-bottom: 30px;
-    color: #4A4A4A;
+    color: #202E77;
 }
 footer ul #mc_embed_signup_scroll>div{
     display: inline-block;
 }
 footer ul #mce-EMAIL{
     border: none;
-    background-color: transparent;
     font-size: 18px;
+    width: 572px;
+    background: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
 }
 footer ul #mc_embed_signup_scroll p{
     border: 1px solid #555555;
@@ -803,15 +809,16 @@ footer ul li a{
     font-weight: bold;
 }
 footer>ul:first-child{
-    padding: 30px;
+    padding: 0 0 30px;
 }
 footer>ul:first-child li{
     width: 12%;
 }
 
 footer> .last_bloc{
-    background-color: #9b9b9b;
+    background-color: #4D43B0;
     padding: 5px 0;
+    margin: 0;
 }
 footer> .last_bloc li{
     border-left: 1px solid #fff;
