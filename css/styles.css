@@ -5,6 +5,10 @@
 /***********************style************************/
 body{
     font-family: Poppins;
+    background-color: #4D43B0;
+    background-image: url("../img/forme_1.png");
+    background-repeat: no-repeat;
+    background-position: top center;
 }
 p{
     margin: 0;
@@ -37,13 +41,14 @@ img{
     width: auto;
 }
 .button-simple{
-    color: #000000;
+    color: #fff;
     font-size: 12px;
-    border: 1px solid;
+    border: 1px solid #FF6B77;
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
     border-radius: 40px;
     padding: 5px 10px;
+    background-color: #FF6B77;
 }
 #mc_embed_signup div.mce_inline_error {
     position: absolute;
@@ -56,7 +61,7 @@ header ul{
 }
 header ul li{
     display: inline-block;
-    margin: auto;
+    margin: auto 12px;
 }
 header ul li:first-child{
     margin-left: 0;
@@ -69,18 +74,28 @@ header .nav h1 img{
     height: 60px;
 }
 header .nav li a{
-    color: #4A4A4A;
-    font-size: 13px;
+    color: #fff;
+    font-size: 14px;
     font-weight: bold;
 }
 header .nav .button-simple{
-    color: #000000;
+    color: #fff;
     font-size: 12px;
-    border: 1px solid;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
     padding: 5px 10px;
+}
+
+header .rs{
+    color: #FF6B77;
+    font-weight: bold;
+    padding: 0;
+}
+header .rs a{
+    color: #FF6B77;
+    font-weight: bold;
+    font-size: 22px;
+}
+header .rs li {
+    margin: auto;
 }
 header .rs li img{
     height: 20px;
@@ -96,13 +111,14 @@ header .rs li img{
 .bloc_accueil_home h2{
     font-size: 39px;
     font-weight: bold;
-    color: #000000;
+    color: #fff;
     line-height: 51px;
+    margin-top: 178px;
 }
 .bloc_accueil_home p{
     font-size: 15px;
     font-weight: initial;
-    color: #9B9B9B;
+    color: #fff;
     line-height: 22px;
 }
 .bloc_accueil_home form{
@@ -130,45 +146,107 @@ header .rs li img{
     left: 90%;
     top: 57%;
 }
+.bloc_accueil_home .cercle{
+    position: relative;
+}
+.bloc_accueil_home .cercle img{
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: 10;
+}
+.bloc_accueil_home .cercle img:first-child{
+    top: 373px;
+    left: 79px;
+}
+.bloc_accueil_home .cercle img:last-child{
+    top: 329px;
+    left: 47px
+}
 
 /***************explication**************/
 .bloc_explication_home{
     text-align: center;
-    background-color: #F1F0F0;
+    margin-top: 210px;
+}
+.bloc_explication_home .background{
+    position: absolute;
+    left: 0;
+    margin-top: -70px;
 }
 .bloc_explication_home h3{
-    font-size: 12px;
+    font-size: 10px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-bottom: 90px;
+    margin-bottom: 45px;
+    color: #fff;
 }
 .bloc_explication_home h3 strong{
-    font-size: 20px;
-    line-height: 50px;
+    font-size: 23px;
+    line-height: 30px;
     letter-spacing: 0;
     text-transform: initial;
+    color: #FF6B77;
+}
+.bloc_explication_home ul li{
+    background-color: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    height: 200px;
+}
+.bloc_explication_home ul li img{
+    margin-top: 20px;
+    height: auto;
 }
 .bloc_explication_home ul li h5{
-    font-size: 15px;
+    font-size: 16px;
     letter-spacing: 0.5px;
     font-weight: bold;
-    margin: 30px 0 20px;
+    margin: 10px 0;
+    color: #202E77;
+}
+.bloc_explication_home .ellipse img{
+    position: absolute;
+    z-index: 20;
+    width: auto;
+    height: auto;
+}
+.bloc_explication_home .ellipse img:first-child{
+    left: 100px;
+    top: 1245px;
+}
+.bloc_explication_home .ellipse img:last-child{
+    left: 165px;
+    top: 1215px;
 }
 .bloc_explication_home ul li p{
     font-size: 12px;
     letter-spacing: 0.5px;
     margin-bottom: 60px;
+    color: #9B9B9B;
 }
 /***************choix-ambiances**************/
 .bloc_choix-ambiances_home{
     background-color: transparent;
-    margin-top: 60px;
+    margin-top: 230px;
 }
+.bloc_choix-ambiances_home .background{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 1285px;
+    z-index: -5;
+}
+
 .bloc_choix-ambiances_home h3{
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    color: #4A4A4A;
 }
 .bloc_choix-ambiances_home>p{
-    margin-bottom: 60px;
+    margin-bottom: 40px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
 }
 .bloc_choix-ambiances_home ul{
     float: none;
@@ -176,6 +254,7 @@ header .rs li img{
 }
 .bloc_choix-ambiances_home ul li{
     text-align: left;
+    background-color: transparent;
 }
 .bloc_choix-ambiances_home ul li p{
     margin-bottom: 36px;
