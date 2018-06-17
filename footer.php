@@ -6,7 +6,7 @@
             <div id="mc_embed_signup">
                 <form action="https://Encasdamour.us18.list-manage.com/subscribe/post?u=d4efdf95ebcd8195d51a30992&amp;id=fef3a2338e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
                     <div id="mc_embed_signup_scroll">
-                        <h3>Inscrivez-vous à notre newsletter</h3>
+                        <h3>Inscris-toi à notre Newsletter</h3>
                         <div class="mc-field-group input">
                             <input placeholder="johndoe@mail.com" name="EMAIL" class="required email mce_inline_error" id="mce-EMAIL" aria-required="true" aria-invalid="true" type="email">
                             <div for="mce-EMAIL" class="mce_inline_error">Champ requis.</div></div>
@@ -26,7 +26,7 @@
                     <a>Presse</a>
                 </li>
                 <li>
-                    <a>hello@encasdamour.fr</a>
+                    <a>contact@encasdamour.fr</a>
                 </li>
         </ul>
     </div>
