@@ -790,6 +790,7 @@ footer{
     background-image: url("../img/footer.png");
     background-repeat: no-repeat;
     background-size: 100%;
+    background-color: #fef5f0;
 }
 footer ul h3{
     margin: -35px 0 25px;
@@ -959,6 +960,16 @@ footer> .last_bloc li a:first-child{
         margin: 0;
         display: block;
     }
+    header nav .rs {
+        display: block !important;
+    }
+    header nav .rs li{
+        display: inline-block;
+        margin: 10px 20px;
+    }
+    header nav .rs li i{
+        font-size: 30px;
+    }
     .menu-toggle {
         width: 40px;
         height: 30px;
@@ -1038,6 +1049,7 @@ footer> .last_bloc li a:first-child{
         margin-top: 50px;
         color: #FF6B77;
         font-weight: bold;
+        font-size: 15px;
     }
 
     .menu-section.on {

@@ -46,11 +46,11 @@
                     <li><a href="#">contact@encasdamour.fr</a></li>
                     <li><a href="#">Mentions légales</a></li>
                     <p>Suis nous sur nos réseaux !  </p>
-                    <div>
+                    <ul class="rs"  >
                         <li><a href="https://www.facebook.com/encasdamour"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="https://twitter.com/Encasdamour"><i class="fab fa-twitter"></i></a></li>
                         <li><a href="https://www.instagram.com/encas_damour/"><i class="fab fa-instagram"></i></a></li>
-                    </div>
+                    </ul>
                 </ul>
             </nav>
          </div>
