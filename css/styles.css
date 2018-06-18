@@ -44,12 +44,14 @@ img{
 .button-simple{
     color: #fff;
     font-size: 12px;
-    border: 1px solid #FF6B77;
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
     border-radius: 40px;
     padding: 5px 10px;
-    background-color: #FF6B77;
+    background-color: #202E77;
+}
+.button-simple:hover{
+    background-color: #4864C8;
 }
 #mc_embed_signup div.mce_inline_error {
     position: absolute;
@@ -75,6 +77,10 @@ header ul li{
 }
 header ul li:first-child{
     margin-left: 0;
+}
+.nav > li > a:focus, .nav > li > a:hover {
+    color: #FFA0A4;
+    background-color: initial;
 }
 header .nav h1{
     height: 60px;
@@ -103,6 +109,9 @@ header .rs a{
     color: #FF6B77;
     font-weight: bold;
     font-size: 22px;
+}
+header .rs a:hover{
+    color: #FFA0A4;
 }
 header .rs li {
     margin: auto;
@@ -153,7 +162,6 @@ header .rs li img{
     color: #9B9B9B;
 }
 .bloc_accueil_home .button-simple {
-    background-color: #202E77;
     border: none;
     position: absolute;
     top: 117px;
@@ -354,7 +362,6 @@ header .rs li img{
 
 .bloc_ambiance ul .infos .button-simple{
     color: #fff;
-    background-color: #4A4A4A;
     padding: 10px 20px;
 }
 /***************service**************/
@@ -1260,10 +1267,15 @@ footer> .last_bloc li a:first-child{
         font-size: 13px;
     }
     footer ul #mce-EMAIL {
-        max-width: 450px;
+        max-width: 290px;
         width: 100%;
         font-size: 15px;
     }
+    footer ul .button-simple {
+        position: relative;
+        right: -87px;
+        top: -45px;
+     }
     footer ul:first-child li {
         display: block;
         margin: 30px 30px 18px;
