@@ -67,6 +67,9 @@ header ul li{
 .mobile{
     display: none;
 }
+.tablette{
+    display: none;
+}
 .desktop{
     display: block;
 }
@@ -890,7 +893,8 @@ footer> .last_bloc li a:first-child{
 
     .bloc_accueil_home h2{
         font-size: 34px;
-        margin-top: 100px;
+        margin: 100px 0 20px;
+        line-height: 40px;
     }
     .bloc_accueil_home #mce-EMAIL {
         width: 370px;
@@ -925,8 +929,11 @@ footer> .last_bloc li a:first-child{
     .bloc_choix-ambiances_home ul li img {
         width: 100%;
     }
+    footer ul #mce-EMAIL {
+        width: 500px;
+    }
     footer ul .button-simple {
-        right: 210px;
+        right: 245px;
     }
 }
 
@@ -934,11 +941,10 @@ footer> .last_bloc li a:first-child{
     .desktop{
         display: none;
     }
-    .mobile{
+    .tablette{
         display: block;
     }
     .container {
-        margin: 0;
         padding: 0;
     }
     .row {
@@ -947,10 +953,78 @@ footer> .last_bloc li a:first-child{
     }
     h1 {
         margin-top: 15px;
-        position: fixed;
+        position: absolute;
     }
     h1 img{
         width: 90px;
+    }
+    .bloc_accueil_home h2 {
+        font-size: 31px;
+    }
+    .bloc_accueil_home form {
+        padding: 10px 0 0;
+    }
+    .bloc_accueil_home #mce-EMAIL {
+        font-size: 15px;
+    }
+    .bloc_accueil_home .button-simple {
+        top: 65px;
+        right: 11px;
+    }
+    .bloc_accueil_home .img_header {
+        margin-top: 73px;
+    }
+    .bloc_accueil_home .cercle img:first-child {
+        top: 295px;
+        left: 45px;
+     }
+    .bloc_accueil_home .cercle img:last-child {
+        top: 264px;
+        left: 23px;
+        width: 90%;
+    }
+    .bloc_explication_home ul li {
+        margin-left: 6.333%;
+    }
+    .bloc_explication_home h3 {
+        margin-top: 200px;
+    }
+    .bloc_explication_home .background {
+        margin-top: 121px;
+        width: 320px;
+    }
+    .bloc_explication_home .ellipse img:first-child {
+        top: 977px;
+        width: 90px;
+        left: 76px;
+        z-index: -1;
+    }
+    .bloc_explication_home .ellipse img:last-child {
+        top: 943px;
+        left: 127px;
+        width: 60px;
+        z-index: -1;
+     }
+    .bloc_choix-ambiances_home .background {
+        margin-top: 95px;
+        top: 860px;
+        height: 850px;
+        width: 100%;
+    }
+    .bloc_choix-ambiances_home ul li {
+        margin: 0;
+    }
+    .bloc_explication_home ul li h5 {
+        font-size: 15px;
+    }
+    footer {
+        background-size: auto;
+    }
+    footer ul #mce-EMAIL {
+        width: 460px;
+    }
+    footer ul .button-simple {
+        right: 145px;
     }
     /*************Menu Burger*********/
     header {
@@ -976,7 +1050,7 @@ footer> .last_bloc li a:first-child{
         top: 29px;
         right: 25px;
         cursor: pointer;
-        position: fixed;
+        position: absolute;
         z-index: 30;
     }
 
@@ -1066,6 +1140,20 @@ footer> .last_bloc li a:first-child{
 }
 
 @media screen and (max-width: 768px) {
+    body{
+        background-image: url("../img/forme_rs.png");
+        background-position: top right;
+        background-size: 40%;
+    }
+    .mobile{
+        display: block;
+    }
+    .desktop{
+        display: none;
+    }
+    .container {
+        margin: 0;
+    }
     .bloc_accueil_home {
         text-align: center;
     }
@@ -1085,9 +1173,14 @@ footer> .last_bloc li a:first-child{
         font-size: 13px;
     }
     .bloc_accueil_home #mce-EMAIL {
-        max-width: 450px;
+        max-width: 290px;
         width: 100%;
-        font-size: 15px;
+        font-size: 12px;
+    }
+    .bloc_accueil_home .button-simple {
+        position: relative;
+        top: -43px;
+        right: -88px;
     }
     .bloc_accueil_home .img_header img {
         width: 170px;
@@ -1104,7 +1197,7 @@ footer> .last_bloc li a:first-child{
         width: 45px;
     }
     .bloc_accueil_home .img_header img {
-        width: 56%;
+        width: 70%;
         margin: auto;
         max-width: 360px;
         padding-top: 10px;

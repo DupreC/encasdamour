@@ -29,8 +29,8 @@
             <li><a href="https://www.instagram.com/encas_damour/"><i class="fab fa-instagram"></i></a></li>
         </ul>
     </div>
-    <div class="mobile">
-        <h1 class="mobile"><img src="img/logo_rose1.png" alt="encasdamour"></h1>
+    <div class="tablette">
+        <h1 class="tablette"><img src="img/logo_rose1.png" alt="encasdamour"></h1>
         <div class="menu-section">
             <div class="menu-toggle">
                 <div class="one"></div>
@@ -58,7 +58,7 @@
 </header>
 
 <div class="bloc_accueil_home row no-padding">
-    <div class="col-md-6 no-padding">
+    <div class="col-sm-6 no-padding">
         <div class="col-md-10 right no-padding">
             <h2>On t’organise le plus romantique des dîners</h2>
             <p class="col-md-11">On te livre tout ce dont tu as besoin pour une belle soirée en amoureux, histoire de passer un moment mémorable.</p>
@@ -80,13 +80,13 @@
             </div>
         </div>
     </div>
-    <div class="col-md-1 cercle">
-        <img class="desktop" src="img/cercle_1.png" alt="cercle_1">
-        <img class="desktop" src="img/cercle_2.png" alt="cercle_2">
+    <div class="col-sm-1 cercle">
+        <img class="desktop tablette" src="img/cercle_1.png" alt="cercle_1">
+        <img class="desktop tablette" src="img/cercle_2.png" alt="cercle_2">
     </div>
-    <div class="col-md-5 img_header">
+    <div class="col-sm-5 img_header">
         <img class="mobile" src="img/cercles.png" alt="cercles">
-        <img class="desktop"  src="img/img_header.png" alt="img_header">
+        <img class="desktop tablette"  src="img/img_header.png" alt="img_header">
     </div>
 </div>
 <div id="explication" class="bloc_explication_home row">
@@ -95,18 +95,18 @@
     </svg>
 
     <h3>Nos petits doigts de fée à ton service<br><strong>Comment ça marche ?</strong></h3>
-    <ul class="row">
-        <li class="col-md-2 col-md-offset-2">
+    <ul class="">
+        <li class="col-lg-2 col-sm-3 col-lg-offset-2 col-sm-offset-1">
             <img src="img/picto_ambiance.png" alt="ambiance">
             <h5>Une ambiance</h5>
             <p>Choisis l'ambiance que vous souhaitez donner à votre dîner pour le rendre unique</p>
         </li>
-        <li class="col-md-2 col-md-offset-1">
+        <li class="col-lg-2 col-sm-3 col-sm-offset-1">
             <img src="img/picto_menu.png" alt="menu">
             <h5>Un menu</h5>
             <p>Choisis le menu qui vous convient selon vos goûts et celles de votre partenaires.</p>
         </li>
-        <li class="col-md-2 col-md-offset-1">
+        <li class="col-lg-2 col-sm-3 col-sm-offset-1">
             <img src="img/picto_calendar.png" alt="date">
             <h5>Une date</h5>
             <p>Dit-nous quand et à quelle heure tu veux être livré(e).  </p>
@@ -121,20 +121,20 @@
     <img class="background" src="img/Subtract.png" alt="">
     <h3>Pour une soirée maqigue <br><strong>Les ambiances</strong></h3>
     <p>Toutes les ambiances comprennent un menu complet et les éléments de décorations associées </p>
-    <ul class="row col-md-10">
-        <li class="col-md-4">
+    <ul class="row col-sm-10">
+        <li class="col-sm-4">
             <img src="img/img_ieuf.png" alt="ambiance">
             <h5>Il était une fois...</h5>
             <p>Un ambiance digne d’un conte de fée.</p>
 <!--            <a class="button-simple" href="#">Choisir cette ambiance</a>-->
         </li>
-        <li class="col-md-4">
+        <li class="col-sm-4">
             <img src="img/img_be.png" alt="belle_étoile">
             <h5>À la belle étoile</h5>
             <p>Les couleurs et la lumière de la ville</p>
 <!--            <a class="button-simple" href="#">Choisir cette ambiance</a>-->
         </li>
-        <li class="col-md-4">
+        <li class="col-sm-4">
             <img src="img/img_cp.png" alt="date">
             <h5>Chandelles à Paris</h5>
             <p>Chandelles à Paris </p>
