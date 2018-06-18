@@ -846,6 +846,10 @@ footer ul li a{
     font-size: 12px;
     font-weight: bold;
 }
+footer ul li a:hover{
+    color: #4864C8;
+    text-decoration: none;
+}
 footer>ul:first-child{
     padding: 0 0 30px;
 }
@@ -862,6 +866,9 @@ footer> .rs li{
 footer> .rs li a{
     font-size: 20px;
     color: #fff;
+}
+footer> .rs li a:hover{
+    color: #202E77;
 }
 footer> .last_bloc{
     background-color: #4D43B0;
