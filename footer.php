@@ -29,7 +29,7 @@
                     <a>Presse</a>
                 </li>
                 <li>
-                    <a>contact@encasdamour.fr</a>
+                    <a href="mailto:contact@encasdamour.fr">contact@encasdamour.fr</a>
                 </li>
         </ul>
     </div>

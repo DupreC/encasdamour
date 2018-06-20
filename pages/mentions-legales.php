@@ -1,11 +1,13 @@
 <?php
-include '../header.php';
-?>
-<?php
+include '../header_pages.php';
 include_once "../functions/php/main.php";
+?>
+<div class="fil_ariane">
+<?php
 define('NOM_SITE', 'accueil', true);
 get_fil_ariane(array('final' => 'Mentions légales'));
 ?>
+</div>
 <div class="bloc_mentions-legales col-md-8 col-md-offset-2">
     <h2>Mentions légales</h2>
     <h3>Mentions légales</h3>

@@ -1,16 +1,18 @@
 <?php
-include '../header.php';
-?>
-<?php
+include '../header_pages.php';
 include "../functions/php/main.php";
 $ambiance = $_GET['ambiance'];
-   define('NOM_SITE', 'accueil', true);
-   get_fil_ariane(array('./choix-choix-ambiances.php' => 'Ambiances', 'final' => $ambiance));
-   $date_ambiance = get_ambianceSlug($pdo,$ambiance);
-   $date_menu_1 = get_menuSlug($pdo,'menu_dolce_vita');
-   $date_menu_2 = get_menuSlug($pdo,'menu_shanghai');
-   $date_menu_3 = get_menuSlug($pdo,'menu_dune_de_sable');
+$date_ambiance = get_ambianceSlug($pdo,$ambiance);
+$date_menu_1 = get_menuSlug($pdo,'menu_dolce_vita');
+$date_menu_2 = get_menuSlug($pdo,'menu_shanghai');
+$date_menu_3 = get_menuSlug($pdo,'menu_dune_de_sable');
 ?>
+<div class="fil_ariane">
+    <?php
+    define('NOM_SITE', 'accueil', true);
+    get_fil_ariane(array('./choix-choix-ambiances.php' => 'Ambiances', 'final' => $ambiance));
+    ?>
+</div>
     <style>
         </style>
     <script src="./functions/js/main.js"></script>

@@ -44,8 +44,8 @@
                 <ul role="navigation" class="hidden">
                     <li><a href="/"><img src="img/logo_rose1.png" alt="encasdamour"></a></li>
                     <li><a href="#">Presse</a></li>
-                    <li><a href="#">contact@encasdamour.fr</a></li>
-                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="mailto:contact@encasdamour.fr">contact@encasdamour.fr</a></li>
+                    <li><a href="/metions-legales">Mentions légales</a></li>
                     <p>Suis nous sur nos réseaux !  </p>
                     <ul class="rs"  >
                         <li><a href="https://www.facebook.com/encasdamour"><i class="fab fa-facebook-f"></i></a></li>

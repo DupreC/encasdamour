@@ -1,11 +1,13 @@
 <?php
-include '../header.php';
+include '../header_pages.php';
 ?>
-<?php
-include_once "../functions/php/main.php";
-define('NOM_SITE', 'accueil', true);
-get_fil_ariane(array('final' => 'Plan du site'));
-?>
+<div class="fil_ariane">
+    <?php
+    include_once "../functions/php/main.php";
+    define('NOM_SITE', 'accueil', true);
+    get_fil_ariane(array('final' => 'Plan du site'));
+    ?>
+</div>
     <div class="bloc_plan-site">
         <h2>Plant du site</h2>
         <h3>Acceuil</h3>

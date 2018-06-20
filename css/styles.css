@@ -9,10 +9,18 @@ body{
     background-image: url("../img/forme_1.png");
     background-repeat: no-repeat;
     background-position: top center;
-    overflow-x: hidden;
+    overflow-x: -moz-hidde-unscrollable;
+    width: 100%;
 }
 p{
     margin: 0;
+}
+a{
+    color: #4D43B0;
+}
+a:hover{
+    text-decoration: none;
+    color: #6D5FFC;
 }
 .clear{
     clear: both;
@@ -58,6 +66,9 @@ img{
     display: none;
     background-color: transparent !important;
     color: #ED5055 !important;
+}
+.fil_ariane{
+    color: #FF6B77;
 }
 /***********************Header************************/
 
@@ -614,6 +625,10 @@ footer> .last_bloc li a:first-child{
     nav ul.hidden {
         display: none;
     }
+    nav ul li .logo_burger-menu {
+        width: 107px;
+        margin: auto;
+    }
 
     nav ul a {
         -moz-transition-duration: 0.5s;
@@ -666,6 +681,7 @@ footer> .last_bloc li a:first-child{
     }
     .bloc_accueil_home {
         text-align: center;
+        margin-bottom: 200px;
     }
     .bloc_accueil_home h2 {
         font-size: 27px;
@@ -725,7 +741,15 @@ footer> .last_bloc li a:first-child{
         font-size: 14px;
     }
     .bloc_choix-ambiances_home {
-        margin-top: 70px;
+        padding-top: 24%;
+        background-image: url("../img/fond_ambiance_mobile.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: initial;
+        margin-top: 60px;
+    }
+    .bloc_choix-ambiances_home .background{
+        display: none;
     }
     .bloc_choix-ambiances_home ul {
         padding: 0;
@@ -743,10 +767,6 @@ footer> .last_bloc li a:first-child{
         top: 1252px;
         height: 1000px;
     }
-    .bloc_choix-ambiances_home {
-        background-color: #FEF5F0;
-        margin-top: 100px;
-    }
     .bloc_choix-ambiances_home h3{
         margin-top: 0;
     }
@@ -758,11 +778,11 @@ footer> .last_bloc li a:first-child{
         margin-bottom: 30px;
     }
     .bloc_choix-ambiances_home ul li:last-child p {
-        margin-bottom: 60px;
+        margin-bottom: 100px;
     }
 
     footer {
-        margin-top: -20px;
+        margin-top: -22px;
         background-size: 202% 100%;
         background-color: #FEF5F0;
     }
