@@ -4,22 +4,22 @@
 (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';
     $.extend($.validator.messages, {
         required: "Ce champ est requis.",
-        remote: "Veuillez remplir ce champ pour continuer.",
-        email: "Veuillez entrer une adresse email valide.",
-        url: "Veuillez entrer une URL valide.",
-        date: "Veuillez entrer une date valide.",
-        dateISO: "Veuillez entrer une date valide (ISO).",
-        number: "Veuillez entrer un nombre valide.",
-        digits: "Veuillez entrer (seulement) une valeur numérique.",
-        creditcard: "Veuillez entrer un numéro de carte de crédit valide.",
-        equalTo: "Veuillez entrer une nouvelle fois la même valeur.",
-        accept: "Veuillez entrer une valeur avec une extension valide.",
-        maxlength: $.validator.format("Veuillez ne pas entrer plus de {0} caractères."),
-        minlength: $.validator.format("Veuillez entrer au moins {0} caractères."),
-        rangelength: $.validator.format("Veuillez entrer entre {0} et {1} caractères."),
-        range: $.validator.format("Veuillez entrer une valeur entre {0} et {1}."),
-        max: $.validator.format("Veuillez entrer une valeur inférieure ou égale à {0}."),
-        min: $.validator.format("Veuillez entrer une valeur supérieure ou égale à {0}.")
+        remote: "Remplis ce champ pour continuer.",
+        email: "Entre une adresse email valide.",
+        url: "Entre une URL valide.",
+        date: "Entre une date valide.",
+        dateISO: "Entre une date valide (ISO).",
+        number: "Entre un nombre valide.",
+        digits: "Entre (seulement) une valeur numérique.",
+        creditcard: "Entre un numéro de carte de crédit valide.",
+        equalTo: "Entre une nouvelle fois la même valeur.",
+        accept: "Entre une valeur avec une extension valide.",
+        maxlength: $.validator.format("N'entrer pas plus de {0} caractères."),
+        minlength: $.validator.format("Entre au moins {0} caractères."),
+        rangelength: $.validator.format("Entre entre {0} et {1} caractères."),
+        range: $.validator.format("Entre une valeur entre {0} et {1}."),
+        max: $.validator.format("Entre une valeur inférieure ou égale à {0}."),
+        min: $.validator.format("Entre une valeur supérieure ou égale à {0}.")
     });}(jQuery));var $mcj = jQuery.noConflict(true);
 
 /////////////////////////////////////////////////
@@ -94,5 +94,26 @@ $thirdButton.on("click", function(e){
     e.preventDefault();
 });
 
+/////////////////////////////////////////////////
+// Menu burger
+/////////////////////////////////////////////////
+$(".menu-toggle").on('click', function() {
+    $(this).toggleClass("on");
+    $('.menu-section').toggleClass("on");
+    $("nav ul").toggleClass('hidden');
+});
 
-
+/////////////////////////////////////////////////
+// Ancre home
+/////////////////////////////////////////////////
+$(document).ready(function() {
+    $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+        var page = $(this).attr('href'); // Page cible
+        var speed = 750; // Durée de l'animation (en ms)
+        $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+        $('.menu-toggle').toggleClass("on");
+        $('.menu-section').toggleClass("on");
+        $("nav ul").toggleClass('hidden');
+        return false;
+    });
+});
