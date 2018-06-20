@@ -43,17 +43,17 @@ include 'header_home.php';
         <li class="col-lg-2 col-sm-3 col-lg-offset-2 col-sm-offset-1">
             <img src="img/picto_ambiance.png" alt="ambiance">
             <h5>Une ambiance</h5>
-            <p>Choisis l'ambiance que vous souhaitez donner à votre dîner pour le rendre unique</p>
+            <p>Choisis le pack qui correspond le plus à ton couple</p>
         </li>
         <li class="col-lg-2 col-sm-3 col-sm-offset-1">
             <img src="img/picto_menu.png" alt="menu">
             <h5>Un menu</h5>
-            <p>Choisis le menu qui vous convient selon vos goûts et celles de votre partenaires.</p>
+            <p>Choisis le menu qui te convient parmi quatre propositions</p>
         </li>
         <li class="col-lg-2 col-sm-3 col-sm-offset-1">
             <img src="img/picto_calendar.png" alt="date">
             <h5>Une date</h5>
-            <p>Dit-nous quand et à quelle heure tu veux être livré(e).  </p>
+            <p>Dis-nous quand et à quelle heure tu veux être livré(e).</p>
         </li>
     </ul>
     <div class="ellipse">
@@ -64,7 +64,7 @@ include 'header_home.php';
 <div id="ambiance" class="bloc_explication_home bloc_choix-ambiances_home row">
     <img class="background" src="img/Subtract.png" alt="">
     <h3>Pour une soirée maqigue <br><strong>Les ambiances</strong></h3>
-    <p>Toutes les ambiances comprennent un menu complet et les éléments de décorations associées </p>
+    <p>Toutes les ambiances comprennent un menu complet et les éléments de décoration associée </p>
     <ul class="row col-sm-10">
         <li class="col-sm-4">
             <img src="img/img_ieuf.png" alt="ambiance">
@@ -81,7 +81,7 @@ include 'header_home.php';
         <li class="col-sm-4">
             <img src="img/img_cp.png" alt="date">
             <h5>Chandelles à Paris</h5>
-            <p>Chandelles à Paris </p>
+            <p>Quoi de plus romantique que la plus belle ville pour célébrer l'amour</p>
 <!--            <a class="button-simple" href="#">Choisir cette ambiance</a>-->
         </li>
     </ul>

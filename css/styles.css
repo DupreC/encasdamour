@@ -105,7 +105,8 @@ header .nav h1 img{
 header .nav li a{
     color: #fff;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 header .nav .button-simple{
     color: #fff;
@@ -141,28 +142,36 @@ header .rs li img{
     color: #000000;
 }
 .bloc_accueil_home h2{
-    font-size: 39px;
+    font-size: 40px;
     font-weight: bold;
     color: #fff;
     line-height: 51px;
-    margin-top: 178px;
+    margin-top: 120px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
 }
 .bloc_accueil_home p{
-    font-size: 15px;
-    font-weight: initial;
+    font-size: 17px;
+    font-weight: 300;
     color: #fff;
     line-height: 22px;
+    letter-spacing: 1px;
 }
 .bloc_accueil_home h3{
     font-size: 15px;
     color: #FF6B77;
     margin-top: 22px;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 .bloc_accueil_home form{
     font-size: 11px;
     padding: 60px 0 0;
     /*margin-bottom: 220px;*/
     position: relative;
+}
+.bloc_accueil_home #mc_embed_signup {
+    margin-top: 60px;
 }
 .bloc_accueil_home #mce-EMAIL {
     border: none;
@@ -229,7 +238,7 @@ header .rs li img{
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    height: 200px;
+    height: 180px;
 }
 .bloc_explication_home ul li img{
     margin-top: 20px;
@@ -283,8 +292,9 @@ header .rs li img{
 }
 .bloc_choix-ambiances_home>p{
     margin-bottom: 40px;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 0.5px;
+    color: #202E77;
 }
 .bloc_choix-ambiances_home ul{
     float: none;
@@ -402,7 +412,9 @@ footer> .last_bloc li a:first-child{
     border: none;
 }
 
-
+/******************************************************************************/
+/**************************Responsive******************************************/
+/******************************************************************************/
 @media screen and (max-width: 1280px){
     header ul li {
         margin: auto 2px;
@@ -419,6 +431,13 @@ footer> .last_bloc li a:first-child{
         font-size: 34px;
         margin: 100px 0 20px;
         line-height: 40px;
+        letter-spacing: initial;
+    }.bloc_accueil_home p{
+        font-size: 15px;
+        letter-spacing: initial;
+    }
+    .bloc_accueil_home h3 {
+        letter-spacing: initial;
     }
     .bloc_accueil_home #mce-EMAIL {
         width: 370px;
@@ -449,6 +468,9 @@ footer> .last_bloc li a:first-child{
     }
     .bloc_choix-ambiances_home .background {
         top: 1220px;
+    }
+    .bloc_choix-ambiances_home h3 {
+        margin-top: 40px;
     }
     .bloc_choix-ambiances_home ul li img {
         width: 100%;
@@ -488,6 +510,10 @@ footer> .last_bloc li a:first-child{
     .bloc_accueil_home form {
         padding: 10px 0 0;
     }
+    .bloc_accueil_home #mc_embed_signup {
+         margin-top: 0;
+     }
+
     .bloc_accueil_home #mce-EMAIL {
         font-size: 15px;
     }
@@ -533,7 +559,7 @@ footer> .last_bloc li a:first-child{
     .bloc_choix-ambiances_home .background {
         margin-top: 95px;
         top: 860px;
-        height: 850px;
+        height: 700px;
         width: 100%;
     }
     .bloc_choix-ambiances_home ul li {
@@ -681,7 +707,7 @@ footer> .last_bloc li a:first-child{
     }
     .bloc_accueil_home {
         text-align: center;
-        margin-bottom: 200px;
+        margin-bottom: 60px;
     }
     .bloc_accueil_home h2 {
         font-size: 27px;
@@ -730,6 +756,9 @@ footer> .last_bloc li a:first-child{
         margin: auto;
         max-width: 360px;
         padding-top: 10px;
+    }
+    .bloc_explication_home h3 {
+        margin-top: 0;
     }
     .bloc_explication_home ul li {
         margin: 20px auto;
