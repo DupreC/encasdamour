@@ -41,7 +41,7 @@
     <ul class="row last_bloc">
             <li class="mention_legales"><a href="/mentions-legales">Mentions légales</a></li>
 <!--            <li><a href="#">CGU-CGV</a></li>-->
-            <li><a href="#">Plan du site</a></li>
+            <li><a href="/plan-site">Plan du site</a></li>
         </ul>
 </footer>
 </body>

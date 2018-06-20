@@ -307,9 +307,9 @@ footer ul h3{
     font-weight: bold;
     color: #202E77;
 }
-footer ul #mc_embed_signup_scroll>div{
+/*footer ul #mc_embed_signup_scroll>div{
     display: inline-block;
-}
+}*/
 footer ul #mce-EMAIL{
     border: none;
     font-size: 18px;
@@ -486,6 +486,7 @@ footer> .last_bloc li a:first-child{
     }
     .bloc_accueil_home .img_header {
         margin-top: 73px;
+        z-index: -1;
     }
     .bloc_accueil_home .cercle img:first-child {
         top: 295px;
@@ -628,10 +629,6 @@ footer> .last_bloc li a:first-child{
         color: #4D43B0;
         font-weight: bold;
     }
-
-    nav ul a:hover {
-        background-color: rgba(0, 0, 0, 0.5);
-    }
     nav ul p {
         margin-top: 50px;
         color: #FF6B77;
@@ -694,6 +691,9 @@ footer> .last_bloc li a:first-child{
         position: relative;
         top: -43px;
         right: -88px;
+    }
+    #mc_embed_signup div.mce_inline_error {
+        right: 51%;
     }
     .bloc_accueil_home .img_header img {
         width: 170px;
@@ -758,29 +758,27 @@ footer> .last_bloc li a:first-child{
         margin-bottom: 30px;
     }
     .bloc_choix-ambiances_home ul li:last-child p {
-        margin-bottom: 40px;
+        margin-bottom: 60px;
     }
 
-
-
     footer {
-        margin-top: -1px;
+        margin-top: -20px;
         background-size: 202% 100%;
         background-color: #FEF5F0;
     }
     footer ul h3 {
-        margin: 0 0 25px;
+        margin: -15px 0 25px;
         font-size: 13px;
     }
     footer ul #mce-EMAIL {
         max-width: 290px;
         width: 100%;
-        font-size: 15px;
+        font-size: 12px;
     }
     footer ul .button-simple {
         position: relative;
         right: -87px;
-        top: -45px;
+        top: -43px;
      }
     footer ul:first-child li {
         display: block;
