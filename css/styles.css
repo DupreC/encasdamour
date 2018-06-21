@@ -165,10 +165,18 @@ header .rs li img{
     font-weight: bold;
 }
 .bloc_accueil_home form{
-    font-size: 11px;
-    padding: 60px 0 0;
-    /*margin-bottom: 220px;*/
-    position: relative;
+font-size: 11px;
+padding: 60px 0 0;
+/*margin-bottom: 220px;*/
+position: relative;
+}
+.bloc_accueil_home .mc-field-group {
+    background-color: #fff;
+    border-radius: 50px;
+    text-align: left;
+    box-shadow: 11px 17px 13px rgba(0, 0, 0, 0.185773);
+    color: #9B9B9B;
+    width: 485px;
 }
 .bloc_accueil_home #mc_embed_signup {
     margin-top: 60px;
@@ -176,11 +184,9 @@ header .rs li img{
 .bloc_accueil_home #mce-EMAIL {
     border: none;
     font-size: 18px;
-    width: 485px;
-    background: #fff;
-    padding: 15px 30px;
+    width: 75%;
+    padding: 15px 0 15px 30px;
     border-radius: 30px;
-    box-shadow: 11px 17px 13px rgba(0, 0, 0, 0.185773);
     color: #9B9B9B;
     font-weight: 300;
 }
@@ -338,17 +344,26 @@ footer ul h3{
 /*footer ul #mc_embed_signup_scroll>div{
     display: inline-block;
 }*/
-footer ul #mce-EMAIL{
-    border: none;
-    font-size: 18px;
-    width: 572px;
-    background: #fff;
-    padding: 15px 30px;
-    border-radius: 30px;
+footer ul .mc-field-group {
+    background-color: #fff;
+    border-radius: 50px;
+    text-align: left;
     box-shadow: 11px 17px 13px rgba(0, 0, 0, 0.185773);
     color: #9B9B9B;
-    font-weight: 300;
+    width: 572px;
+    margin: auto;
 }
+footer ul #mce-EMAIL {
+    border: none;
+    font-size: 18px;
+    width: 75%;
+    background: #fff;
+    padding: 15px 0 15px 30px;
+    color: #9B9B9B;
+    font-weight: 300;
+    border-radius: 50px;
+}
+
 footer ul #mc_embed_signup_scroll{
     position: relative;
 }
@@ -433,8 +448,6 @@ footer> .last_bloc li a:first-child{
     header .rs a {
         font-size: 18px;
     }
-
-
     .bloc_accueil_home h2{
         font-size: 34px;
         margin: 100px 0 20px;
@@ -447,8 +460,11 @@ footer> .last_bloc li a:first-child{
     .bloc_accueil_home h3 {
         letter-spacing: initial;
     }
-    .bloc_accueil_home #mce-EMAIL {
+    .bloc_accueil_home .mc-field-group {
         width: 370px;
+    }
+    .bloc_accueil_home #mce-EMAIL {
+        width: 70%;
     }
     .bloc_accueil_home .img_header img{
         width: 100%;
@@ -483,8 +499,11 @@ footer> .last_bloc li a:first-child{
     .bloc_choix-ambiances_home ul li img {
         width: 100%;
     }
-    footer ul #mce-EMAIL {
+    footer ul .mc-field-group {
         width: 500px;
+    }
+    footer ul #mce-EMAIL {
+        width: 80%;
     }
     footer ul .button-simple {
         right: 245px;
@@ -524,6 +543,7 @@ footer> .last_bloc li a:first-child{
 
     .bloc_accueil_home #mce-EMAIL {
         font-size: 15px;
+        width: 70%;
     }
     .bloc_accueil_home .button-simple {
         top: 65px;
@@ -579,8 +599,11 @@ footer> .last_bloc li a:first-child{
     footer {
         background-size: auto;
     }
-    footer ul #mce-EMAIL {
+    footer ul .mc-field-group {
         width: 460px;
+    }
+    footer ul #mce-EMAIL {
+        width: 70%;
     }
     footer ul .button-simple {
         right: 145px;
@@ -732,9 +755,13 @@ footer> .last_bloc li a:first-child{
     .bloc_accueil_home h3 {
         font-size: 13px;
     }
-    .bloc_accueil_home #mce-EMAIL {
+    .bloc_accueil_home .mc-field-group {
+        margin: auto;
         max-width: 290px;
         width: 100%;
+    }
+    .bloc_accueil_home #mce-EMAIL {
+        width: 60%;
         font-size: 12px;
     }
     .bloc_accueil_home .button-simple {
@@ -827,9 +854,13 @@ footer> .last_bloc li a:first-child{
         margin: -15px 0 25px;
         font-size: 13px;
     }
-    footer ul #mce-EMAIL {
+    footer ul .mc-field-group {
         max-width: 290px;
         width: 100%;
+        font-size: 12px;
+    }
+    footer ul #mce-EMAIL {
+        width: 60%;
         font-size: 12px;
     }
     footer ul .button-simple {

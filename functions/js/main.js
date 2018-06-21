@@ -124,3 +124,12 @@ $(document).ready(function() {
         return false;
     });
 });
+/////////////////////////////////////////////////
+// switch images
+/////////////////////////////////////////////////
+ $('.petite_photo').on({
+     'click': function(){
+         var src = ($(this).attr('src'));
+         $('.grande_photo').attr('src', src);
+     }
+ });

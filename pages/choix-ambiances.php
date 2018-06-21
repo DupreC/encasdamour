@@ -1,6 +1,7 @@
 <?php
 include '../header_pages.php';
 ?>
+<div class="container">
 <div class="fil_ariane">
     <?php
     include_once "../functions/php/main.php";
@@ -28,6 +29,7 @@ include '../header_pages.php';
             <a class="button-simple" href="/ambiance?ambiance=nature/foret">Choisir cette ambiance</a>
         </li>
     </ul>
+</div>
 </div>
 <?php
 include '../footer.php';
