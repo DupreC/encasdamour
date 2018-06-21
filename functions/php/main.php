@@ -19,7 +19,7 @@ function get_fil_ariane($array_fil) {
 /////////////////////////////////////////////////
 
 try{
-    $pdo = new PDO('mysql:dbname=duprec_encasdamour;host:localhost:3306;charset=utf8','duprec_colin','dromar971');
+    $pdo = new PDO('mysql:dbname=duprec_encasdamour;host:localhost:3306;charset=utf8','root','');
     $pdo->exec('SET NAMES utf8');
 } catch( PDOException $e){
     die("Erreur! ".$e->getMessage());
@@ -121,7 +121,7 @@ function get_ambianceId(PDO $pdo, $id)
 /////////////////////////////////////////////////
 ///
 try{
-    $pdo = new PDO('mysql:dbname=duprec_encasdamour;host:localhost:3306;charset=utf8','duprec_colin','dromar971');
+    $pdo = new PDO('mysql:dbname=duprec_encasdamour;host:localhost:3306;charset=utf8','root','');
     $pdo->exec('SET NAMES utf8');
 } catch( PDOException $e){
     die("Erreur! ".$e->getMessage());

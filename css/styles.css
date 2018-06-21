@@ -182,6 +182,7 @@ header .rs li img{
     border-radius: 30px;
     box-shadow: 11px 17px 13px rgba(0, 0, 0, 0.185773);
     color: #9B9B9B;
+    font-weight: 300;
 }
 .bloc_accueil_home .button-simple {
     border: none;
@@ -189,6 +190,12 @@ header .rs li img{
     top: 117px;
     right: 43px;
     padding: 11px 24px;
+}
+
+.bloc_accueil_home .response {
+    color: #ED5055 !important;
+    margin-top: -30px;
+    margin-bottom: 30px;
 }
 .bloc_accueil_home .cercle{
     position: relative;
@@ -340,6 +347,7 @@ footer ul #mce-EMAIL{
     border-radius: 30px;
     box-shadow: 11px 17px 13px rgba(0, 0, 0, 0.185773);
     color: #9B9B9B;
+    font-weight: 300;
 }
 footer ul #mc_embed_signup_scroll{
     position: relative;
