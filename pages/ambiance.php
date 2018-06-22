@@ -160,9 +160,12 @@ $data_menu = get_menu($pdo);
                     <button class="row third button-simple">Valider</button>
                 </form>
                 <form class="slider-form slider-four">
-                    <h2>Hello, <span class="yourname"></span></h2>
-                    <h3>Thank you for your input!
-                    </h3>
+                    <label for="name">Prénom et nom</label>
+                    <input required type="text" id="name" name="name">
+                    <label for="mail">Email</label>
+                    <input required id="email"  type="email">
+                    <label for="phone">Numéro de téléphone</label>
+                    <input required id="phone"  type="text">
                     <button class="row four button-simple">Valider</button>
                 </form>
                 <form class="slider-form slider-five">
