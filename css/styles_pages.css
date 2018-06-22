@@ -4,7 +4,9 @@ body{
     background-position: top right;
     background-size: 30%;
 }
-
+.background-body{
+    background-color: #FEF5F0;
+}
 /***********************Header************************/
 header .nav li a {
     color: #FF6B77;
@@ -39,7 +41,7 @@ header .nav li .button-simple:hover{
 .bloc_equipe ul li h4{
     font-size: 14px;
     color: #4A4A4A;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .bloc_equipe ul li p{
@@ -53,6 +55,12 @@ header .nav li .button-simple:hover{
 .bloc_ambiance {
     margin-bottom: 80px;
 }
+.bloc_ambiance>ul>li{
+    padding: 40px 0;
+    background-color: #fff;
+    margin-top: 15px;
+}
+
 .bloc_ambiance .grande_photo{
     width: 100%;
     height: 300px;
@@ -61,37 +69,56 @@ header .nav li .button-simple:hover{
     width: 100%;
     height: 60px;
     text-align: right;
+    margin-bottom: 54px;
 }
 .bloc_ambiance .sos{
     background: #4D43B0;
     color: #fff;
-    padding: 20px;
+    padding:20px 20px 40px 20px;
     position: relative;
 }
 .bloc_ambiance .sos h3{
     color: #fff;
     position: absolute;
-    top: -49px;
-    padding: 5px;
+    top: -36px;
+    padding: 2px 8px;
     font-size: 28px;
     font-weight: 900;
     background: #719FFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
 }
 .bloc_ambiance .sos h4{
-    font-size: 14px;
+    font-size: 12px;
 }
 .bloc_ambiance .sos p{
     line-height: 15px;
-    font-size: 11px;
+    font-size: 10px;
+}
+.bloc_ambiance .sos .quizz{
+    height: 21px;
+    text-align: right;
+}
+.bloc_ambiance .sos .quizz a{
+    position: relative;
+    top: 19px;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 21px;
+    padding: 8px 13px;
+}
+.bloc_ambiance .sos .quizz a:hover{
+    background-color: #FF6B77;
+    color: #fff;
+    border: 1px solid #FF6B77;
 }
 .bloc_ambiance ul .infos .button-simple{
     background-color: transparent;
     border: 1px solid #4D43B0;
     color: #4D43B0;
     font-size: 8px;
-    font-weight: bold;
+    font-weight: 600;
     padding: 5px 10px;
     text-transform: uppercase;
     margin-right: 5px;
@@ -99,7 +126,7 @@ header .nav li .button-simple:hover{
 }
 .bloc_ambiance ul .infos h2{
     letter-spacing: 0.5px;
-    font-weight: bold;
+    font-weight: 600;
     margin: 20px 0 5px;
     line-height: 20px;
     font-size: 18px;
@@ -119,9 +146,10 @@ header .nav li .button-simple:hover{
 }
 .bloc_ambiance ul .infos .prix{
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 600;
     line-height: 15px;
     text-align: right;
+    color: #4F4F4F;
 }
 .bloc_ambiance ul .infos .prix span{
     font-size: 10px;
@@ -129,28 +157,33 @@ header .nav li .button-simple:hover{
 .bloc_ambiance ul .infos h3{
     font-size: 12px;
     color: #4D43B0;
-    font-weight: bold;
+    font-weight: 600;
     line-height: 20px;
 }
 .bloc_ambiance ul .infos h4{
     font-size: 12px;
     color: #4F4F4F;
-    font-weight: bold;
+    font-weight: 600;
     margin: 20px 0 5px;
 }
 .bloc_ambiance ul .infos p{
+    line-height: 20px;
     font-size: 12px;
-    line-height: 18px;
-    margin-bottom: 20px;
+    color: #868E95;
+    margin-bottom: 21px;
 }
 .bloc_ambiance ul .sens{
     display: flex;
     flex-direction: column;
 }
 .bloc_ambiance ul .sens li{
-    height: 39px;
+    height: 43px;
     display: flex;
     justify-content: space-between;
+    border-bottom: 0.5px solid #E0E0E0;
+}
+.bloc_ambiance ul .sens li:first-child{
+    border-top: 0.5px solid #E0E0E0;
 }
 .bloc_ambiance ul .sens p{
     display: inline-block;
@@ -158,22 +191,23 @@ header .nav li .button-simple:hover{
     margin: auto 0;
     line-height: 20px;
     font-size: 10px;
-    text-transform: uppercase;
     color: #4F4F4F;
-    font-weight: bold;
+    font-weight: 600;
     position: relative;
     margin-left: 30px;
+    text-transform: uppercase;
 }
 .bloc_ambiance ul .sens p:last-child{
     line-height: 16px;
     font-size: 9px;
     color: #4D43B0;
+    font-weight: normal;
 }
 .bloc_ambiance ul .sens p:last-child span{
     line-height: 20px;
     font-size: 10px;
     color: #6D5FFC;
-    font-weight: bold;
+    font-weight: 600;
 }
 .bloc_ambiance ul .sens .icon:before{
     content: url("../img/ouie.png");
@@ -200,13 +234,19 @@ header .nav li .button-simple:hover{
 /***************form_ambiance**************/
 .bloc_form{
     position: relative;
-    height: 600px;
+    height: 1300px;
+}
+.bloc_form h3{
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+    color: #4D43B0;
 }
 .bloc_form h4{
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    color: #4A4A4A;
+    font-size: 18px;
+    color: #4D43B0;
+    font-weight: 500;
+    margin-bottom: 35px;
 }
 
 /***stepbystep****/
@@ -275,7 +315,7 @@ button:active,
 .steps > div > .liner {
     position: absolute;
     height: 2px;
-    width: 0%;
+    width: 0;
     left: 0;
     top: 50%;
     margin-top: -1px;
@@ -289,18 +329,22 @@ button:active,
 }
 
 .step-two {
-    left: 33%;
+    left: 25%;
     clip: rect(0, 0px, 25px, 0px);
 }
 
 .step-three {
-    left: 66%;
+    left: 50%;
     clip: rect(0, 0px, 25px, 0px);
 }
 
 .step-four {
-    left: 100%;
+    left: 75%;
     clip: rect(0, 0px, 25px, 0px);
+}
+.step-five {
+left: 100%;
+clip: rect(0, 0px, 25px, 0px);
 }
 
 .line {
@@ -310,7 +354,7 @@ button:active,
     position: relative;
     border-radius: 10px;
     overflow: visible;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     margin-left: 10%;
 }
 
@@ -345,7 +389,7 @@ button:active,
 }
 
 .line .dot.one {
-    left: 0%;
+    left: 0;
     background: #bbb;
 }
 
@@ -354,15 +398,19 @@ button:active,
 }
 
 .line .dot.two {
-    left: 33%;
+    left: 25%;
     background: #bbb
 }
 
 .line .dot.three {
-    left: 66%;
+    left: 50%;
     background: #bbb
 }
 .line .dot.four {
+    left: 75%;
+    background: #bbb
+}
+.line .dot.five {
     left: 100%;
     background: #bbb
 }
@@ -374,7 +422,7 @@ button:active,
 
 .slider {
     overflow: hidden;
-    width: 2800px;
+    width: 3500px;
     -webkit-transition: .3s all ease;
     transition: .3s all ease;
     -webkit-transform: translate(0px) scale(1);
@@ -495,7 +543,7 @@ label.radio {
 /*  two */
 
 .contain_form.two .line .dot-move {
-    left: 33%;
+    left: 25%;
     -webkit-animation: .3s anim 1;
 }
 
@@ -520,7 +568,7 @@ label.radio {
 /*  three */
 
 .contain_form.three .line .dot-move {
-    left: 66%;
+    left: 50%;
     -webkit-animation: .3s anim 1;
 }
 
@@ -547,7 +595,7 @@ label.radio {
 /*  four */
 
 .contain_form.four .line .dot-move {
-    left: 100%;
+    left: 75%;
     -webkit-animation: .3s anim 1;
 }
 
@@ -572,6 +620,36 @@ label.radio {
 .contain_form.four .step-three .liner{
     width: 100%;
 }
+/*  five */
+
+.contain_form.five .line .dot-move {
+    left: 100%;
+    -webkit-animation: .3s anim 1;
+}
+
+.contain_form.five .line .dot.five {
+    background: #5892fc;
+}
+
+.contain_form.five .slider {
+    -webkit-transform: translate(-2800px);
+    -ms-transform: translate(-28100px);
+    transform: translate(-2800px);
+}
+
+.contain_form.five .step-two,
+.contain_form.five .step-three,
+.contain_form.five .step-four ,
+.contain_form.five .step-five {
+    clip: rect(0, 100px, 25px, 0px);
+}
+
+.contain_form.five .step-one .liner,
+.contain_form.five .step-two .liner,
+.contain_form.five .step-three .liner,
+.contain_form.five .step-four .liner{
+    width: 100%;
+}
 /**end stepbystep ambiance**/
 
 /***menu***/
@@ -585,42 +663,93 @@ label.radio {
     padding: 0 10px;
     margin-bottom: 28px;
 }
-.bloc_menu ul li h5{
-    font-size: 12px;
-    font-weight: bold;
-    color: #4A4A4A;
-    margin-bottom: 5px;
+.bloc_menu>ul>li{
+    background-color: transparent;
+    padding: 10px 15px;
+    height: 400px;
+    margin-bottom: 20px;
+    box-shadow: -2px 7px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin-left:7%;
 }
-.bloc_menu ul li{
-    background-color: #F5F5FA;
-    border-right: 10px solid #fff;
-    border-left: 10px solid #fff;
-    padding-top: 10px;
-    height: 220px;
+.bloc_menu>ul>li:nth-child(2n){
+    margin-left: 3%
+}
+.bloc_menu>ul>li img{
+    height: 110px;
+}
+.bloc_menu ul li h5{
+    font-size: 14px;
+    font-weight: 600;
+    color: #4A4A4A;
+    margin: 2px 5px 8px;
+}
+.bloc_menu ul li ul li{
+    display: flex;
+    height: 60px;
+    border-bottom: 0.5px solid #E0E0E0;
+    text-align: left;
+}
+.bloc_menu ul li ul li:first-child{
+    border-top: 0.5px solid #E0E0E0;
 }
 .bloc_menu ul li .titre_menu{
-    font-size: 9px;
-    letter-spacing: 0.62px;
-    color: #9B9B9B;
+    line-height: 19px;
+    font-size: 11px;
+    color: #4F4F4F;
+    margin: auto 20px auto 0;
+    font-weight: bold;
+    width: 70px;
 }
 .bloc_menu ul li .text_menu{
+    line-height: 17px;
     font-size: 10px;
-    letter-spacing: 0.62px;
-    color: #9B9B9B;
-    margin-bottom: 13px;
+    margin: auto auto auto 0;
+    color: #4F4F4F;
+    font-weight: 500;
+    max-width: 165px;
+}
+.bloc_menu h5{
+    line-height: 22px;
+    font-size: 13px;
+    color: #4D43B0;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.bloc_menu textarea{
+    width: 400px;
+    height: 130px;
+    line-height: 16px;
+    font-size: 12px;
+    color: #868E95;
+    border: 1px solid #BFBFBF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 15px;
+}
+.contain_form .slider-ctr {
+    width: 102%;
+    overflow: hidden;
+}
+.contain_form .button-simple{
+    border: none;
+    padding: 10px 25px;
+    font-size: 13px;
+    background-color: #4D43B0;
+    margin-top: 20px;
 }
 
 /*****************Mentions légales*********************/
 .bloc_mentions-legales h2{
     color: #FF6B77;
     font-size: 25px;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 40px;
 }
 .bloc_mentions-legales h3{
     color: #4D43B0;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 0;
 }
 .bloc_mentions-legales p{
@@ -636,13 +765,13 @@ label.radio {
 .bloc_plan-site h2{
     color: #FF6B77;
     font-size: 25px;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 40px;
 }
 .bloc_plan-site h3{
     color: #4D43B0;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 0;
 }
 .bloc_plan-site h3:last-child{

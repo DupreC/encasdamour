@@ -116,12 +116,12 @@ header .nav .button-simple{
 
 header .rs{
     color: #FF6B77;
-    font-weight: bold;
+    font-weight: 600;
     padding: 0;
 }
 header .rs a{
     color: #FF6B77;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 22px;
 }
 header .rs a:hover{
@@ -138,12 +138,12 @@ header .rs li img{
 /***************acceuil**************/
 .bloc_accueil_home {
     font-size: 39px;
-    font-weight: bold;
+    font-weight: 600;
     color: #000000;
 }
 .bloc_accueil_home h2{
     font-size: 40px;
-    font-weight: bold;
+    font-weight: 600;
     color: #fff;
     line-height: 51px;
     margin-top: 120px;
@@ -162,7 +162,7 @@ header .rs li img{
     color: #FF6B77;
     margin-top: 22px;
     letter-spacing: 1px;
-    font-weight: bold;
+    font-weight: 600;
 }
 .bloc_accueil_home form{
 font-size: 11px;
@@ -260,7 +260,7 @@ position: relative;
 .bloc_explication_home ul li h5{
     font-size: 16px;
     letter-spacing: 0.5px;
-    font-weight: bold;
+    font-weight: 600;
     margin: 10px 0;
     color: #202E77;
 }
@@ -338,7 +338,7 @@ footer{
 footer ul h3{
     margin: -35px 0 25px;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 600;
     color: #202E77;
 }
 /*footer ul #mc_embed_signup_scroll>div{
@@ -387,7 +387,7 @@ footer ul li{
 footer ul li a{
     color: #fff;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 600;
 }
 footer ul li a:hover{
     color: #4864C8;
@@ -699,12 +699,12 @@ footer> .last_bloc li a:first-child{
         font-size: 14px;
         margin-bottom: 21px;
         color: #4D43B0;
-        font-weight: bold;
+        font-weight: 600;
     }
     nav ul p {
         margin-top: 50px;
         color: #FF6B77;
-        font-weight: bold;
+        font-weight: 600;
         font-size: 15px;
     }
 
@@ -875,7 +875,7 @@ footer> .last_bloc li a:first-child{
     footer ul li a {
         color: #fff;
         font-size: 15px;
-        font-weight: bold;
+        font-weight: 600;
     }
     footer .rs {
         margin-top: 18px;
