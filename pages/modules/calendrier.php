@@ -2,6 +2,7 @@
     .calendar {
         width: 350px;
         margin: 50px auto 0;
+        background: #FAFAFA;
     }
     .calendar__month {
         font-size: 20px;
@@ -36,7 +37,9 @@
 
     .cal-month__current {
         text-align: center;
-        color: #e1e1e1;
+        color: rgba(0, 0, 0, 0.872566);
+        font-weight: 600;
+        text-transform: capitalize;
     }
 
     .cal-head__day,
@@ -70,14 +73,14 @@
     }
 
     .cal-body__day {
-        color: #777;
+        color: #e1e1e1;
         line-height: 50px;
         text-align: center;
         cursor: pointer;
     }
 
     .cal-day__month--current {
-        color: #e1e1e1;
+        color: rgba(0, 0, 0, 0.867782);
     }
 
     .cal-day__day--today {
@@ -86,10 +89,10 @@
     }
 
     .cal-day__day--selected {
-        background-color: #2196f3;
+        background-color: #4D43B0;
         box-shadow: 0 5px 10px -5px rgba(0, 0, 0, .75);
         border-radius: 50%;
-        color: #111;
+        color: #fff;
     }
 </style>
 <div class="calendar">

@@ -76,6 +76,11 @@ function geolocate() {
 /////////////////////////////////////////////////
 // step by step page_ambiance
 /////////////////////////////////////////////////
+function ScrollToReserver(classe) {
+    $('html, body').animate({
+        scrollTop: ($('.'+classe).offset().top)
+    },500);
+}
 var $firstButton = $(".first"),
     $secondButton = $(".second"),
     $thirdButton = $(".third"),
@@ -85,43 +90,121 @@ var $firstButton = $(".first"),
     $more = $(".more"),
     $yourname = $(".yourname"),
     $reset = $(".reset"),
-    $ctr = $(".contain_form");
+    $ctr = $(".contain_form"),
+    $mail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 $firstButton.on("click", function(e){
     $(this).text("Saving...").delay(900).queue(function(){
         $ctr.addClass("two slider-two-active").removeClass("four slider-one-active");
         $(".bloc_form").css("height", "500px");
         $(".slider").css("height", "300px");
+        ScrollToReserver('reserver');
     });
     e.preventDefault();
 });
-
 $secondButton.on("click", function(e){
+    if ($('.adresse').val() != ""){
     $(this).text("Saving...").delay(900).queue(function(){
         $ctr.addClass("three slider-three-active").removeClass("two slider-two-active slider-one-active");
-        $(".bloc_form").css("height", "750px");
-        $(".slider").css("height", "550px");
+        $(".bloc_form").css("height", "850px");
+        $(".slider").css("height", "650px");
+        ScrollToReserver('reserver');
     });
+    } else{
+        $( ".slider-two .adresse" ).each().addClass("invalid");
+        $( ".slider-two .invalid" ).each().addClass("error_show");
+        ScrollToReserver('invalid');
+    }
     e.preventDefault();
 });
 $thirdButton.on("click", function(e){
-    $(this).text("Saving...").delay(900).queue(function(){
-        $ctr.addClass("four slider-four-active").removeClass("three slider-three-active slider-two-active slider-two-active");
-        $name = $name.val();
-        if($name == "") {
-            $yourname.html("Anonymous!");
-        }
-        else { $yourname.html($name+"!"); }
-    });
+    if ($('.form-control').val().length == 5){
+        $(this).text("Saving...").delay(900).queue(function(){
+                $ctr.addClass("four slider-four-active").removeClass("three slider-three-active slider-two-active slider-two-active");
+                $(".bloc_form").css("height", "650px");
+                $(".slider").css("height", "450px");
+            ScrollToReserver('reserver');
+        });
+    } else{
+        $( ".slider-three input" ).each().addClass("invalid");
+        $( ".slider-three .invalid" ).each().addClass("error_show");
+        ScrollToReserver('invalid');
+    }
     e.preventDefault();
 });
 $fourButton.on("click", function(e){
+    if ($mail.test($("#email").val()) && $( ".slider-four #name" ).val() != "" && $( ".slider-four #phone" ).val().length == 10) {
     $(this).text("Saving...").delay(900).queue(function(){
         $ctr.addClass("five slider-four-active").removeClass("four slider-four-active three slider-three-active slider-two-active slider-two-active");
+        ScrollToReserver('reserver');
     });
+    } else{
+        $( ".slider-three input" ).each().addClass("invalid");
+        $( ".slider-two .invalid" ).each().addClass("error_show");
+        ScrollToReserver('invalid');
+    }
     e.preventDefault();
 });
 
+
+/////////////////////////////////////////////
+//Validation
+// /////////////////////////////////////////////
+// $(document).ready(function() {
+//     <!-- Real-time Validation -->
+//     <!--Name can't be blank-->
+//     $('#contact_name').on('input', function() {
+//         var input=$(this);
+//         var is_name=input.val();
+//         if(is_name){input.removeClass("invalid").addClass("valid");}
+//         else{input.removeClass("valid").addClass("invalid");}
+//     });
+//
+//     <!--Email must be an email -->
+//     $('#contact_email').on('second', function() {
+//         var input=$(this);
+//         var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+//         var is_email=re.test(input.val());
+//         if(is_email){input.removeClass("invalid").addClass("valid");}
+//         else{input.removeClass("valid").addClass("invalid");}
+//     });
+//
+//     <!--Website must be a website -->
+//     $('.adresse').on('input', function() {
+//         var input=$(this);
+//         var is_adresse=input.val();
+//         if(is_adresse){input.removeClass("invalid").addClass("valid");}
+//         else{input.removeClass("valid").addClass("invalid");}
+//     });
+//
+//     <!--Message can't be blank -->
+//     $('#contact_message').keyup(function(event) {
+//         var input=$(this);
+//         var message=$(this).val();
+//         console.log(message);
+//         if(message){input.removeClass("invalid").addClass("valid");}
+//         else{input.removeClass("valid").addClass("invalid");}
+//     });
+//
+//     <!-- After Form Submitted Validation-->
+//     $("dsqd").click(function(event){
+//         var form_data=$(".slider-two").serializeArray();
+//         var error_free=true;
+//         for (var input in form_data){
+//             var element=$("form"+form_data[input]['name']);
+//             var valid=element.hasClass("valid");
+//             var error_element=$("span", element.parent());
+//             if (!valid){error_element.removeClass("error").addClass("error_show"); error_free=false;}
+//             else{error_element.removeClass("error_show").addClass("error");}
+//         }
+//         if (!error_free){
+//             event.preventDefault();
+//         }
+//         else{
+//             alert('No errors: Form will be submitted');
+//         }
+//     });
+// });
 /////////////////////////////////////////////
 //Menu burger
 /////////////////////////////////////////////
@@ -154,3 +237,51 @@ $('.petite_photo').on({
         $('.grande_photo').attr('src', src);
     }
 });
+/////////////////////////////////////////////
+// choix menus
+/////////////////////////////////////////////
+
+(function() {
+
+    window.inputNumber = function(el) {
+
+        var min = el.attr('min') || false;
+        var max = el.attr('max') || false;
+
+        var els = {};
+
+        els.dec = el.prev();
+        els.inc = el.next();
+
+        el.each(function() {
+            init($(this));
+        });
+
+        function init(el) {
+
+            els.dec.on('click', decrement);
+            els.inc.on('click', increment);
+
+            function decrement() {
+                var value = el[0].value;
+                value--;
+                if(!min || value >= min) {
+                    el[0].value = value;
+                }
+            }
+
+            function increment() {
+                var value = el[0].value;
+                value++;
+                if(!max || value <= max) {
+                    el[0].value = value++;
+                }
+            }
+        }
+    }
+})();
+var NumberMenu = ".input-number";
+inputNumber($('.input-number_menu_dolce_vita'));
+inputNumber($('.input-number_menu_shanghai'));
+inputNumber($('.input-number_menu_dune_de_sable'));
+inputNumber($('.input-number_menu_art_de_vivre'));

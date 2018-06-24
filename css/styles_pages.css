@@ -651,7 +651,24 @@ label.radio {
     width: 100%;
 }
 /**end stepbystep ambiance**/
-
+.error{
+    display: none;
+}
+.error_show{
+    display: block;
+}
+input.invalid{
+    border: 2px solid red !important;
+}
+input.valid{
+    border: 2px solid green !important;
+}
+/***Code_postal***/
+#code_postal input{
+    width: 400px;
+    border: 1px solid #BFBFBF;
+    border-radius: 4px;
+}
 /***menu***/
 .bloc_menu{
     text-align: center;
@@ -695,21 +712,58 @@ label.radio {
 }
 .bloc_menu ul li .titre_menu{
     line-height: 19px;
-    font-size: 11px;
+    font-size: 12px;
     color: #4F4F4F;
     margin: auto 20px auto 0;
-    font-weight: bold;
+    font-weight: 600;
     width: 70px;
 }
+
 .bloc_menu ul li .text_menu{
-    line-height: 17px;
-    font-size: 10px;
-    margin: auto auto auto 0;
-    color: #4F4F4F;
+    margin: auto 0;
     font-weight: 500;
-    max-width: 165px;
+    line-height: 17px;
+    font-size: 11px;
+    color: #4F4F4F;
+    width: 240px;
 }
-.bloc_menu h5{
+.bloc_menu .number {
+    margin-top: 15px;
+}
+.bloc_menu .number .input-number{
+    width: 45px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    height: 40px;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 14px;
+    text-align: center;
+    color: #828282;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.bloc_menu .number p{
+    background: #4D43B0;
+    color: #fff;
+    padding: 7px 0;
+    border-radius: 5px 0 0 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.bloc_menu .number p:last-child{
+    border-radius: 0 5px 5px 0;
+}
+.contain_form  h5{
     line-height: 22px;
     font-size: 13px;
     color: #4D43B0;
@@ -737,6 +791,42 @@ label.radio {
     font-size: 13px;
     background-color: #4D43B0;
     margin-top: 20px;
+}
+/***date & heure***/
+.contain_form .clockpicker{
+    margin: auto;
+}
+.contain_form .clockpicker input{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/***Contact***/
+.contain_form .contact h4{
+    font-weight: 300;
+    font-size: 18px;
+    color: #4D43B0;
+}
+.contain_form .contact h5{
+    font-weight: 500;
+    line-height: 22px;
+    font-size: 13px;
+    color: #4D43B0;
+    text-align: left;
+}
+
+.contain_form .contact input{
+    border: 1px solid #BFBFBF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    line-height: 21px;
+    font-size: 12px;
+    color: #868E95;
+    padding-left: 20px;
+    margin: 0;
 }
 
 /*****************Mentions légales*********************/

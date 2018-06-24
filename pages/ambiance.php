@@ -78,7 +78,7 @@ $data_menu = get_menu($pdo);
 </div>
 
 <div class="bloc_form" style="position: relative">
-    <h3>Réservez</h3>
+    <h3 class="reserver">Réservez</h3>
     <div class="contain_form slider-one-active">
         <div class="steps">
             <div class="step step-one">
@@ -135,6 +135,11 @@ $data_menu = get_menu($pdo);
                                         <p class="text_menu"><span><?=$value['dessert']?></span></p>
                                     </li>
                                 </ul>
+                                <div class="row number">
+                                    <p class="col-sm-2 col-sm-offset-3 input-number-decrement">–</p>
+                                    <input class="col-sm-2 input-number input-number_<?=$value['code_menu']?>" type="text" value="0" min="0" max="2">
+                                    <p class="col-sm-2 input-number-increment">+</p>
+                                </div>
                             </li>
                             <?php
                             };
@@ -149,23 +154,30 @@ $data_menu = get_menu($pdo);
                     <div class="row" id="code_postal">
                         <h4>Où souhaitez-vous être livré ?</h4>
                         <div id="locationField">
-                            <input id="autocomplete" placeholder="Enter your address" type="text">
+                            <input class="adresse" required id="autocomplete" placeholder="33 rue du paradis, 75000, PARIS" type="text">
                         </div>
                     </div>
                     <button class="row second button-simple">Valider</button>
                 </form>
                 <form class="slider-form slider-three">
-                    <h4>Choisissez une data et un horaire</h4>
+                    <h4>Choisissez une date et un horaire</h4>
                     <?php include 'modules/calendrier.php';?>
+                    <h5><label for="time">À quelle heure ?</label></h5>
+                    <div class="input-group clockpicker" data-placement="right" data-align="top" data-autoclose="true">
+                        <input required type="text" class="form-control" placeholder="18:45">
+                    </div>
                     <button class="row third button-simple">Valider</button>
                 </form>
-                <form class="slider-form slider-four">
-                    <label for="name">Prénom et nom</label>
-                    <input required type="text" id="name" name="name">
-                    <label for="mail">Email</label>
-                    <input required id="email"  type="email">
-                    <label for="phone">Numéro de téléphone</label>
-                    <input required id="phone"  type="text">
+                <form class="slider-form slider-four row">
+                    <div class="contact col-sm-8 col-sm-offset-2">
+                        <h4>Quelques infos pour pouvoir te contacter</h4>
+                        <h5>Prénom et nom</h5>
+                        <input required type="text" id="name" name="name" placeholder="Firmin Dustriel">
+                        <h5>Email</h5>
+                        <input required id="email"  type="email" placeholder="Firmin.Dustriel@gmail.com">
+                        <h5>Numéro de téléphone</h5>
+                        <input required id="phone"  type="tel" placeholder="06 36 65 65 65"  pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$"><br>
+                    </div>
                     <button class="row four button-simple">Valider</button>
                 </form>
                 <form class="slider-form slider-five">
@@ -178,8 +190,13 @@ $data_menu = get_menu($pdo);
         </div>
     </div>
 </div>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" href="http://weareoutman.github.io/clockpicker/dist/bootstrap-clockpicker.min.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACNkob18sCtX5tS7PyfPvPD4HpQC-tOlQ&libraries=places&callback=initAutocomplete" async defer></script>
-
+    <script src="http://weareoutman.github.io/clockpicker/dist/jquery-clockpicker.min.js"></script>
+    <script>
+        $('.clockpicker').clockpicker();
+    </script>
 <?php
 include '../footer.php';
 ?>
