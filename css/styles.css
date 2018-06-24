@@ -9,10 +9,18 @@ body{
     background-image: url("../img/forme_1.png");
     background-repeat: no-repeat;
     background-position: top center;
-    overflow-x: hidden;
+    overflow-x: -moz-hidde-unscrollable;
+    width: 100%;
 }
 p{
     margin: 0;
+}
+a{
+    color: #4D43B0;
+}
+a:hover{
+    text-decoration: none;
+    color: #6D5FFC;
 }
 .clear{
     clear: both;
@@ -59,6 +67,9 @@ img{
     background-color: transparent !important;
     color: #ED5055 !important;
 }
+.fil_ariane{
+    color: #FF6B77;
+}
 /***********************Header************************/
 
 header ul{
@@ -94,7 +105,8 @@ header .nav h1 img{
 header .nav li a{
     color: #fff;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 header .nav .button-simple{
     color: #fff;
@@ -104,12 +116,12 @@ header .nav .button-simple{
 
 header .rs{
     color: #FF6B77;
-    font-weight: bold;
+    font-weight: 600;
     padding: 0;
 }
 header .rs a{
     color: #FF6B77;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 22px;
 }
 header .rs a:hover{
@@ -126,42 +138,57 @@ header .rs li img{
 /***************acceuil**************/
 .bloc_accueil_home {
     font-size: 39px;
-    font-weight: bold;
+    font-weight: 600;
     color: #000000;
 }
 .bloc_accueil_home h2{
-    font-size: 39px;
-    font-weight: bold;
+    font-size: 40px;
+    font-weight: 600;
     color: #fff;
     line-height: 51px;
-    margin-top: 178px;
+    margin-top: 120px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
 }
 .bloc_accueil_home p{
-    font-size: 15px;
-    font-weight: initial;
+    font-size: 17px;
+    font-weight: 300;
     color: #fff;
     line-height: 22px;
+    letter-spacing: 1px;
 }
 .bloc_accueil_home h3{
     font-size: 15px;
     color: #FF6B77;
     margin-top: 22px;
+    letter-spacing: 1px;
+    font-weight: 600;
 }
 .bloc_accueil_home form{
-    font-size: 11px;
-    padding: 60px 0 0;
-    /*margin-bottom: 220px;*/
-    position: relative;
+font-size: 11px;
+padding: 60px 0 0;
+/*margin-bottom: 220px;*/
+position: relative;
+}
+.bloc_accueil_home .mc-field-group {
+    background-color: #fff;
+    border-radius: 50px;
+    text-align: left;
+    box-shadow: 11px 17px 13px rgba(0, 0, 0, 0.185773);
+    color: #9B9B9B;
+    width: 485px;
+}
+.bloc_accueil_home #mc_embed_signup {
+    margin-top: 60px;
 }
 .bloc_accueil_home #mce-EMAIL {
     border: none;
     font-size: 18px;
-    width: 485px;
-    background: #fff;
-    padding: 15px 30px;
+    width: 75%;
+    padding: 15px 0 15px 30px;
     border-radius: 30px;
-    box-shadow: 11px 17px 13px rgba(0, 0, 0, 0.185773);
     color: #9B9B9B;
+    font-weight: 300;
 }
 .bloc_accueil_home .button-simple {
     border: none;
@@ -169,6 +196,12 @@ header .rs li img{
     top: 117px;
     right: 43px;
     padding: 11px 24px;
+}
+
+.bloc_accueil_home .response {
+    color: #ED5055 !important;
+    margin-top: -30px;
+    margin-bottom: 30px;
 }
 .bloc_accueil_home .cercle{
     position: relative;
@@ -218,7 +251,7 @@ header .rs li img{
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    height: 200px;
+    height: 180px;
 }
 .bloc_explication_home ul li img{
     margin-top: 20px;
@@ -227,7 +260,7 @@ header .rs li img{
 .bloc_explication_home ul li h5{
     font-size: 16px;
     letter-spacing: 0.5px;
-    font-weight: bold;
+    font-weight: 600;
     margin: 10px 0;
     color: #202E77;
 }
@@ -272,8 +305,9 @@ header .rs li img{
 }
 .bloc_choix-ambiances_home>p{
     margin-bottom: 40px;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 0.5px;
+    color: #202E77;
 }
 .bloc_choix-ambiances_home ul{
     float: none;
@@ -304,22 +338,32 @@ footer{
 footer ul h3{
     margin: -35px 0 25px;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 600;
     color: #202E77;
 }
 /*footer ul #mc_embed_signup_scroll>div{
     display: inline-block;
 }*/
-footer ul #mce-EMAIL{
+footer ul .mc-field-group {
+    background-color: #fff;
+    border-radius: 50px;
+    text-align: left;
+    box-shadow: 11px 4px 30px rgba(0, 0, 0, 0.25);
+    color: #9B9B9B;
+    width: 572px;
+    margin: auto;
+}
+footer ul #mce-EMAIL {
     border: none;
     font-size: 18px;
-    width: 572px;
+    width: 75%;
     background: #fff;
-    padding: 15px 30px;
-    border-radius: 30px;
-    box-shadow: 11px 17px 13px rgba(0, 0, 0, 0.185773);
+    padding: 15px 0 15px 30px;
     color: #9B9B9B;
+    font-weight: 300;
+    border-radius: 50px;
 }
+
 footer ul #mc_embed_signup_scroll{
     position: relative;
 }
@@ -343,7 +387,7 @@ footer ul li{
 footer ul li a{
     color: #fff;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 600;
 }
 footer ul li a:hover{
     color: #4864C8;
@@ -391,7 +435,9 @@ footer> .last_bloc li a:first-child{
     border: none;
 }
 
-
+/******************************************************************************/
+/**************************Responsive******************************************/
+/******************************************************************************/
 @media screen and (max-width: 1280px){
     header ul li {
         margin: auto 2px;
@@ -402,15 +448,23 @@ footer> .last_bloc li a:first-child{
     header .rs a {
         font-size: 18px;
     }
-
-
     .bloc_accueil_home h2{
         font-size: 34px;
         margin: 100px 0 20px;
         line-height: 40px;
+        letter-spacing: initial;
+    }.bloc_accueil_home p{
+        font-size: 15px;
+        letter-spacing: initial;
+    }
+    .bloc_accueil_home h3 {
+        letter-spacing: initial;
+    }
+    .bloc_accueil_home .mc-field-group {
+        width: 370px;
     }
     .bloc_accueil_home #mce-EMAIL {
-        width: 370px;
+        width: 70%;
     }
     .bloc_accueil_home .img_header img{
         width: 100%;
@@ -439,11 +493,17 @@ footer> .last_bloc li a:first-child{
     .bloc_choix-ambiances_home .background {
         top: 1220px;
     }
+    .bloc_choix-ambiances_home h3 {
+        margin-top: 40px;
+    }
     .bloc_choix-ambiances_home ul li img {
         width: 100%;
     }
-    footer ul #mce-EMAIL {
+    footer ul .mc-field-group {
         width: 500px;
+    }
+    footer ul #mce-EMAIL {
+        width: 80%;
     }
     footer ul .button-simple {
         right: 245px;
@@ -477,8 +537,13 @@ footer> .last_bloc li a:first-child{
     .bloc_accueil_home form {
         padding: 10px 0 0;
     }
+    .bloc_accueil_home #mc_embed_signup {
+         margin-top: 0;
+     }
+
     .bloc_accueil_home #mce-EMAIL {
         font-size: 15px;
+        width: 70%;
     }
     .bloc_accueil_home .button-simple {
         top: 65px;
@@ -522,7 +587,7 @@ footer> .last_bloc li a:first-child{
     .bloc_choix-ambiances_home .background {
         margin-top: 95px;
         top: 860px;
-        height: 850px;
+        height: 700px;
         width: 100%;
     }
     .bloc_choix-ambiances_home ul li {
@@ -534,8 +599,11 @@ footer> .last_bloc li a:first-child{
     footer {
         background-size: auto;
     }
-    footer ul #mce-EMAIL {
+    footer ul .mc-field-group {
         width: 460px;
+    }
+    footer ul #mce-EMAIL {
+        width: 70%;
     }
     footer ul .button-simple {
         right: 145px;
@@ -614,6 +682,10 @@ footer> .last_bloc li a:first-child{
     nav ul.hidden {
         display: none;
     }
+    nav ul li .logo_burger-menu {
+        width: 107px;
+        margin: auto;
+    }
 
     nav ul a {
         -moz-transition-duration: 0.5s;
@@ -627,12 +699,12 @@ footer> .last_bloc li a:first-child{
         font-size: 14px;
         margin-bottom: 21px;
         color: #4D43B0;
-        font-weight: bold;
+        font-weight: 600;
     }
     nav ul p {
         margin-top: 50px;
         color: #FF6B77;
-        font-weight: bold;
+        font-weight: 600;
         font-size: 15px;
     }
 
@@ -666,6 +738,7 @@ footer> .last_bloc li a:first-child{
     }
     .bloc_accueil_home {
         text-align: center;
+        margin-bottom: 60px;
     }
     .bloc_accueil_home h2 {
         font-size: 27px;
@@ -682,9 +755,13 @@ footer> .last_bloc li a:first-child{
     .bloc_accueil_home h3 {
         font-size: 13px;
     }
-    .bloc_accueil_home #mce-EMAIL {
+    .bloc_accueil_home .mc-field-group {
+        margin: auto;
         max-width: 290px;
         width: 100%;
+    }
+    .bloc_accueil_home #mce-EMAIL {
+        width: 60%;
         font-size: 12px;
     }
     .bloc_accueil_home .button-simple {
@@ -715,6 +792,9 @@ footer> .last_bloc li a:first-child{
         max-width: 360px;
         padding-top: 10px;
     }
+    .bloc_explication_home h3 {
+        margin-top: 0;
+    }
     .bloc_explication_home ul li {
         margin: 20px auto;
     }
@@ -725,7 +805,15 @@ footer> .last_bloc li a:first-child{
         font-size: 14px;
     }
     .bloc_choix-ambiances_home {
-        margin-top: 70px;
+        padding-top: 24%;
+        background-image: url("../img/fond_ambiance_mobile.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: initial;
+        margin-top: 60px;
+    }
+    .bloc_choix-ambiances_home .background{
+        display: none;
     }
     .bloc_choix-ambiances_home ul {
         padding: 0;
@@ -743,10 +831,6 @@ footer> .last_bloc li a:first-child{
         top: 1252px;
         height: 1000px;
     }
-    .bloc_choix-ambiances_home {
-        background-color: #FEF5F0;
-        margin-top: 100px;
-    }
     .bloc_choix-ambiances_home h3{
         margin-top: 0;
     }
@@ -758,11 +842,11 @@ footer> .last_bloc li a:first-child{
         margin-bottom: 30px;
     }
     .bloc_choix-ambiances_home ul li:last-child p {
-        margin-bottom: 60px;
+        margin-bottom: 100px;
     }
 
     footer {
-        margin-top: -20px;
+        margin-top: -22px;
         background-size: 202% 100%;
         background-color: #FEF5F0;
     }
@@ -770,9 +854,13 @@ footer> .last_bloc li a:first-child{
         margin: -15px 0 25px;
         font-size: 13px;
     }
-    footer ul #mce-EMAIL {
+    footer ul .mc-field-group {
         max-width: 290px;
         width: 100%;
+        font-size: 12px;
+    }
+    footer ul #mce-EMAIL {
+        width: 60%;
         font-size: 12px;
     }
     footer ul .button-simple {
@@ -787,7 +875,7 @@ footer> .last_bloc li a:first-child{
     footer ul li a {
         color: #fff;
         font-size: 15px;
-        font-weight: bold;
+        font-weight: 600;
     }
     footer .rs {
         margin-top: 18px;
