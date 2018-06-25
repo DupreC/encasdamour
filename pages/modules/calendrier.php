@@ -98,7 +98,7 @@
 <div class="calendar">
     <div class="calendar__month">
         <div class="cal-month__previous"><</div>
-        <div class="cal-month__current"></div>
+        <div class="cal-month__current" id="current_month"></div>
         <div class="cal-month__next">></div>
     </div>
     <div class="calendar__head">

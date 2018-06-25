@@ -21,8 +21,8 @@ $data_menu = get_menu($pdo);
             <ul>
                 <li class="col-sm-offset-1 col-sm-5">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <p class="grande_photo"><img src="<?=$data_ambiance['photo1']?>" alt="grande_photos"></p>
-                        <p class="petites_photos"><img class="petite_photo" src="<?=$data_ambiance['photo1']?>" alt="photos1"><img class="petite_photo" src="<?=$data_ambiance['photo2']?>" alt="photos2"></p>
+                        <p class="grande_photo"><img src="./img/img-ambiances/<?=$data_ambiance['photo1']?>" alt="grande_photos"></p>
+                        <p class="petites_photos"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo1']?>" alt="photos1"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo2']?>" alt="photos2"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo3']?>" alt="photos4"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo2']?>" alt="photos2"></p>
                         <div class="sos">
                             <h3>SOS</h3>
                             <h4>Tu as un doute ? Par ici le coup de pouce ! </h4>
@@ -54,7 +54,7 @@ $data_menu = get_menu($pdo);
                             </li>
                             <li>
                                 <p class="icon vue">Pour la vue</p>
-                                <p class="inclus"><span>Une décoration romantique</span><br><?=$data_ambiance['vue']?></p>
+                                <p class="inclus"><span><?=$data_ambiance['vue1']?></span><br>(guirlandes, bougeoires, nappes, décoration florale)</p>
                             </li>
                             <li>
                                 <p class="icon odorat">Pour  l’odorat</p>
@@ -112,7 +112,7 @@ $data_menu = get_menu($pdo);
         </div>
         <div class="slider-ctr">
             <div class="slider">
-                <form class="slider-form slider-one">
+                <div class="slider-form slider-one">
                     <div class="bloc_menu">
                         <h4>Choisis deux menus</h4>
                         <ul class="row">
@@ -136,9 +136,9 @@ $data_menu = get_menu($pdo);
                                     </li>
                                 </ul>
                                 <div class="row number">
-                                    <p class="col-sm-2 col-sm-offset-3 input-number-decrement">–</p>
-                                    <input class="col-sm-2 input-number input-number_<?=$value['code_menu']?>" type="text" value="0" min="0" max="2">
-                                    <p class="col-sm-2 input-number-increment">+</p>
+                                    <p class="col-sm-2 col-sm-offset-3 input-number-decrement decrement">–</p>
+                                    <input required class="col-sm-2 require input-number input-number_<?=$value['code_menu']?>" type="text" value="0" min="0" max="2">
+                                    <p class="col-sm-2 input-number-increment increment">+</p>
                                 </div>
                             </li>
                             <?php
@@ -148,8 +148,9 @@ $data_menu = get_menu($pdo);
                         <h5>Des besoins spécifiques ? Dis-le nous ici !</h5>
                         <textarea placeholder="Ex : Ma copine est allergique aux arachides, je n’aime pas les tomates..." name="ameliorer" id="ameliorer"></textarea>
                     </div>
+                    <span class="error">Choisis deux menus</span>
                     <button class="first button-simple">Valider</button>
-                </form>
+                </div>
                 <form class="slider-form slider-two">
                     <div class="row" id="code_postal">
                         <h4>Où souhaitez-vous être livré ?</h4>
@@ -164,7 +165,7 @@ $data_menu = get_menu($pdo);
                     <?php include 'modules/calendrier.php';?>
                     <h5><label for="time">À quelle heure ?</label></h5>
                     <div class="input-group clockpicker" data-placement="right" data-align="top" data-autoclose="true">
-                        <input required type="text" class="form-control" placeholder="18:45">
+                        <input required type="text" class="form-control heure" placeholder="18:45">
                     </div>
                     <button class="row third button-simple">Valider</button>
                 </form>
@@ -176,15 +177,49 @@ $data_menu = get_menu($pdo);
                         <h5>Email</h5>
                         <input required id="email"  type="email" placeholder="Firmin.Dustriel@gmail.com">
                         <h5>Numéro de téléphone</h5>
-                        <input required id="phone"  type="tel" placeholder="06 36 65 65 65"  pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$"><br>
+                        <input required id="phone"  type="tel" placeholder="0636656565"  pattern="^0[1-68][0-9]{10}$#"><br>
+                        <button class="row four button-simple">Valider</button>
                     </div>
-                    <button class="row four button-simple">Valider</button>
                 </form>
-                <form class="slider-form slider-five">
-                    <h2>Hello, <span class="yourname"></span></h2>
-                    <h3>Thank you for your input!
-                    </h3>
-                    <a class="reset" href="#">Reset</a>
+                <form class="slider-form slider-five recap">
+                    <div class="row">
+                        <h4>Récapitulatif de ta résa</h4>
+                        <ul class="col-sm-8 col-sm-offset-2">
+                            <li>
+                                <p class="recap_titre">Pack </p>
+                                <p class="recap_text pack"><span><?=$data_ambiance['nom']?></span></p>
+                            </li>
+                            <li>
+                                <p class="recap_titre">Menu</p>
+                                <p class="recap_text input_menu"></p>
+                            </li>
+                            <li>
+                                <p class="recap_titre">Date</p>
+                                <p class="recap_text input_date"></p>
+                            </li>
+                            <li>
+                                <p class="recap_titre">Heure</p>
+                                <p class="recap_text input_heure"></p>
+                            </li>
+                            <li>
+                                <p class="recap_titre">Adresse</p>
+                                <p class="recap_text input_adresse"></p>
+                            </li>
+                            <li>
+                                <p class="recap_titre">PRÉNOM ET NOM</p>
+                                <p class="recap_text input_nom"></p>
+                            </li>
+                            <li>
+                                <p class="recap_titre">email</p>
+                                <p class="recap_text input_email"></p>
+                            </li>
+                            <li>
+                                <p class="recap_titre">téléphone</p>
+                                <p class="recap_text input_phone"></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="row four button-simple">Valider et réserver</button>
                 </form>
             </div>
         </div>

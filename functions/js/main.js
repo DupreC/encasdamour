@@ -94,22 +94,30 @@ var $firstButton = $(".first"),
     $mail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 $firstButton.on("click", function(e){
-    $(this).text("Saving...").delay(900).queue(function(){
-        $ctr.addClass("two slider-two-active").removeClass("four slider-one-active");
-        $(".bloc_form").css("height", "500px");
-        $(".slider").css("height", "300px");
-        ScrollToReserver('reserver');
-    });
+    var calcul_menu =  parseFloat($('.input-number_menu_dolce_vita').val()) + parseFloat($('.input-number_menu_shanghai').val()) + parseFloat($('.input-number_menu_dune_de_sable').val()) + parseFloat($('.input-number_menu_art_de_vivre').val());
+    $(".slider-one .error_show").removeClass("error_show").addClass("error");
+    if ( calcul_menu == 2){
+        $(this).text("Saving...").delay(900).queue(function(){
+            $ctr.addClass("two slider-two-active").removeClass("four slider-one-active");
+            $(".bloc_form").css("height", "500px");
+            $(".slider").css("height", "300px");
+            ScrollToReserver('reserver');
+        });
+    } else{
+        $( ".slider-one .error" ).removeClass("error").addClass("error_show");
+        $(".slider-one .error_show").animate({opacity:1});
+        $(".slider-one .error_show").animate({opacity:0},2000)
+    }
     e.preventDefault();
 });
 $secondButton.on("click", function(e){
     if ($('.adresse').val() != ""){
-    $(this).text("Saving...").delay(900).queue(function(){
-        $ctr.addClass("three slider-three-active").removeClass("two slider-two-active slider-one-active");
-        $(".bloc_form").css("height", "850px");
-        $(".slider").css("height", "650px");
-        ScrollToReserver('reserver');
-    });
+        $(this).text("Saving...").delay(900).queue(function(){
+            $ctr.addClass("three slider-three-active").removeClass("two slider-two-active slider-one-active");
+            $(".bloc_form").css("height", "850px");
+            $(".slider").css("height", "650px");
+            ScrollToReserver('reserver');
+        });
     } else{
         $( ".slider-two .adresse" ).each().addClass("invalid");
         $( ".slider-two .invalid" ).each().addClass("error_show");
@@ -123,7 +131,7 @@ $thirdButton.on("click", function(e){
                 $ctr.addClass("four slider-four-active").removeClass("three slider-three-active slider-two-active slider-two-active");
                 $(".bloc_form").css("height", "650px");
                 $(".slider").css("height", "450px");
-            ScrollToReserver('reserver');
+                ScrollToReserver('reserver');
         });
     } else{
         $( ".slider-three input" ).each().addClass("invalid");
@@ -134,10 +142,37 @@ $thirdButton.on("click", function(e){
 });
 $fourButton.on("click", function(e){
     if ($mail.test($("#email").val()) && $( ".slider-four #name" ).val() != "" && $( ".slider-four #phone" ).val().length == 10) {
-    $(this).text("Saving...").delay(900).queue(function(){
-        $ctr.addClass("five slider-four-active").removeClass("four slider-four-active three slider-three-active slider-two-active slider-two-active");
-        ScrollToReserver('reserver');
+        $(this).text("Saving...").delay(900).queue(function(){
+            $ctr.addClass("five slider-four-active").removeClass("four slider-four-active three slider-three-active slider-two-active slider-two-active");
+            $(".bloc_form").css("height", "850px");
+            $(".slider").css("height", "650px");
+            ScrollToReserver('reserver');
     });
+        var adresse = $('.adresse').val();
+        var heure = $('.heure').val();
+        var jour = $('.cal-day__day--selected').html();
+        var mois = $('.cal-month__current').html();
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var phone = $('#phone').val();
+        var menu="";
+        $('.bloc_menu .input-number').each(function(){
+                var parent = $(this).parent();
+                var parent2 = $(parent).parent();
+            if ($(this).val() == 1){
+                menu += $(parent2+' h5').val();
+            } else if($(this).val() == 2){
+                menu = $(parent2+' h5').val();
+            }
+        });
+
+        $('.recap .input_menu').prepend('<span></span>');
+        $('.recap .input_date').prepend('<span>'+jour+' '+mois+'</span>');
+        $('.recap .input_heure').prepend('<span>'+heure+'</span>');
+        $('.recap .input_adresse').prepend('<span>'+adresse+'</span>');
+        $('.recap .input_nom').prepend('<span>'+name+'</span>');
+        $('.recap .input_email').prepend('<span>'+email+'</span>');
+        $('.recap .input_phone').prepend('<span>'+phone+'</span>');
     } else{
         $( ".slider-three input" ).each().addClass("invalid");
         $( ".slider-two .invalid" ).each().addClass("error_show");
@@ -145,6 +180,10 @@ $fourButton.on("click", function(e){
     }
     e.preventDefault();
 });
+
+/////////////////////////////////////////////
+// Recap
+// /////////////////////////////////////////////
 
 
 /////////////////////////////////////////////
@@ -231,6 +270,7 @@ $(document).ready(function () {
 /////////////////////////////////////////////////
 // switch images
 /////////////////////////////////////////////////
+var calcul;
 $('.petite_photo').on({
     'click': function () {
         var src = ($(this).attr('src'));
@@ -272,13 +312,22 @@ $('.petite_photo').on({
 
             function increment() {
                 var value = el[0].value;
+                var calcul_menu =  parseFloat($('.input-number_menu_dolce_vita').val()) + parseFloat($('.input-number_menu_shanghai').val()) + parseFloat($('.input-number_menu_dune_de_sable').val()) + parseFloat($('.input-number_menu_art_de_vivre').val());
                 value++;
-                if(!max || value <= max) {
+                if((!max || value <= max) && calcul_menu<2)  {
                     el[0].value = value++;
                 }
             }
         }
-    }
+    };
+    $(function(){
+        calcul =  parseFloat($('.input-number_menu_dolce_vita').val()) + parseFloat($('.input-number_menu_shanghai').val()) + parseFloat($('.input-number_menu_dune_de_sable').val()) + parseFloat($('.input-number_menu_art_de_vivre').val());
+        if (calcul>=2 ){
+            $('.increment').removeClass(".input-number-increment");
+        }else{
+            $('.increment').removeClass(".input-number-increment").addClass(".input-number-increment");
+        }
+    });
 })();
 var NumberMenu = ".input-number";
 inputNumber($('.input-number_menu_dolce_vita'));
