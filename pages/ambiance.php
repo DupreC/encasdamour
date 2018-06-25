@@ -120,7 +120,7 @@ $data_menu = get_menu($pdo);
                             foreach ($data_menu as $value) {
                             ?>
                             <li class="col-sm-5 col-sm-offset-1"><img src="./img/<?=$value['photo']?>" alt="<?=$value['nom']?>">
-                                <h5><?=$value['nom']?></h5>
+                                <h5 class="nom_menu"><?=$value['nom']?></h5>
                                 <ul>
                                     <li>
                                         <p class="titre_menu">ENTRÉE</p>
