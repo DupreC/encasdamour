@@ -156,17 +156,15 @@ $fourButton.on("click", function(e){
         var email = $('#email').val();
         var phone = $('#phone').val();
         var menu="";
-        $('.bloc_menu .input-number').each(function(){
-                var parent = $(this).parent();
-                var parent2 = $(parent).parent();
-            if ($(this).val() == 1){
-                menu += $(parent2+' h5').val();
-            } else if($(this).val() == 2){
-                menu = $(parent2+' h5').val();
-            }
-        });
+        if($('.nom_menu').hasClass('valeur1')) {
+            $('.valeur1').each(function () {
+                menu += "1x "+$(this).html() + "<br>";
+            });
+        }else if($('.nom_menu').hasClass('valeur2')){
+            menu ="2x "+$('.valeur2').html();
+        }
 
-        $('.recap .input_menu').prepend('<span></span>');
+        $('.recap .input_menu').prepend('<span>'+menu+'</span>');
         $('.recap .input_date').prepend('<span>'+jour+' '+mois+'</span>');
         $('.recap .input_heure').prepend('<span>'+heure+'</span>');
         $('.recap .input_adresse').prepend('<span>'+adresse+'</span>');
@@ -181,69 +179,6 @@ $fourButton.on("click", function(e){
     e.preventDefault();
 });
 
-/////////////////////////////////////////////
-// Recap
-// /////////////////////////////////////////////
-
-
-/////////////////////////////////////////////
-//Validation
-// /////////////////////////////////////////////
-// $(document).ready(function() {
-//     <!-- Real-time Validation -->
-//     <!--Name can't be blank-->
-//     $('#contact_name').on('input', function() {
-//         var input=$(this);
-//         var is_name=input.val();
-//         if(is_name){input.removeClass("invalid").addClass("valid");}
-//         else{input.removeClass("valid").addClass("invalid");}
-//     });
-//
-//     <!--Email must be an email -->
-//     $('#contact_email').on('second', function() {
-//         var input=$(this);
-//         var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-//         var is_email=re.test(input.val());
-//         if(is_email){input.removeClass("invalid").addClass("valid");}
-//         else{input.removeClass("valid").addClass("invalid");}
-//     });
-//
-//     <!--Website must be a website -->
-//     $('.adresse').on('input', function() {
-//         var input=$(this);
-//         var is_adresse=input.val();
-//         if(is_adresse){input.removeClass("invalid").addClass("valid");}
-//         else{input.removeClass("valid").addClass("invalid");}
-//     });
-//
-//     <!--Message can't be blank -->
-//     $('#contact_message').keyup(function(event) {
-//         var input=$(this);
-//         var message=$(this).val();
-//         console.log(message);
-//         if(message){input.removeClass("invalid").addClass("valid");}
-//         else{input.removeClass("valid").addClass("invalid");}
-//     });
-//
-//     <!-- After Form Submitted Validation-->
-//     $("dsqd").click(function(event){
-//         var form_data=$(".slider-two").serializeArray();
-//         var error_free=true;
-//         for (var input in form_data){
-//             var element=$("form"+form_data[input]['name']);
-//             var valid=element.hasClass("valid");
-//             var error_element=$("span", element.parent());
-//             if (!valid){error_element.removeClass("error").addClass("error_show"); error_free=false;}
-//             else{error_element.removeClass("error_show").addClass("error");}
-//         }
-//         if (!error_free){
-//             event.preventDefault();
-//         }
-//         else{
-//             alert('No errors: Form will be submitted');
-//         }
-//     });
-// });
 /////////////////////////////////////////////
 //Menu burger
 /////////////////////////////////////////////
@@ -293,7 +228,7 @@ $('.petite_photo').on({
         els.dec = el.prev();
         els.inc = el.next();
 
-        el.each(function() {
+        el.each(function () {
             init($(this));
         });
 
@@ -305,17 +240,52 @@ $('.petite_photo').on({
             function decrement() {
                 var value = el[0].value;
                 value--;
-                if(!min || value >= min) {
+                if (!min || value >= min) {
                     el[0].value = value;
+                    if ($('.input-1').val() == 1) {
+                        $('.nom_menu-1').removeClass('valeur2').addClass('valeur1');
+                    } else if ($('.input-2').val() == 1) {
+                        $('.nom_menu-2').removeClass('valeur2').addClass('valeur1');
+                    } else if ($('.input-3').val() == 1) {
+                        $('.nom_menu-3').removeClass('valeur2').addClass('valeur1');
+                    } else if ($('.input-4').val() == 1) {
+                        $('.nom_menu-4').removeClass('valeur2').addClass('valeur1');
+                    } else if ($('.input-1').val() == 0) {
+                        $('.nom_menu-1').removeClass('valeur1');
+                    } else if ($('.input-2').val() == 0) {
+                        $('.nom_menu-2').removeClass('valeur1');
+                    } else if ($('.input-3').val() == 0) {
+                        $('.nom_menu-3').removeClass('valeur1');
+                    } else if ($('.input-4').val() == 0) {
+                        $('.nom_menu-4').removeClass('valeur1');
+                    }
                 }
             }
 
             function increment() {
                 var value = el[0].value;
-                var calcul_menu =  parseFloat($('.input-number_menu_dolce_vita').val()) + parseFloat($('.input-number_menu_shanghai').val()) + parseFloat($('.input-number_menu_dune_de_sable').val()) + parseFloat($('.input-number_menu_art_de_vivre').val());
+                var calcul_menu = parseFloat($('.input-number_menu_dolce_vita').val()) + parseFloat($('.input-number_menu_shanghai').val()) + parseFloat($('.input-number_menu_dune_de_sable').val()) + parseFloat($('.input-number_menu_art_de_vivre').val());
                 value++;
-                if((!max || value <= max) && calcul_menu<2)  {
+                if ((!max || value <= max) && calcul_menu < 2) {
                     el[0].value = value++;
+                    if ($('.input-1').val() == 1) {
+                        $('.nom_menu-1').addClass('valeur1')
+                    } else if ($('.input-2').val() == 1) {
+                        $('.nom_menu-2').addClass('valeur1')
+                    } else if ($('.input-3').val() == 1) {
+                        $('.nom_menu-3').addClass('valeur1')
+                    } else if ($('.input-4').val() == 1) {
+                        $('.nom_menu-4').addClass('valeur1')
+                    }else if ($('.input-1').val() == 2) {
+                        $('.nom_menu-1').removeClass('valeur1').addClass('valeur2')
+                    } else if ($('.input-2').val() == 2) {
+                        $('.nom_menu-2').removeClass('valeur1').addClass('valeur2')
+                    } else if ($('.input-3').val() == 2) {
+                        $('.nom_menu-3').removeClass('valeur1').addClass('valeur2')
+                    } else if ($('.input-4').val() == 2) {
+                        $('.nom_menu-4').removeClass('valeur1').addClass('valeur2')
+                    }
+
                 }
             }
         }

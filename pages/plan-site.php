@@ -9,7 +9,7 @@ include '../header_pages.php';
     ?>
 </div>
     <div class="bloc_plan-site">
-        <h2>Plant du site</h2>
+        <h2>Plan du site</h2>
         <h3>Acceuil</h3>
         <h3>Les ambiances</h3>
         <h3>L’équipe d’amour</h3>

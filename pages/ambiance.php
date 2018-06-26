@@ -117,10 +117,12 @@ $data_menu = get_menu($pdo);
                         <h4>Choisis deux menus</h4>
                         <ul class="row">
                             <?php
+                            $i=0;
                             foreach ($data_menu as $value) {
+                                $i++;
                             ?>
                             <li class="col-sm-5 col-sm-offset-1"><img src="./img/<?=$value['photo']?>" alt="<?=$value['nom']?>">
-                                <h5><?=$value['nom']?></h5>
+                                <h5 class="nom_menu-<?=$i?>"><?=$value['nom']?></h5>
                                 <ul>
                                     <li>
                                         <p class="titre_menu">ENTRÉE</p>
@@ -137,7 +139,7 @@ $data_menu = get_menu($pdo);
                                 </ul>
                                 <div class="row number">
                                     <p class="col-sm-2 col-sm-offset-3 input-number-decrement decrement">–</p>
-                                    <input required class="col-sm-2 require input-number input-number_<?=$value['code_menu']?>" type="text" value="0" min="0" max="2">
+                                    <input required class="col-sm-2 require input-number input-number_<?=$value['code_menu']?> input-<?=$i?>" type="text" value="0" min="0" max="2">
                                     <p class="col-sm-2 input-number-increment increment">+</p>
                                 </div>
                             </li>
