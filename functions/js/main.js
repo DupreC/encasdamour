@@ -228,7 +228,7 @@ $('.petite_photo').on({
         els.dec = el.prev();
         els.inc = el.next();
 
-        el.each(function() {
+        el.each(function () {
             init($(this));
         });
 
@@ -240,27 +240,52 @@ $('.petite_photo').on({
             function decrement() {
                 var value = el[0].value;
                 value--;
-                if(!min || value >= min) {
+                if (!min || value >= min) {
                     el[0].value = value;
-                    if (el[0].value==1){
-                        $('.nom_menu').removeClass('valeur2').addClass('valeur1');
-                    }else {
-                        $('.nom_menu').removeClass('valeur1');
+                    if ($('.input-1').val() == 1) {
+                        $('.nom_menu-1').removeClass('valeur2').addClass('valeur1');
+                    } else if ($('.input-2').val() == 1) {
+                        $('.nom_menu-2').removeClass('valeur2').addClass('valeur1');
+                    } else if ($('.input-3').val() == 1) {
+                        $('.nom_menu-3').removeClass('valeur2').addClass('valeur1');
+                    } else if ($('.input-4').val() == 1) {
+                        $('.nom_menu-4').removeClass('valeur2').addClass('valeur1');
+                    } else if ($('.input-1').val() == 0) {
+                        $('.nom_menu-1').removeClass('valeur1');
+                    } else if ($('.input-2').val() == 0) {
+                        $('.nom_menu-2').removeClass('valeur1');
+                    } else if ($('.input-3').val() == 0) {
+                        $('.nom_menu-3').removeClass('valeur1');
+                    } else if ($('.input-4').val() == 0) {
+                        $('.nom_menu-4').removeClass('valeur1');
                     }
                 }
             }
 
             function increment() {
                 var value = el[0].value;
-                var calcul_menu =  parseFloat($('.input-number_menu_dolce_vita').val()) + parseFloat($('.input-number_menu_shanghai').val()) + parseFloat($('.input-number_menu_dune_de_sable').val()) + parseFloat($('.input-number_menu_art_de_vivre').val());
+                var calcul_menu = parseFloat($('.input-number_menu_dolce_vita').val()) + parseFloat($('.input-number_menu_shanghai').val()) + parseFloat($('.input-number_menu_dune_de_sable').val()) + parseFloat($('.input-number_menu_art_de_vivre').val());
                 value++;
-                if((!max || value <= max) && calcul_menu<2)  {
+                if ((!max || value <= max) && calcul_menu < 2) {
                     el[0].value = value++;
-                    if (el[0].value<2){
-                        $('.nom_menu').addClass('valeur1')
-                    }else{
-                        $('.nom_menu').removeClass('valeur1').addClass('valeur2')
+                    if ($('.input-1').val() == 1) {
+                        $('.nom_menu-1').addClass('valeur1')
+                    } else if ($('.input-2').val() == 1) {
+                        $('.nom_menu-2').addClass('valeur1')
+                    } else if ($('.input-3').val() == 1) {
+                        $('.nom_menu-3').addClass('valeur1')
+                    } else if ($('.input-4').val() == 1) {
+                        $('.nom_menu-4').addClass('valeur1')
+                    }else if ($('.input-1').val() == 2) {
+                        $('.nom_menu-1').removeClass('valeur1').addClass('valeur2')
+                    } else if ($('.input-2').val() == 2) {
+                        $('.nom_menu-2').removeClass('valeur1').addClass('valeur2')
+                    } else if ($('.input-3').val() == 2) {
+                        $('.nom_menu-3').removeClass('valeur1').addClass('valeur2')
+                    } else if ($('.input-4').val() == 2) {
+                        $('.nom_menu-4').removeClass('valeur1').addClass('valeur2')
                     }
+
                 }
             }
         }
