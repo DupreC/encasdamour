@@ -664,6 +664,21 @@ input.invalid{
 input.valid{
     border: 2px solid green !important;
 }
+.slider-form {
+    position: relative;
+}
+.slider-form .retour{
+    position: absolute;
+    top: 11px;
+    left: 60px;
+    font-weight: 500;
+    font-size: 13px;
+    color: #4D43B0;
+    cursor: pointer;
+}
+.slider-form .retour:hover{
+    color: #6D5FFC;
+}
 /***Code_postal***/
 #code_postal input{
     width: 400px;
@@ -850,7 +865,6 @@ input.valid{
     color: #868E95;
 }
 .recap ul li .recap_text {
-    line-height: 46px;
     font-size: 12px;
     color: #000000;
 }
