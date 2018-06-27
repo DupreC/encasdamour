@@ -1,4 +1,24 @@
 <?php
+/////////////////////////////////////////////////
+// Insert commande
+/////////////////////////////////////////////////
+try{
+    $pdo = new PDO('mysql:dbname=duprec_encasdamour;host:localhost:3306;charset=utf8','root','');
+    $pdo->exec('SET NAMES utf8');
+} catch( PDOException $e){
+    die("Erreur! ".$e->getMessage());
+}
+
+$sql = "INSERT INTO
+ commande1 (pack, menu1, menu2, date_time, heure, adresse, nom, email, telephone)
+        VALUES ('".$_POST["pack"]."','".$_POST["menu"]."','".$_POST["menus"]."','".$_POST["date_time"]."','".$_POST["heure"]."','".$_POST["adresse"]."','".$_POST["nom"]."','".$_POST["email"]."','".$_POST["phone"]."')";
+
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+
+/////////////////////////////////////////////////
+// Envois du mail de récap
+/////////////////////////////////////////////////
 
 $mail = $_POST["email"]; // Déclaration de l'adresse de destination.
 if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail)) // On filtre les serveurs qui rencontrent des bogues.
@@ -15,7 +35,7 @@ $message_html = "
 <html>
     <head></head>
     <body>
-    <h1>Bonjour X !</h1>
+    <h1>Bonjour ".$_POST["nom"]." !</h1>
     <p>Ta réservation a bien été pris en compte par le service Encas d’amour. <br>
 On revient très vite vers toi pour te dire si tu fais partie de notre sélection de beta testeurs pour bénéficier d’un dîner gratuit. ! </p>
 <br>
@@ -40,8 +60,8 @@ $sujet = "Confirmation réservation";
 //=========
 
 //=====Création du header de l'e-mail.
-$header = "From: \"WeaponsB\"<dupre.col@gmail.com>".$passage_ligne;
-$header.= "Reply-to: \"WeaponsB\" <dupre.col@gmail.com>".$passage_ligne;
+$header = "From: \"Encas d'amour\"<dupre.col@gmail.com>".$passage_ligne;
+$header.= "Reply-to: \"Encas d'amour\" <dupre.col@gmail.com>".$passage_ligne;
 $header.= "MIME-Version: 1.0".$passage_ligne;
 $header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
 //==========
@@ -68,18 +88,5 @@ mail($mail,$sujet,$message,$header);
 //==========
 
 
-try{
-    $pdo = new PDO('mysql:dbname=duprec_encasdamour;host:localhost:3306;charset=utf8','root','');
-    $pdo->exec('SET NAMES utf8');
-} catch( PDOException $e){
-    die("Erreur! ".$e->getMessage());
-}
-
-$sql = "INSERT INTO
- commande1 (pack, menu1, menu2, date_time, heure, adresse, nom, email, telephone)
-        VALUES ('".$_POST["pack"]."','".$_POST["menu"]."','".$_POST["menus"]."','".$_POST["date_time"]."','".$_POST["heure"]."','".$_POST["adresse"]."','".$_POST["nom"]."','".$_POST["email"]."','".$_POST["phone"]."')";
-
-$stmt = $pdo->prepare($sql);
-$stmt->execute();
 //
 //header('Location: /index.php');

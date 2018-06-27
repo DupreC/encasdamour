@@ -8,6 +8,7 @@ body{
     background-color: #FEF5F0;
 }
 /***********************Header************************/
+
 header .nav li a {
     color: #FF6B77;
 }
@@ -20,6 +21,39 @@ header .nav li .button-simple{
 header .nav li .button-simple:hover{
     background-color: #FFA0A4;
     color: #fff;
+}
+header .nav li:hover{
+    border-bottom: 3px solid #FFA0A4;
+}
+header .nav .button_experience:hover{
+    border-bottom: none;
+}
+header .nav .packs ul{
+    display: none;
+    position: absolute;
+    width: 280px;
+    border: 1px solid #FFA0A4;
+    height: 202px;
+    margin-top: 3px;
+    z-index: 20;
+}
+header .nav .packs ul li{
+    display: flex;
+    margin: auto 0;
+    background: #FFFFFF;
+    border-bottom: 1px solid #EBEBED;;
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 40px;
+}
+header .nav .packs:hover ul{
+    display: block;
+}
+header .nav .packs li a{
+    margin: auto 15px;
+    font-size: 13px;
+    width: 100%;
+    padding: 12px 0;
 }
 
 /***********************Page_equipe************************/
@@ -929,7 +963,55 @@ input.valid{
     margin-bottom: 40px;
 }
 
+    /*****************Remerciment commande*********************/
+.remerciement{
+    text-align: center;
+}
+
+.remerciement h2{
+    font-weight: 600;
+    font-size: 64px;
+    color: #4D43B0;
+    margin-bottom: 20px;
+}
+
+.remerciement p:nth-child(2){
+    font-weight: 600;
+    line-height: 24px;
+    font-size: 15px;
+    color: #4D43B0;
+    margin-bottom: 15px;
+}
+.remerciement p:nth-child(3){
+    line-height: 21px;
+    font-size: 13px;
+    color: #9B9B9B;
+    margin-bottom: 40px;
+}
+.remerciement p:last-child{
+    margin-top: 60px;
+}
+.remerciement a{
+    margin-top: 60px;
+    background-color: #202E77;
+    border: none;
+    padding: 11px 24px;
+}
+.remerciement a:hover{
+    color: #fff;
+}
+
 /*****************Footer*********************/
 footer{
     background-color: transparent;
+}
+
+@media screen and (max-width: 990px) {
+
+    .remerciement{
+        width: 100%;
+    }
+    .remerciement p:last-child{
+        margin-bottom: 100px;
+    }
 }
