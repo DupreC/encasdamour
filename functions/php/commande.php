@@ -89,4 +89,4 @@ mail($mail,$sujet,$message,$header);
 
 
 //
-//header('Location: /index.php');
+header('Location: /remerciement.php');

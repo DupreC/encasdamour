@@ -259,11 +259,9 @@ $(".menu-toggle").on('click', function () {
 
 
 /////////////////////////////////////////////
-// toggle nav
+// addclass image home bloc ambiance
 /////////////////////////////////////////////
-// $('.packs ul li').hover(function () {
-//    $('.packs ul').show();
-// });
+$('.bloc_choix-ambiances_home ul li:first-child').addClass('col-sm-offset-1');
 
 
 /////////////////////////////////////////////////
