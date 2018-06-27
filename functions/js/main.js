@@ -195,35 +195,51 @@ $fourButton.on("click", function(e){
         var email = $('#email').val();
         var phone = $('#phone').val();
         var menu="";
+        var menus="";
         
         if ($('.menu_dolce_vita input').val() ==1){
-            menu += "1x "+$('.menu_dolce_vita h5').html()+'<br>';
+            menu += "1x "+$('.menu_dolce_vita h5').html()+'\n';
         }else if ($('.menu_dolce_vita input').val() ==2){
             menu += "2x "+$('.menu_dolce_vita h5').html();
         }
         if ($('.menu_shanghai input').val() ==1){
-            menu += "1x "+$('.menu_shanghai h5').html()+'<br>';
+            if (menu != ""){
+                menus = "1x "+$('.menu_shanghai h5').html()+'\n';
+            }else {
+                menu += "1x " + $('.menu_shanghai h5').html() + '\n';
+            }
         }else if ($('.menu_shanghai input').val() ==2){
             menu += "2x "+$('.menu_shanghai h5').html();
         }
         if ($('.menu_dune_de_sable input').val() ==1){
-            menu += "1x "+$('.menu_dune_de_sable h5').html()+'<br>';
+            if (menu != ""){
+                menus = "1x "+$('.menu_dune_de_sable h5').html()+'\n';
+            }else {
+                menu += "1x " + $('.menu_dune_de_sable h5').html() + '\n';
+            }
         }else if ($('.menu_dune_de_sable input').val() ==2){
             menu += "2x "+$('.menu_dune_de_sable h5').html();
         }
         if ($('.menu_art_de_vivre input').val() ==1){
-            menu += "1x "+$('.menu_art_de_vivre h5').html()+'<br>';
+            if (menu != ""){
+                menus = "1x "+$('.menu_art_de_vivre h5').html()+'\n';
+            }else {
+                menu += "1x " + $('.menu_art_de_vivre h5').html() + '\n';
+            }
         }else if ($('.menu_art_de_vivre input').val() ==2){
             menu += "2x "+$('.menu_art_de_vivre h5').html();
         }
 
-        $('.recap .input_menu').prepend('<span>'+menu+'</span>');
-        $('.recap .input_date').prepend('<span>'+jour+' '+mois+'</span>');
-        $('.recap .input_heure').prepend('<span>'+heure+'</span>');
-        $('.recap .input_adresse').prepend('<span>'+adresse+'</span>');
-        $('.recap .input_nom').prepend('<span>'+name+'</span>');
-        $('.recap .input_email').prepend('<span>'+email+'</span>');
-        $('.recap .input_phone').prepend('<span>'+phone+'</span>');
+        $('.recap .input_menu').prepend('<input name="menu" type="text" readonly value="'+menu+'"><br><input class="menus" name="menus" type="text" readonly value="'+menus+'">');
+        $('.recap .input_date').prepend('<input name="date_time " type="text" readonly value="'+jour+' '+mois+'">');
+        $('.recap .input_heure').prepend('<input name="heure" type="text" readonly value="'+heure+'">');
+        $('.recap .input_adresse').prepend('<input name="adresse" type="text" readonly value="'+adresse+'">');
+        $('.recap .input_nom').prepend('<input name="nom" type="text" readonly value="'+name+'">');
+        $('.recap .input_email').prepend('<input name="email" type="text" readonly value="'+email+'">');
+        $('.recap .input_phone').prepend('<input name="phone" type="text" readonly value="'+phone+'">');
+        if (menus == ""){
+            $('.recap .menus').hide();
+        }
     } else{
         $( ".slider-three input" ).each().addClass("invalid");
         $( ".slider-two .invalid" ).each().addClass("error_show");

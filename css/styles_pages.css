@@ -868,6 +868,27 @@ input.valid{
     font-size: 12px;
     color: #000000;
 }
+.recap ul li [type="text"] {
+    background: transparent;
+    border: none;
+    width: 300px;
+    text-align: right;
+    padding: 0;
+    margin: auto;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    -webkit-border-radius: initial;
+    -moz-border-radius: initial;
+    border-radius: initial;
+}
+.recap ul li [type="text"]:focus{
+    background: transparent;
+    border: none;
+    width: 300px;
+    text-align: right;
+    padding: 0;
+    margin: auto;
+}
 
 /*****************Mentions légales*********************/
 .bloc_mentions-legales h2{

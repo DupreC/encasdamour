@@ -82,24 +82,34 @@ $data_menu = get_menu($pdo);
     <div class="contain_form slider-one-active">
         <div class="steps">
             <div class="step step-one">
-                <div class="liner"></div>
-                <span>Lieux</span>
+                <div class="img-fil_ariane">
+                    <img src="./img/menu.png" alt="menu">
+                    <span>menu</span>
+                </div>
             </div>
             <div class="step step-two">
-                <div class="liner"></div>
-                <span>Menu</span>
+                <div class="img-fil_ariane">
+                    <img src="./img/localisation.png" alt="localisation">
+                    <span>Localisation</span>
+                </div>
             </div>
             <div class="step step-three">
-                <div class="liner"></div>
-                <span>Date</span>
+                <div class="img-fil_ariane">
+                    <img src="./img/date_heure.png" alt="date_heure">
+                    <span>Date & heure</span>
+                </div>
             </div>
             <div class="step step-four">
-                <div class="liner"></div>
-                <span>Vous</span>
+                <div class="img-fil_ariane">
+                    <img src="./img/toi.png" alt="toi">
+                    <span>Toi</span>
+                </div>
             </div>
             <div class="step step-five">
-                <div class="liner"></div>
-                <span>Recap</span>
+                <div class="img-fil_ariane">
+                    <img src="./img/recap.png" alt="recap">
+                    <span>Récapitulatif</span>
+                </div>
             </div>
         </div>
         <div class="line">
@@ -184,14 +194,14 @@ $data_menu = get_menu($pdo);
                         <button class="row four button-simple">Valider</button>
                     </div>
                 </form>
-                <form class="slider-form slider-five recap">
+                <form class="slider-form slider-five recap" action="./functions/php/commande.php" method="post">
                     <a class="retour">< Retour</a>
                     <div class="row">
                         <h4>Récapitulatif de ta résa</h4>
                         <ul class="col-sm-8 col-sm-offset-2">
                             <li>
                                 <p class="recap_titre">Pack </p>
-                                <p class="recap_text pack"><span><?=$data_ambiance['nom']?></span></p>
+                                <p class="recap_text pack"><input name="pack" type="text" readonly value="<?=$data_ambiance['nom']?>"></p>
                             </li>
                             <li>
                                 <p class="recap_titre">Menu</p>
@@ -223,7 +233,7 @@ $data_menu = get_menu($pdo);
                             </li>
                         </ul>
                     </div>
-                    <button class="row four button-simple">Valider et réserver</button>
+                    <button class="row five button-simple">Valider et réserver</button>
                 </form>
             </div>
         </div>
