@@ -7,24 +7,9 @@ $data_ambiance = get_ambiance($pdo);
     <div class="bloc_accueil_home row no-padding">
         <div class="col-sm-6 no-padding">
             <div class="col-md-10 right no-padding">
-                <h2>On t’organise le plus romantique des dîners</h2>
-                <p class="col-md-11">On te livre tout ce dont tu as besoin pour une belle soirée en amoureux, histoire de passer un moment mémorable.</p>
-                <div id="mc_embed_signup">
-                    <form action="https://Encasdamour.us18.list-manage.com/subscribe/post?u=d4efdf95ebcd8195d51a30992&amp;id=fef3a2338e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
-                        <div id="mc_embed_signup_scroll">
-                            <h3>Inscris-toi à notre Newsletter</h3>
-                            <div class="mc-field-group input">
-                                <input placeholder="johndoe@mail.com" name="EMAIL" class="required email mce_inline_error" id="mce-EMAIL" aria-required="true" aria-invalid="true" type="email">
-                                <div for="mce-EMAIL" class="mce_inline_error">Champ requis.</div></div>
-                            <div class="input"><input value="Envoyer" name="subscribe" id="mc-embedded-subscribe" class="button button-simple" type="submit"></div>
-                        </div>
-                        <div id="mce-responses" class="clear">
-                            <div class="response" id="mce-error-response" style="display:none"></div>
-                            <div class="response" id="mce-success-response" style="display:none"></div>
-                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input name="b_d4efdf95ebcd8195d51a30992_fef3a2338e" tabindex="-1" value="" type="text"></div>
-                    </form>
-                </div>
+                <h2>Cherches plus, ton plus beau cadeau, c’est nous !</h2>
+                <p class="col-md-11">On te livre tout ce dont tu as besoin pour un moment en amoureux unique et inoubliable. </p>
+                <a class="button-simple" href="/les_packs">Tentez l’expérience</a>
             </div>
         </div>
         <div class="col-sm-1 cercle">
@@ -45,7 +30,7 @@ $data_ambiance = get_ambiance($pdo);
         <ul class="">
             <li class="col-lg-2 col-sm-3 col-lg-offset-2 col-sm-offset-1">
                 <img src="img/pack_home.png " alt="ambiance">
-                <h5>Une ambiance</h5>
+                <h5>Une Boxpack</h5>
                 <p>Choisis le pack qui correspond le plus à ton couple</p>
             </li>
             <li class="col-lg-2 col-sm-3 col-sm-offset-1">
@@ -56,7 +41,7 @@ $data_ambiance = get_ambiance($pdo);
             <li class="col-lg-2 col-sm-3 col-sm-offset-1">
                 <img src="img/picto_calendar.png" alt="date">
                 <h5>Une date</h5>
-                <p>Dis-nous quand et à quelle heure tu veux être livré(e).</p>
+                <p>Dis-nous quand et à quelle heure tu veux qu’on te livre ta Boxpack.</p>
             </li>
         </ul>
         <div class="ellipse">

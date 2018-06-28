@@ -1,38 +1,8 @@
-<script>
-    window.fbMessengerPlugins = window.fbMessengerPlugins || {
-        init: function () {
-            FB.init({
-                appId            : '1678638095724206',
-                autoLogAppEvents : true,
-                xfbml            : true,
-                version          : 'v2.10'
-            });
-        }, callable: []
-    };
-    window.fbAsyncInit = window.fbAsyncInit || function () {
-        window.fbMessengerPlugins.callable.forEach(function (item) { item(); });
-        window.fbMessengerPlugins.init();
-    };
-    setTimeout(function () {
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) { return; }
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    }, 0);
-</script>
-
-<div
-        class="fb-customerchat"
-        page_id="251794062063770"
-        ref="">
-</div>
 
 <?php
 include '../header_pages.php';
+?>
+<?php
 include "../functions/php/main.php";
 $ambiance = $_GET['ambiance'];
 $data_ambiance = get_ambianceSlug($pdo,$ambiance);
@@ -55,7 +25,7 @@ $data_menu = get_menu($pdo);
                 <li class="desktop col-md-offset-1 col-md-5">
                     <div class="col-md-offset-2 col-md-10">
                         <p class="grande_photo"><img src="./img/img-ambiances/<?=$data_ambiance['photo1']?>" alt="grande_photos"></p>
-                        <p class="petites_photos"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo1']?>" alt="photos1"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo2']?>" alt="photos2"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo3']?>" alt="photos4"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo2']?>" alt="photos2"></p>
+                        <p class="petites_photos"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo1']?>" alt="photos1"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo2']?>" alt="photos2"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo3']?>" alt="photos4"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo4']?>" alt="photos4"></p>
 <!--                        <div class="sos">-->
 <!--                            <h3>SOS</h3>-->
 <!--                            <h4>Tu as un doute ? Par ici le coup de pouce ! </h4>-->
@@ -113,7 +83,7 @@ $data_menu = get_menu($pdo);
                             </li>
                         </ul>
                     </div>
-                    <p><a class="button-simple"  href="#">Réserver</a></p>
+<!--                    <p><a class="button-simple"  href="#">Réserver</a></p>-->
                 </li>
             </ul>
         </div>

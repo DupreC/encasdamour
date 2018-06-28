@@ -25,9 +25,6 @@ header .nav li .button-simple:hover{
 header .nav li:hover{
     border-bottom: 3px solid #FFA0A4;
 }
-header .nav .button_experience:hover{
-    border-bottom: none;
-}
 
 /***********************Page_ambiance************************/
 /***************ambiance**************/
@@ -404,7 +401,7 @@ button:active,
 }
 
 .contain_form.slider-one-active .dot.one {
-    background: #5892fc;
+    background: #4D43B0;
 }
 
 .line .dot.two {
@@ -511,7 +508,7 @@ button:active,
 .slider-form h3 .balapa {
     font-family: 'Pacifico', sans-serif;
     display: inline-block;
-    color: #5892fc;
+    color: #4D43B0;
     text-decoration: none
 }
 
@@ -558,7 +555,7 @@ label.radio {
 }
 
 .contain_form.two .line .dot.two {
-    background: #5892fc;
+    background: #4D43B0;
 }
 
 .contain_form.two .slider {
@@ -583,7 +580,7 @@ label.radio {
 }
 
 .contain_form.three .line .dot.three {
-    background: #5892fc;
+    background: #4D43B0;
 }
 
 .contain_form.three .slider {
@@ -608,17 +605,14 @@ label.radio {
     left: 75%;
     -webkit-animation: .3s anim 1;
 }
-
 .contain_form.four .line .dot.four {
-    background: #5892fc;
+    background: #4D43B0;
 }
-
 .contain_form.four .slider {
     -webkit-transform: translate(-2100px);
     -ms-transform: translate(-2100px);
     transform: translate(-2100px);
 }
-
 .contain_form.four .step-two,
 .contain_form.four .step-three,
 .contain_form.four .step-four {
@@ -638,7 +632,7 @@ label.radio {
 }
 
 .contain_form.five .line .dot.five {
-    background: #5892fc;
+    background: #4D43B0;
 }
 
 .contain_form.five .slider {
@@ -980,6 +974,7 @@ input.valid{
 /*****************Footer*********************/
 footer{
     background-color: transparent;
+    position:relative;
 }
 @media screen and (max-width:1280px) {
     .bloc_ambiance > ul > li {

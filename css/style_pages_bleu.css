@@ -73,9 +73,9 @@
 }
 .equipe_forme2 img{
     position:absolute;
-    height:579px;
     bottom:-208px;
-    z-index:0;
+    width: 286px;
+    height: auto;
 }
 
 .background-body{
@@ -159,84 +159,100 @@
     margin-top: 50px;
 }
 
+footer ul #mc_embed_signup_scroll h3 {
+     color: #fff;
+}
+
 /******************************************************************************/
 /**************************Responsive******************************************/
 /******************************************************************************/
 
 /************************Equipe***********************/
-@media screen and (min-width: 1700px) {
+@media screen and (min-width: 1599px) {
     .background-body{
-        background-color:#4D43B0;
-        background-image:url("../img/forme_header_mages.png") ;
-        background-repeat: no-repeat;
-        background-position: top right;
         background-size: 26%;
     }
     .container{
         width:1620px;
     }
     .cercle1_equipe{
-        left: 400px;
+        left: 220px;
     }
     .cercle2_equipe{
-        left: 480px;
+        left: 300px;
     }
-
-}
-
-@media screen and (max-width:1280px){
-    .bloc_equipe{
-        text-align: center;
-    }
-
     .bloc_equipe h2{
-        line-height: normal;
-        font-size: 28px;
-        text-align: center;
-        color: #FF6B77;
+        font-size: 40px;
         padding-top:15px;
     }
     .bloc_equipe>h3{
         font-weight: normal;
-        line-height: normal;
-        font-size: 18px;
-        text-align: center;
-        color: #FFFFFF;
+        font-size: 25px;
         margin-bottom: 42px;
     }
     .bloc_equipe p{
         font-weight: 600;
-        line-height: normal;
-        text-align: center;
         font-size:15px;
-        color: #FFFFFF;
         margin-top:-30px;
-        text-transform: uppercase;
         margin-bottom:55px;
     }
     .bloc_equipe h4{
         font-weight: 600;
         line-height: normal;
         font-size: 17px;
-        margin-bottom:0px;
+        margin-bottom:0;
     }
     .bloc_equipe h5{
         font-weight: 600;
         line-height: normal;
         font-size: 13px;
-        margin-top:0px;
-        color: #FF6B77;
+        margin-top:0;
 
     }
     .bloc_equipe ul li p{
         font-weight: normal;
-        line-height: normal;
         font-size: 15px;
         color: #FFFFFF;
-        text-transform:none;
-        margin-top:0px;
+        margin-top:0;
         margin-bottom:41px;
-        text-align:left;
+    }
+}
+
+@media screen and (max-width:1280px){
+    .bloc_equipe h2{
+        font-size: 28px;
+        padding-top:15px;
+    }
+    .bloc_equipe>h3{
+        font-weight: normal;
+        font-size: 18px;
+        margin-bottom: 42px;
+    }
+    .bloc_equipe p{
+        font-weight: 600;
+        font-size:15px;
+        margin-top:-30px;
+        margin-bottom:55px;
+    }
+    .bloc_equipe h4{
+        font-weight: 600;
+        line-height: normal;
+        font-size: 17px;
+        margin-bottom:0;
+    }
+    .bloc_equipe h5{
+        font-weight: 600;
+        line-height: normal;
+        font-size: 13px;
+        margin-top:0;
+
+    }
+    .bloc_equipe ul li p{
+        font-weight: normal;
+        font-size: 15px;
+        color: #FFFFFF;
+        margin-top:0;
+        margin-bottom:41px;
     }
     .bloc_equipe ul{
         margin-bottom:70px;
@@ -259,7 +275,6 @@
         position:absolute;
         height:419px;
         bottom:-208px;
-        z-index:0;
     }
     .cercle1_equipe{
         position: absolute;
@@ -276,19 +291,13 @@
     }
     .bloc_equipe ul li p{
         font-weight: normal;
-        line-height: normal;
         font-size: 11px;
-        color: #FFFFFF;
-        text-transform:none;
-        margin-top:0px;
+        margin-top:0;
         margin-bottom:41px;
-        text-align:left;
     }
     .bloc_equipe h2{
         line-height: normal;
         font-size: 28px;
-        text-align: center;
-        color: #FF6B77;
         padding-top:15px;
     }
     .bloc_equipe h4{
@@ -300,10 +309,6 @@
         font-weight:normal;
     }
     .background-body{
-        background-color:#4D43B0;
-        background-image:url("../img/forme_header_mages.png") ;
-        background-repeat: no-repeat;
-        background-position: top right;
         background-size: 25%;
     }
 }
@@ -313,63 +318,64 @@
     }
     .cercle1_equipe{
         position: absolute;
-        left: 50px;
-        top: 335px;
+        left: 10px;
+        top: 237px;
+        height: 75px;
+        width: 75px;
     }
     .cercle2_equipe{
         position: absolute;
-        left: 130px;
-        top: 285px;
+        left: 57px;
+        top: 200px;
+        width:60px;
+        height:60px;
     }
     .bloc_equipe h2{
-        line-height: normal;
-        font-size: 40px;
-        text-align: center;
-        color: #FF6B77;
+        font-size: 20px;
         padding-top:15px;
         font-weight: 600;
     }
     .bloc_equipe>h3{
-        font-weight: normal;
-        line-height: normal;
-        font-size: 35px;
-        text-align: center;
-        color: #FFFFFF;
+        font-size: 14px;
         margin-bottom: 55px;
     }
     .bloc_equipe p{
         font-weight: 600;
-        line-height: normal;
-        text-align: center;
-        font-size:21px;
-        color: #FFFFFF;
-        margin-top:-30px;
-        text-transform: uppercase;
-        margin-bottom:105px;
+        font-size:14px;
+        margin-top:-39px;
+        margin-bottom:60px;
     }
     .bloc_equipe h4{
-        font-size: 32px;
+        font-size: 14px;
         margin-bottom:0;
     }
     .bloc_equipe h5{
-        font-size: 25px;
+        font-size: 12px;
         margin-top:0;
         font-weight:normal;
     }
     .bloc_equipe ul li p{
-        font-size: 23px;
+        font-size: 13px;
         margin-top:0;
         margin-bottom:50px;
     }
     .bloc_equipe ul{
-        margin-bottom:50px;
+        margin-bottom:0;
+    }
+    .pousse-footer{
+        margin-bottom:70px;
     }
     .background-body{
         background-color:#4D43B0;
         background-image:url("../img/forme_header_mages.png") ;
         background-repeat: no-repeat;
         background-position: top right;
-        background-size: 23%;
+        background-size: 35%;
+    }
+    .equipe_forme2 img{
+        position:absolute;
+        height:309px;
+        bottom:-248px;
     }
     .bloc_pack{
         text-align: center;
