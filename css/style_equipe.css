@@ -1,0 +1,304 @@
+/***********************Page_equipe************************/
+.bloc_equipe{
+    text-align: center;
+}
+
+.bloc_equipe h2{
+    line-height: normal;
+    font-size: 29px;
+    text-align: center;
+    color: #FF6B77;
+    padding-top:15px;
+}
+.bloc_equipe>h3{
+    font-weight: normal;
+    line-height: normal;
+    font-size: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 42px;
+}
+.bloc_equipe p{
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    font-size:11px;
+    color: #FFFFFF;
+    margin-top:-30px;
+    text-transform: uppercase;
+    margin-bottom:60px;
+}
+.bloc_equipe h4{
+    font-weight: 600;
+    line-height: normal;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align:left;
+}
+.bloc_equipe h5{
+    font-weight: 600;
+    line-height: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #FF6B77;
+    text-align:left;
+}
+
+.bloc_equipe ul li p{
+    font-weight: normal;
+    line-height: normal;
+    font-size: 11px;
+    color: #FFFFFF;
+    text-transform:none;
+    margin-top:0px;
+    margin-bottom:0px;
+    text-align:left;
+}
+.bloc_equipe ul li img{
+    width:100%;
+    border-radius:2%;
+}
+.cercle1_equipe{
+    position: absolute;
+    left: 50px;
+    top: 290px;
+}
+.cercle2_equipe{
+    position: absolute;
+    left:130px;
+    top: 240px;
+}
+.equipe_forme2{
+    position:relative;
+}
+.equipe_forme2 img{
+    position:absolute;
+    height:579px;
+    bottom:-208px;
+    z-index:0;
+}
+
+.background-body{
+    background-color:#4D43B0;
+    background-image:url("../img/forme_header_mages.png") ;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 30%;
+}
+.fil_ariane a{
+    color:#fff;
+}
+/******************************************************************************/
+/**************************Responsive******************************************/
+/******************************************************************************/
+
+/************************Equipe***********************/
+@media screen and (min-width: 1700px) {
+    .background-body{
+        background-color:#4D43B0;
+        background-image:url("../img/forme_header_mages.png") ;
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: 26%;
+    }
+    .container{
+        width:1620px;
+    }
+    .cercle1_equipe{
+        left: 400px;
+    }
+    .cercle2_equipe{
+        left: 480px;
+    }
+
+}
+
+@media screen and (max-width:1280px){
+    .bloc_equipe{
+        text-align: center;
+    }
+
+    .bloc_equipe h2{
+        line-height: normal;
+        font-size: 28px;
+        text-align: center;
+        color: #FF6B77;
+        padding-top:15px;
+    }
+    .bloc_equipe>h3{
+        font-weight: normal;
+        line-height: normal;
+        font-size: 18px;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 42px;
+    }
+    .bloc_equipe p{
+        font-weight: 600;
+        line-height: normal;
+        text-align: center;
+        font-size:15px;
+        color: #FFFFFF;
+        margin-top:-30px;
+        text-transform: uppercase;
+        margin-bottom:55px;
+    }
+    .bloc_equipe h4{
+        font-weight: 600;
+        line-height: normal;
+        font-size: 17px;
+        margin-bottom:0px;
+    }
+    .bloc_equipe h5{
+        font-weight: 600;
+        line-height: normal;
+        font-size: 13px;
+        margin-top:0px;
+        color: #FF6B77;
+
+    }
+    .bloc_equipe ul li p{
+        font-weight: normal;
+        line-height: normal;
+        font-size: 15px;
+        color: #FFFFFF;
+        text-transform:none;
+        margin-top:0px;
+        margin-bottom:41px;
+        text-align:left;
+    }
+    .bloc_equipe ul{
+        margin-bottom:70px;
+    }
+    .bloc_equipe ul li img{
+        width:100%;
+    }
+    .equipe_forme2 img{
+        position:absolute;
+        height:479px;
+        bottom:-208px;
+    }
+}
+@media screen and (max-width:990px){
+
+    .equipe_forme2{
+        position:relative;
+    }
+    .equipe_forme2 img{
+        position:absolute;
+        height:419px;
+        bottom:-208px;
+        z-index:0;
+    }
+    .cercle1_equipe{
+        position: absolute;
+        left: 60px;
+        top: 250px;
+    }
+    .cercle2_equipe{
+        position: absolute;
+        left: 140px;
+        top: 200px;
+    }
+    .fil_ariane a{
+        color:#fff;
+    }
+    .bloc_equipe ul li p{
+        font-weight: normal;
+        line-height: normal;
+        font-size: 11px;
+        color: #FFFFFF;
+        text-transform:none;
+        margin-top:0px;
+        margin-bottom:41px;
+        text-align:left;
+    }
+    .bloc_equipe h2{
+        line-height: normal;
+        font-size: 28px;
+        text-align: center;
+        color: #FF6B77;
+        padding-top:15px;
+    }
+    .bloc_equipe h4{
+        margin-bottom:0px;
+    }
+    .bloc_equipe h5{
+        margin-top:0px;
+        font-size:11px;
+        font-weight:normal;
+    }
+    .background-body{
+        background-color:#4D43B0;
+        background-image:url("../img/forme_header_mages.png") ;
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: 25%;
+    }
+}
+@media screen and (max-width:768px){
+    .fil_ariane{
+        display:none;
+    }
+    .cercle1_equipe{
+        position: absolute;
+        left: 50px;
+        top: 335px;
+    }
+    .cercle2_equipe{
+        position: absolute;
+        left: 130px;
+        top: 285px;
+    }
+    .bloc_equipe h2{
+        line-height: normal;
+        font-size: 40px;
+        text-align: center;
+        color: #FF6B77;
+        padding-top:15px;
+        font-weight: 600;
+    }
+    .bloc_equipe>h3{
+        font-weight: normal;
+        line-height: normal;
+        font-size: 35px;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 55px;
+    }
+    .bloc_equipe p{
+        font-weight: 600;
+        line-height: normal;
+        text-align: center;
+        font-size:21px;
+        color: #FFFFFF;
+        margin-top:-30px;
+        text-transform: uppercase;
+        margin-bottom:105px;
+    }
+    .bloc_equipe h4{
+        font-size: 32px;
+        margin-bottom:0px;
+    }
+    .bloc_equipe h5{
+        font-size: 25px;
+        margin-top:0px;
+        font-weight:normal;
+    }
+    .bloc_equipe ul li p{
+        font-size: 23px;
+        margin-top:0px;
+        margin-bottom:50px;
+    }
+    .bloc_equipe ul{
+        margin-bottom:50px;
+    }
+    .background-body{
+        background-color:#4D43B0;
+        background-image:url("../img/forme_header_mages.png") ;
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: 23%;
+    }
+}
