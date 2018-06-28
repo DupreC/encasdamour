@@ -1,6 +1,6 @@
 Options +FollowSymlinks
 RewriteEngine On
-RewriteRule ^choix-ambiances pages/choix-ambiances.php [L]
+RewriteRule ^les-packs pages/les-packs.php [L]
 RewriteRule ^equipe pages/equipe.php [L]
 RewriteRule ^ambiance pages/ambiance.php [L]
 RewriteRule ^mentions-legales pages/mentions-legales.php [L]

@@ -10,7 +10,7 @@ $data_menu = get_menu($pdo);
     <div class="fil_ariane col-sm-offset-1">
         <?php
         define('NOM_SITE', 'Accueil', true);
-        get_fil_ariane(array('./choix-ambiances.php' => 'Ambiances', 'final' => $data_ambiance['nom']));
+        get_fil_ariane(array('./les-packs.php' => 'Ambiances', 'final' => $data_ambiance['nom']));
         ?>
     </div>
         <style>

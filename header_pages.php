@@ -25,7 +25,7 @@
                 <ul class="col-md-8 flex nav">
                     <li><h1><a href="/"><img src="img/logo_rose1.png" alt="encasdamour"></a></h1></li>
                     <li class="packs">
-                        <a href="/choix-ambiances">Les packs</a>
+                        <a href="/les_packs.php">Les packs</a>
                         <ul>
                             <li><a href="">Hymme à l'amour</a></li>
                             <li><a href="">Passion ardente</a></li>
@@ -35,7 +35,7 @@
                         </ul>
                     </li>
                     <li class=""><a href="/equipe">L’équipe</a></li>
-                    <li class="button_experience"><a class="button-simple" href="choix-ambiances">Tentez l’expérience</a></li>
+                    <li class="button_experience"><a class="button-simple" href="les_packs.php">Tentez l’expérience</a></li>
                 </ul>
                 <ul class="col-md-2 right flex rs">
                     <li><p>Suivez-nous</p></li>
