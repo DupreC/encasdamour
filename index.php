@@ -1,5 +1,7 @@
 <?php
 include 'header_home.php';
+include "functions/php/main.php";
+$data_ambiance = get_ambiance($pdo);
 ?>
 <div class="container">
     <div class="bloc_accueil_home row no-padding">
@@ -39,10 +41,10 @@ include 'header_home.php';
             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 464.982C53.1252 514.842 98.9122 537.986 99.4257 538.244C107.431 542.6 115.84 546.376 124.655 549.572C196.828 574.74 275.141 547.927 320.982 488.129C320.982 488.129 397.95 394.832 425.356 211.281C439.824 126.326 393.874 42.0283 313.2 13.7102C304.386 10.5144 295.435 8.25705 286.392 6.62545C286.392 6.62545 149.56 -22.407 0 41.0761V464.982Z" fill="#B9C7F6"/>
         </svg>
 
-        <h3>Nos petits doigts de fée à ton service<br><strong>Comment ça marche ?</strong></h3>
+        <h3>Aimer c'est bien, faire plaisir c'est mieux<br><strong>Comment ça marche ?</strong></h3>
         <ul class="">
             <li class="col-lg-2 col-sm-3 col-lg-offset-2 col-sm-offset-1">
-                <img src="img/picto_ambiance.png" alt="ambiance">
+                <img src="img/pack_home.png " alt="ambiance">
                 <h5>Une ambiance</h5>
                 <p>Choisis le pack qui correspond le plus à ton couple</p>
             </li>
@@ -64,27 +66,23 @@ include 'header_home.php';
     </div>
     <div id="ambiance" class="bloc_explication_home bloc_choix-ambiances_home row">
         <img class="background" src="img/Subtract.png" alt="">
-        <h3>Pour une soirée maqigue <br><strong>Les ambiances</strong></h3>
-        <p>Toutes les ambiances comprennent un menu complet et les éléments de décoration associée </p>
-        <ul class="row col-sm-10">
-            <li class="col-sm-4">
-                <img src="img/img_ieuf.png" alt="ambiance">
-                <h5>Il était une fois...</h5>
-                <p>Un ambiance digne d’un conte de fée.</p>
-    <!--            <a class="button-simple" href="#">Choisir cette ambiance</a>-->
+        <p>Livreur d'amour, c'est notre projet </p>
+        <h3><strong>Trouve la boxpack qui ressemble à ton couple</strong></h3>
+        <ul class="row">
+            <?php
+            foreach ($data_ambiance as $value) {
+            ?>
+            <li class="col-sm-2">
+                <img src="img/img-ambiances/<?=$value['photo1']?>" alt="<?=$value['photo1']?>">
+                <div>
+                    <h5><?=$value['nom']?></h5>
+                    <p><?=$value['intro']?></p>
+                </div>
+                <a class="button-simple" href="/ambiance?ambiance=<?=$value['code_nom']?>">Je choisie</a>
             </li>
-            <li class="col-sm-4">
-                <img src="img/img_be.png" alt="belle_étoile">
-                <h5>À la belle étoile</h5>
-                <p>Les couleurs et la lumière de la ville</p>
-    <!--            <a class="button-simple" href="#">Choisir cette ambiance</a>-->
-            </li>
-            <li class="col-sm-4">
-                <img src="img/img_cp.png" alt="date">
-                <h5>Chandelles à Paris</h5>
-                <p>Quoi de plus romantique que la plus belle ville pour célébrer l'amour</p>
-    <!--            <a class="button-simple" href="#">Choisir cette ambiance</a>-->
-            </li>
+            <?php
+            };
+            ?>
         </ul>
     </div>
 </div>

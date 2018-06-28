@@ -1,6 +1,7 @@
 <?php
 include '../header_pages.php';
-?><link rel="stylesheet" href="./css/style_equipe.css">
+?>
+    <link rel="stylesheet" href="./css/style_pages_bleu.css">
     <div class="container">
 <div class="fil_ariane col-md-2 col-md-offset-0 col-md-3 col-md-offset-0">
     <?php

@@ -85,6 +85,10 @@ var $firstButton = $(".first"),
     $secondButton = $(".second"),
     $thirdButton = $(".third"),
     $fourButton = $(".four"),
+    $firstRetour = $(".slider-two .retour"),
+    $secondRetour = $(".slider-three .retour"),
+    $thirdRetour = $(".slider-four .retour"),
+    $fourRetour = $(".slider-five .retour"),
     $input = $("input"),
     $name = $(".name"),
     $more = $(".more"),
@@ -92,16 +96,48 @@ var $firstButton = $(".first"),
     $reset = $(".reset"),
     $ctr = $(".contain_form"),
     $mail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
+$firstRetour.on("click", function(e){
+        $ctr.addClass("one slider-one-active").removeClass("two slider-two-active");
+        $(".bloc_form").css("height", "1300px");
+        $(".slider").css("height", "1200px");
+        ScrollToReserver('reserver');
+        $firstButton.text("Valider");
+        e.preventDefault();
+});
+$secondRetour.on("click", function(e){
+        $ctr.addClass("two slider-two-active").removeClass("three slider-three-active");
+        $(".bloc_form").css("height", "500px");
+        $(".slider").css("height", "300px");
+        ScrollToReserver('reserver');
+        $secondButton.text("Valider");
+        e.preventDefault();
+});
+$thirdRetour.on("click", function(e){
+        $ctr.addClass("three slider-three-active").removeClass("four slider-four-active");
+        $(".bloc_form").css("height", "1300px");
+        $(".slider").css("height", "1200px");
+        ScrollToReserver('reserver');
+        $thirdButton.text("Valider");
+        e.preventDefault();
+});
+$fourRetour.on("click", function(e){
+        $ctr.addClass("four slider-four-active").removeClass("five slider-five-active");
+        $(".bloc_form").css("height", "1300px");
+        $(".slider").css("height", "1200px");
+        ScrollToReserver('reserver');
+        $fourButton.text("Valider");
+        e.preventDefault();
+});
 $firstButton.on("click", function(e){
     var calcul_menu =  parseFloat($('.input-number_menu_dolce_vita').val()) + parseFloat($('.input-number_menu_shanghai').val()) + parseFloat($('.input-number_menu_dune_de_sable').val()) + parseFloat($('.input-number_menu_art_de_vivre').val());
     $(".slider-one .error_show").removeClass("error_show").addClass("error");
     if ( calcul_menu == 2){
         $(this).text("Saving...").delay(900).queue(function(){
-            $ctr.addClass("two slider-two-active").removeClass("four slider-one-active");
+            $ctr.addClass("two slider-two-active").removeClass("one slider-one-active");
             $(".bloc_form").css("height", "500px");
             $(".slider").css("height", "300px");
             ScrollToReserver('reserver');
+            $( this ).dequeue();
         });
     } else{
         $( ".slider-one .error" ).removeClass("error").addClass("error_show");
@@ -113,10 +149,11 @@ $firstButton.on("click", function(e){
 $secondButton.on("click", function(e){
     if ($('.adresse').val() != ""){
         $(this).text("Saving...").delay(900).queue(function(){
-            $ctr.addClass("three slider-three-active").removeClass("two slider-two-active slider-one-active");
+            $ctr.addClass("three slider-three-active").removeClass("two slider-two-active");
             $(".bloc_form").css("height", "850px");
             $(".slider").css("height", "650px");
             ScrollToReserver('reserver');
+            $( this ).dequeue();
         });
     } else{
         $( ".slider-two .adresse" ).each().addClass("invalid");
@@ -128,10 +165,11 @@ $secondButton.on("click", function(e){
 $thirdButton.on("click", function(e){
     if ($('.form-control').val().length == 5){
         $(this).text("Saving...").delay(900).queue(function(){
-                $ctr.addClass("four slider-four-active").removeClass("three slider-three-active slider-two-active slider-two-active");
+                $ctr.addClass("four slider-four-active").removeClass("three slider-three-active");
                 $(".bloc_form").css("height", "650px");
                 $(".slider").css("height", "450px");
                 ScrollToReserver('reserver');
+            $( this ).dequeue();
         });
     } else{
         $( ".slider-three input" ).each().addClass("invalid");
@@ -143,10 +181,11 @@ $thirdButton.on("click", function(e){
 $fourButton.on("click", function(e){
     if ($mail.test($("#email").val()) && $( ".slider-four #name" ).val() != "" && $( ".slider-four #phone" ).val().length == 10) {
         $(this).text("Saving...").delay(900).queue(function(){
-            $ctr.addClass("five slider-four-active").removeClass("four slider-four-active three slider-three-active slider-two-active slider-two-active");
+            $ctr.addClass("five slider-five-active").removeClass("four slider-four-active");
             $(".bloc_form").css("height", "850px");
             $(".slider").css("height", "650px");
             ScrollToReserver('reserver');
+            $( this ).dequeue();
     });
         var adresse = $('.adresse').val();
         var heure = $('.heure').val();
@@ -156,21 +195,51 @@ $fourButton.on("click", function(e){
         var email = $('#email').val();
         var phone = $('#phone').val();
         var menu="";
-        if($('.nom_menu').hasClass('valeur1')) {
-            $('.valeur1').each(function () {
-                menu += "1x "+$(this).html() + "<br>";
-            });
-        }else if($('.nom_menu').hasClass('valeur2')){
-            menu ="2x "+$('.valeur2').html();
+        var menus="";
+        
+        if ($('.menu_dolce_vita input').val() ==1){
+            menu += "1x "+$('.menu_dolce_vita h5').html()+'\n';
+        }else if ($('.menu_dolce_vita input').val() ==2){
+            menu += "2x "+$('.menu_dolce_vita h5').html();
+        }
+        if ($('.menu_shanghai input').val() ==1){
+            if (menu != ""){
+                menus = "1x "+$('.menu_shanghai h5').html()+'\n';
+            }else {
+                menu += "1x " + $('.menu_shanghai h5').html() + '\n';
+            }
+        }else if ($('.menu_shanghai input').val() ==2){
+            menu += "2x "+$('.menu_shanghai h5').html();
+        }
+        if ($('.menu_dune_de_sable input').val() ==1){
+            if (menu != ""){
+                menus = "1x "+$('.menu_dune_de_sable h5').html()+'\n';
+            }else {
+                menu += "1x " + $('.menu_dune_de_sable h5').html() + '\n';
+            }
+        }else if ($('.menu_dune_de_sable input').val() ==2){
+            menu += "2x "+$('.menu_dune_de_sable h5').html();
+        }
+        if ($('.menu_art_de_vivre input').val() ==1){
+            if (menu != ""){
+                menus = "1x "+$('.menu_art_de_vivre h5').html()+'\n';
+            }else {
+                menu += "1x " + $('.menu_art_de_vivre h5').html() + '\n';
+            }
+        }else if ($('.menu_art_de_vivre input').val() ==2){
+            menu += "2x "+$('.menu_art_de_vivre h5').html();
         }
 
-        $('.recap .input_menu').prepend('<span>'+menu+'</span>');
-        $('.recap .input_date').prepend('<span>'+jour+' '+mois+'</span>');
-        $('.recap .input_heure').prepend('<span>'+heure+'</span>');
-        $('.recap .input_adresse').prepend('<span>'+adresse+'</span>');
-        $('.recap .input_nom').prepend('<span>'+name+'</span>');
-        $('.recap .input_email').prepend('<span>'+email+'</span>');
-        $('.recap .input_phone').prepend('<span>'+phone+'</span>');
+        $('.recap .input_menu').prepend('<input name="menu" type="text" readonly value="'+menu+'"><br><input class="menus" name="menus" type="text" readonly value="'+menus+'">');
+        $('.recap .input_date').prepend('<input name="date_time " type="text" readonly value="'+jour+' '+mois+'">');
+        $('.recap .input_heure').prepend('<input name="heure" type="text" readonly value="'+heure+'">');
+        $('.recap .input_adresse').prepend('<input name="adresse" type="text" readonly value="'+adresse+'">');
+        $('.recap .input_nom').prepend('<input name="nom" type="text" readonly value="'+name+'">');
+        $('.recap .input_email').prepend('<input name="email" type="text" readonly value="'+email+'">');
+        $('.recap .input_phone').prepend('<input name="phone" type="text" readonly value="'+phone+'">');
+        if (menus == ""){
+            $('.recap .menus').hide();
+        }
     } else{
         $( ".slider-three input" ).each().addClass("invalid");
         $( ".slider-two .invalid" ).each().addClass("error_show");
@@ -187,6 +256,13 @@ $(".menu-toggle").on('click', function () {
     $('.menu-section').toggleClass("on");
     $("nav ul").toggleClass('hidden');
 });
+
+
+/////////////////////////////////////////////
+// addclass image home bloc ambiance
+/////////////////////////////////////////////
+$('.bloc_choix-ambiances_home ul li:first-child').addClass('col-sm-offset-1');
+
 
 /////////////////////////////////////////////////
 // Ancre home
@@ -240,25 +316,9 @@ $('.petite_photo').on({
             function decrement() {
                 var value = el[0].value;
                 value--;
+
                 if (!min || value >= min) {
                     el[0].value = value;
-                    if ($('.input-1').val() == 1) {
-                        $('.nom_menu-1').removeClass('valeur2').addClass('valeur1');
-                    } else if ($('.input-2').val() == 1) {
-                        $('.nom_menu-2').removeClass('valeur2').addClass('valeur1');
-                    } else if ($('.input-3').val() == 1) {
-                        $('.nom_menu-3').removeClass('valeur2').addClass('valeur1');
-                    } else if ($('.input-4').val() == 1) {
-                        $('.nom_menu-4').removeClass('valeur2').addClass('valeur1');
-                    } else if ($('.input-1').val() == 0) {
-                        $('.nom_menu-1').removeClass('valeur1');
-                    } else if ($('.input-2').val() == 0) {
-                        $('.nom_menu-2').removeClass('valeur1');
-                    } else if ($('.input-3').val() == 0) {
-                        $('.nom_menu-3').removeClass('valeur1');
-                    } else if ($('.input-4').val() == 0) {
-                        $('.nom_menu-4').removeClass('valeur1');
-                    }
                 }
             }
 
@@ -268,24 +328,6 @@ $('.petite_photo').on({
                 value++;
                 if ((!max || value <= max) && calcul_menu < 2) {
                     el[0].value = value++;
-                    if ($('.input-1').val() == 1) {
-                        $('.nom_menu-1').addClass('valeur1')
-                    } else if ($('.input-2').val() == 1) {
-                        $('.nom_menu-2').addClass('valeur1')
-                    } else if ($('.input-3').val() == 1) {
-                        $('.nom_menu-3').addClass('valeur1')
-                    } else if ($('.input-4').val() == 1) {
-                        $('.nom_menu-4').addClass('valeur1')
-                    }else if ($('.input-1').val() == 2) {
-                        $('.nom_menu-1').removeClass('valeur1').addClass('valeur2')
-                    } else if ($('.input-2').val() == 2) {
-                        $('.nom_menu-2').removeClass('valeur1').addClass('valeur2')
-                    } else if ($('.input-3').val() == 2) {
-                        $('.nom_menu-3').removeClass('valeur1').addClass('valeur2')
-                    } else if ($('.input-4').val() == 2) {
-                        $('.nom_menu-4').removeClass('valeur1').addClass('valeur2')
-                    }
-
                 }
             }
         }

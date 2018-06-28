@@ -10,7 +10,7 @@ $data_menu = get_menu($pdo);
     <div class="fil_ariane col-sm-offset-1">
         <?php
         define('NOM_SITE', 'Accueil', true);
-        get_fil_ariane(array('./choix-ambiances.php' => 'Ambiances', 'final' => $data_ambiance['nom']));
+        get_fil_ariane(array('./les-packs.php' => 'Ambiances', 'final' => $data_ambiance['nom']));
         ?>
     </div>
         <style>
@@ -82,24 +82,34 @@ $data_menu = get_menu($pdo);
     <div class="contain_form slider-one-active">
         <div class="steps">
             <div class="step step-one">
-                <div class="liner"></div>
-                <span>Lieux</span>
+                <div class="img-fil_ariane">
+                    <img src="./img/menu.png" alt="menu">
+                    <span>menu</span>
+                </div>
             </div>
             <div class="step step-two">
-                <div class="liner"></div>
-                <span>Menu</span>
+                <div class="img-fil_ariane">
+                    <img src="./img/localisation.png" alt="localisation">
+                    <span>Localisation</span>
+                </div>
             </div>
             <div class="step step-three">
-                <div class="liner"></div>
-                <span>Date</span>
+                <div class="img-fil_ariane">
+                    <img src="./img/date_heure.png" alt="date_heure">
+                    <span>Date & heure</span>
+                </div>
             </div>
             <div class="step step-four">
-                <div class="liner"></div>
-                <span>Vous</span>
+                <div class="img-fil_ariane">
+                    <img src="./img/toi.png" alt="toi">
+                    <span>Toi</span>
+                </div>
             </div>
             <div class="step step-five">
-                <div class="liner"></div>
-                <span>Recap</span>
+                <div class="img-fil_ariane">
+                    <img src="./img/recap.png" alt="recap">
+                    <span>Récapitulatif</span>
+                </div>
             </div>
         </div>
         <div class="line">
@@ -117,12 +127,10 @@ $data_menu = get_menu($pdo);
                         <h4>Choisis deux menus</h4>
                         <ul class="row">
                             <?php
-                            $i=0;
                             foreach ($data_menu as $value) {
-                                $i++;
                             ?>
-                            <li class="col-sm-5 col-sm-offset-1"><img src="./img/<?=$value['photo']?>" alt="<?=$value['nom']?>">
-                                <h5 class="nom_menu-<?=$i?>"><?=$value['nom']?></h5>
+                            <li class="col-sm-5 col-sm-offset-1 <?=$value['code_menu']?>"><img src="./img/<?=$value['photo']?>" alt="<?=$value['nom']?>">
+                                <h5 class="nom_menu"><?=$value['nom']?></h5>
                                 <ul>
                                     <li>
                                         <p class="titre_menu">ENTRÉE</p>
@@ -139,7 +147,7 @@ $data_menu = get_menu($pdo);
                                 </ul>
                                 <div class="row number">
                                     <p class="col-sm-2 col-sm-offset-3 input-number-decrement decrement">–</p>
-                                    <input required class="col-sm-2 require input-number input-number_<?=$value['code_menu']?> input-<?=$i?>" type="text" value="0" min="0" max="2">
+                                    <input required class="col-sm-2 require input-number input-number_<?=$value['code_menu']?>" type="text" value="0" min="0" max="2">
                                     <p class="col-sm-2 input-number-increment increment">+</p>
                                 </div>
                             </li>
@@ -154,6 +162,7 @@ $data_menu = get_menu($pdo);
                     <button class="first button-simple">Valider</button>
                 </div>
                 <form class="slider-form slider-two">
+                    <a class="retour">< Retour</a>
                     <div class="row" id="code_postal">
                         <h4>Où souhaitez-vous être livré ?</h4>
                         <div id="locationField">
@@ -163,6 +172,7 @@ $data_menu = get_menu($pdo);
                     <button class="row second button-simple">Valider</button>
                 </form>
                 <form class="slider-form slider-three">
+                    <a class="retour">< Retour</a>
                     <h4>Choisissez une date et un horaire</h4>
                     <?php include 'modules/calendrier.php';?>
                     <h5><label for="time">À quelle heure ?</label></h5>
@@ -172,6 +182,7 @@ $data_menu = get_menu($pdo);
                     <button class="row third button-simple">Valider</button>
                 </form>
                 <form class="slider-form slider-four row">
+                    <a class="retour">< Retour</a>
                     <div class="contact col-sm-8 col-sm-offset-2">
                         <h4>Quelques infos pour pouvoir te contacter</h4>
                         <h5>Prénom et nom</h5>
@@ -179,17 +190,18 @@ $data_menu = get_menu($pdo);
                         <h5>Email</h5>
                         <input required id="email"  type="email" placeholder="Firmin.Dustriel@gmail.com">
                         <h5>Numéro de téléphone</h5>
-                        <input required id="phone"  type="tel" placeholder="0636656565"  pattern="^0[1-68][0-9]{10}$#"><br>
+                        <input required id="phone"  type="tel" placeholder="0636656565"  pattern="^0\d(\s|-)?(\d{2}(\s|-)?){4}$"><br>
                         <button class="row four button-simple">Valider</button>
                     </div>
                 </form>
-                <form class="slider-form slider-five recap">
+                <form class="slider-form slider-five recap" action="./functions/php/commande.php" method="post">
+                    <a class="retour">< Retour</a>
                     <div class="row">
                         <h4>Récapitulatif de ta résa</h4>
                         <ul class="col-sm-8 col-sm-offset-2">
                             <li>
                                 <p class="recap_titre">Pack </p>
-                                <p class="recap_text pack"><span><?=$data_ambiance['nom']?></span></p>
+                                <p class="recap_text pack"><input name="pack" type="text" readonly value="<?=$data_ambiance['nom']?>"></p>
                             </li>
                             <li>
                                 <p class="recap_titre">Menu</p>
@@ -221,7 +233,7 @@ $data_menu = get_menu($pdo);
                             </li>
                         </ul>
                     </div>
-                    <button class="row four button-simple">Valider et réserver</button>
+                    <button class="row five button-simple">Valider et réserver</button>
                 </form>
             </div>
         </div>

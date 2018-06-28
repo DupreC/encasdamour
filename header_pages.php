@@ -24,9 +24,18 @@
             <div class="desktop">
                 <ul class="col-md-8 flex nav">
                     <li><h1><a href="/"><img src="img/logo_rose1.png" alt="encasdamour"></a></h1></li>
+                    <li class="packs">
+                        <a href="/les_packs.php">Les packs</a>
+                        <ul>
+                            <li><a href="">Hymme à l'amour</a></li>
+                            <li><a href="">Passion ardente</a></li>
+                            <li><a href="">Sous les projecteurs</a></li>
+                            <li><a href="">Espièglerie</a></li>
+                            <li><a href="">Je t’aime moi non plus</a></li>
+                        </ul>
+                    </li>
                     <li class=""><a href="/equipe">L’équipe</a></li>
-                    <li class=""><a href="/choix-ambiances">Choix d'ambiance</a></li>
-                    <li class=""><a class="button-simple" href="choix-ambiances">Tentez l’expérience</a></li>
+                    <li class="button_experience"><a class="button-simple" href="les_packs.php">Tentez l’expérience</a></li>
                 </ul>
                 <ul class="col-md-2 right flex rs">
                     <li><p>Suivez-nous</p></li>
