@@ -33,7 +33,7 @@
                 <li class="logo"><h1><a href="/"><img src="img/logo_rose1.png" alt="encasdamour"></a></h1></li>
                 <li class="js-scrollTo"><a href="#explication">Comment ça marche ?</a></li>
                 <li class="packs">
-                    <a href="/les_packs.php">Les packs</a>
+                    <a href="/les-packs">Les packs</a>
                     <ul>
                         <li><a href="/ambiance?ambiance=hymne_a_lamour">Hymne à l’amour </a></li>
                         <li><a href="/ambiance?ambiance=passion_ardente">Passion ardente</a></li>
@@ -43,7 +43,7 @@
                     </ul>
                 </li>
                 <li class=""><a href="/equipe">L’équipe</a></li>
-                <li class="button_experience"><a class="button-simple" href="/les_packs.php">Tentez l’expérience</a></li>
+                <li class="button_experience"><a class="button-simple" href="/les-packs">Tentez l’expérience</a></li>
             </ul>
             <ul class="col-md-2 right flex rs">
                 <li><p>Suivez-nous</p></li>
@@ -63,7 +63,7 @@
                 <nav>
                     <ul role="navigation" class="hidden">
                         <li><a href="/index.php"><img src="img/logo_rose1.png" alt="encasdamour"></a></li>
-                        <li><a href="/lespacks">Les packs</a></li>
+                        <li><a href="/les-packs">Les packs</a></li>
                         <ul class="sous-menu">
                             <li><a href="/ambiance?ambiance=hymne_a_lamour">Hymne à l’amour </a></li>
                             <li><a href="/ambiance?ambiance=passion_ardente">Passion ardente</a></li>
@@ -72,7 +72,7 @@
                             <li><a href="/ambiance?ambiance=je_taime_moi_non_plus">Je t’aime moi non plus</a></li>
                         </ul>
                         <li><a href="/equipe">L'équipe</a></li>
-                        <li><a href="/media/CP_Encas_d_amour.pdf">Presse</a></li>
+                        <li><a target="_blank" href="/media/CP_Encas_d_amour.pdf">Presse</a></li>
                         <li><a href="mailto:contact@encasdamour.fr">contact@encasdamour.fr</a></li>
                         <li><a href="/metions-legales">Mentions légales</a></li>
                         <p>Suis nous sur nos réseaux !</p>

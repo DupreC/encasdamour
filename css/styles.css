@@ -594,7 +594,7 @@ footer> .last_bloc li a:first-child{
     header nav ul .sous-menu{
         display: block !important;
         height: auto;
-        margin: 0 auto 40px;
+        margin: 0 auto 20px;
     }
     header nav ul .sous-menu li,
     header nav ul .sous-menu li a{
@@ -765,9 +765,9 @@ footer> .last_bloc li a:first-child{
         transform: rotate(-45deg) translate(8px, -10px);
     }
 
-    .one,
-    .two,
-    .three {
+    header .one,
+    header .two,
+    header .three {
         width: 100%;
         height: 5px;
         background: #FF6B77;
@@ -813,7 +813,6 @@ footer> .last_bloc li a:first-child{
         font-weight: 600;
     }
     nav ul p {
-        margin-top: 50px;
         color: #FF6B77;
         font-weight: 600;
         font-size: 15px;

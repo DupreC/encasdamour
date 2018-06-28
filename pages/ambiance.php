@@ -13,7 +13,7 @@ $data_menu = get_menu($pdo);
     <div class="fil_ariane col-sm-offset-1">
         <?php
         define('NOM_SITE', 'Accueil', true);
-        get_fil_ariane(array('./les-packs.php' => 'Ambiances', 'final' => $data_ambiance['nom']));
+        get_fil_ariane(array('./les-packs.php' => 'Les packs', 'final' => $data_ambiance['nom']));
         ?>
     </div>
         <style>
@@ -59,7 +59,7 @@ $data_menu = get_menu($pdo);
                         <h4>Ce pack est-il fait pour mon couple ? </h4>
                         <p class="description"><?=$data_ambiance['description']?></p>
                         <h4>inclus dans le pack</h4>
-                        <p>Nous avons sélectionnés les meilleurs éléments pour te proposer une expérience unique est adaptée au besoin de ton couple. </p>
+                        <p>Nous avons sélectionnés les meilleurs éléments pour te proposer une expérience unique et adaptée aux besoins de ton couple. </p>
                         <ul class="sens">
                             <li>
                                 <p class="icon ouie">Pour l’ouïe</p>
