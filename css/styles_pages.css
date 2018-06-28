@@ -22,34 +22,6 @@ header .nav li .button-simple:hover{
     color: #fff;
 }
 
-/***********************Page_equipe************************/
-.bloc_equipe{
-    text-align: center;
-}
-
-.bloc_equipe h2{
-    font-weight: 700;
-    font-size: 20px;
-    margin: 48px 0 24px;
-    color: #4A4A4A;
-}
-.bloc_equipe>p{
-    font-size: 12px;
-    margin-bottom: 42px;
-    color: #9B9B9B;
-}
-.bloc_equipe ul li h4{
-    font-size: 14px;
-    color: #4A4A4A;
-    font-weight: 600;
-}
-
-.bloc_equipe ul li p{
-    font-size: 14px;
-    color: #9B9B9B;
-    margin-bottom: 35px;
-}
-
 /***********************Page_ambiance************************/
 /***************ambiance**************/
 .bloc_ambiance {
@@ -897,4 +869,10 @@ input.valid{
 /*****************Footer*********************/
 footer{
     background-color: transparent;
+    position:relative;
 }
+
+/******************************************************************************/
+/**************************Responsive******************************************/
+/******************************************************************************/
+
