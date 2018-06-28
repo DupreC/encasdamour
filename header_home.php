@@ -29,11 +29,21 @@
 <div  class="container">
     <header class="row">
         <div class="desktop">
-            <ul class="col-md-8 flex nav">
-                <li><h1><a href="/"><img src="img/logo_rose1.png" alt="encasdamour"></a></h1></li>
-                <li><a class="js-scrollTo" href="#explication">Comment ça marche ?</a></li>
-                <li><a class="js-scrollTo" href="#ambiance">Les ambiances</a></li>
-                <!--        <li><a class="button-simple" href="choix-ambiances">Tentez l’expérience</a></li>-->
+            <ul class="col-md-9 flex nav">
+                <li class="logo"><h1><a href="/"><img src="img/logo_rose1.png" alt="encasdamour"></a></h1></li>
+                <li class="js-scrollTo"><a href="#explication">Comment ça marche ?</a></li>
+                <li class="packs">
+                    <a href="/les_packs.php">Les packs</a>
+                    <ul>
+                        <li><a href="">Hymme à l'amour</a></li>
+                        <li><a href="">Passion ardente</a></li>
+                        <li><a href="">Sous les projecteurs</a></li>
+                        <li><a href="">Espièglerie</a></li>
+                        <li><a href="">Je t’aime moi non plus</a></li>
+                    </ul>
+                </li>
+                <li class=""><a href="/equipe">L’équipe</a></li>
+                <li class="button_experience"><a class="button-simple" href="les_packs.php">Tentez l’expérience</a></li>
             </ul>
             <ul class="col-md-2 right flex rs">
                 <li><p>Suivez-nous</p></li>
@@ -52,12 +62,19 @@
                 </div>
                 <nav>
                     <ul role="navigation" class="hidden">
-                        <li><a href="/" class="logo_burger-menu"><img src="img/logo_rose1.png" alt="encasdamour"></a></li>
-                        <li><a class="js-scrollTo" href="#explication">Comment ça marche ?</a></li>
-                        <li><a  class="js-scrollTo" href="#ambiance">Les ambiances </a></li>
-                        <li><a href="#">Presse</a></li>
+                        <li><a href="/index.php"><img src="img/logo_rose1.png" alt="encasdamour"></a></li>
+                        <li><a href="/lespacks">Les packs</a></li>
+                        <ul class="sous-menu">
+                            <li><a href="/ambiance?ambiance=hymne_a_lamour">Hymne à l’amour </a></li>
+                            <li><a href="/ambiance?ambiance=passion_ardente">Passion ardente</a></li>
+                            <li><a href="/ambiance?ambiance=sous_les_projecteurs">Sous les projecteurs</a></li>
+                            <li><a href="/ambiance?ambiance=espieglerie">Espièglerie</a></li>
+                            <li><a href="/ambiance?ambiance=je_taime_moi_non_plus">Je t’aime moi non plus</a></li>
+                        </ul>
+                        <li><a href="/equipe">L'équipe</a></li>
+                        <li><a href="/media/CP_Encas_d_amour.pdf">Presse</a></li>
                         <li><a href="mailto:contact@encasdamour.fr">contact@encasdamour.fr</a></li>
-                        <li><a href="/mentions-legales">Mentions légales</a></li>
+                        <li><a href="/metions-legales">Mentions légales</a></li>
                         <p>Suis nous sur nos réseaux !  </p>
                         <ul class="rs"  >
                             <li><a href="https://www.facebook.com/encasdamour"><i class="fab fa-facebook-f"></i></a></li>

@@ -23,7 +23,7 @@
         <header class="row">
             <div class="desktop">
                 <ul class="col-md-8 flex nav">
-                    <li><h1><a href="/"><img src="img/logo_rose1.png" alt="encasdamour"></a></h1></li>
+                    <li class="logo"><h1><a href="/"><img src="img/logo_rose1.png" alt="encasdamour"></a></h1></li>
                     <li class="packs">
                         <a href="/les_packs.php">Les packs</a>
                         <ul>
@@ -54,8 +54,17 @@
                     </div>
                     <nav>
                         <ul role="navigation" class="hidden">
-                            <li><a href="/"><img src="img/logo_rose1.png" alt="encasdamour"></a></li>
-                            <li><a href="#">Presse</a></li>
+                            <li><a href="/index.php"><img src="img/logo_rose1.png" alt="encasdamour"></a></li>
+                            <li><a href="/lespacks">Les packs</a></li>
+                            <ul class="sous-menu">
+                                <li><a href="/ambiance?ambiance=hymne_a_lamour">Hymne à l’amour </a></li>
+                                <li><a href="/ambiance?ambiance=passion_ardente">Passion ardente</a></li>
+                                <li><a href="/ambiance?ambiance=sous_les_projecteurs">Sous les projecteurs</a></li>
+                                <li><a href="/ambiance?ambiance=espieglerie">Espièglerie</a></li>
+                                <li><a href="/ambiance?ambiance=je_taime_moi_non_plus">Je t’aime moi non plus</a></li>
+                            </ul>
+                            <li><a href="/equipe">L'équipe</a></li>
+                            <li><a href="/media/CP_Encas_d_amour.pdf">Presse</a></li>
                             <li><a href="mailto:contact@encasdamour.fr">contact@encasdamour.fr</a></li>
                             <li><a href="/metions-legales">Mentions légales</a></li>
                             <p>Suis nous sur nos réseaux !  </p>

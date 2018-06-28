@@ -88,6 +88,77 @@
 .fil_ariane a{
     color:#fff;
 }
+
+
+
+
+/*****************Les packs*********************/
+.fil_ariane a{
+    color: #fff;
+}
+.bloc_pack h3{
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+    color: #FF6B77;
+    margin: 26px 0 65px;
+}
+.bloc_pack>img{
+    width: 100%;
+    max-width: 400px;
+}
+.bloc_pack div{
+    position: relative;
+}
+.bloc_pack div .cercle1{
+    position: absolute;
+    top: -11px;
+    height: 74px;
+    left: 95px;
+}
+.bloc_pack div .cercle2{
+    position: absolute;
+    height: 50px;
+    top: -40px;
+    left: 76px;
+}
+.bloc_pack div h2{
+    font-weight: 600;
+    line-height: 42px;
+    font-size: 64px;
+    color: #FF6B77;
+    margin-bottom: 40px;
+}
+.bloc_pack div p{
+    font-size: 12px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+.bloc_pack div .text-boxpack span{
+    font-weight: 600;
+}
+.bloc_pack div p:last-child{
+    margin-bottom: 80px;
+}
+.bloc_pack div .liste{
+    font-weight: 300;
+}
+.bloc_pack div .fa-check{
+    margin-right: 5px;
+}
+.bloc_choix-ambiances_home {
+    margin-top: 0;
+    background-image: none;
+    padding-top: 0;
+}
+.bloc_choix-ambiances_home h3{
+    margin-top: 0;
+}
+.bloc_choix-ambiances_home>p {
+    margin-top: 50px;
+}
+
 /******************************************************************************/
 /**************************Responsive******************************************/
 /******************************************************************************/
@@ -221,10 +292,10 @@
         padding-top:15px;
     }
     .bloc_equipe h4{
-        margin-bottom:0px;
+        margin-bottom:0;
     }
     .bloc_equipe h5{
-        margin-top:0px;
+        margin-top:0;
         font-size:11px;
         font-weight:normal;
     }
@@ -278,16 +349,16 @@
     }
     .bloc_equipe h4{
         font-size: 32px;
-        margin-bottom:0px;
+        margin-bottom:0;
     }
     .bloc_equipe h5{
         font-size: 25px;
-        margin-top:0px;
+        margin-top:0;
         font-weight:normal;
     }
     .bloc_equipe ul li p{
         font-size: 23px;
-        margin-top:0px;
+        margin-top:0;
         margin-bottom:50px;
     }
     .bloc_equipe ul{
@@ -299,5 +370,35 @@
         background-repeat: no-repeat;
         background-position: top right;
         background-size: 23%;
+    }
+    .bloc_pack{
+        text-align: center;
+    }
+    .bloc_pack .boxpack{
+        width: 100%;
+        max-width: 400px;
+    }
+    .bloc_pack div .cercle1 {
+        top: 1px;
+        height: 55px;
+        left: 83%;
+    }
+    .bloc_pack div .cercle2 {
+        height: 39px;
+        top: -22px;
+        left: 77%;
+    }
+    .bloc_pack div h2 {
+        max-width: 185px;
+        width: 100%;
+        text-align: left;
+        margin: 0 auto 40px;
+        font-size: 40px;
+    }
+    .bloc_pack div p:last-child{
+        max-width: 130px;
+        text-align: left;
+        margin: 0 auto 40px;
+        width: 100%;
     }
 }

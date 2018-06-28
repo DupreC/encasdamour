@@ -1,14 +1,7 @@
 <?php
 include '../header_pages.php';
 ?>
-<style>
-    .background-body{
-        background-color: #4D43B0;
-        background-image: url("../img/forme_header_mages.png");
-        background-position: top right;
-        background-size: 30%;
-    }
-</style>
+    <link rel="stylesheet" href="./css/style_pages_bleu.css">
 <?php
 include "../functions/php/main.php";
 $data_ambiance = get_ambiance($pdo);
@@ -24,7 +17,7 @@ $data_ambiance = get_ambiance($pdo);
         <div class="bloc_pack">
             <h3>Nos packs d’amour</h3>
             <div class="row">
-                <img class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1" src="./img/boxpack.png" alt="boxpack">
+                <img class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1 boxpack" src="./img/boxpack.png" alt="boxpack">
                 <div class="col-sm-5 col-sm-offset-1">
                     <img class=" cercle1" src="img/cercle_1.png" alt="cercle_1">
                     <img class=" cercle2" src="img/cercle_2.png" alt="cercle_2">
@@ -51,7 +44,7 @@ $data_ambiance = get_ambiance($pdo);
                             <h5><?=$value['nom']?></h5>
                             <p><?=$value['intro']?></p>
                         </div>
-                        <a class="button-simple" href="/ambiance?ambiance=<?=$value['code_nom']?>">Je choisie</a>
+                        <a class="button-simple" href="/ambiance?ambiance=<?=$value['code_nom']?>">Je choisis</a>
                     </li>
                     <?php
                 };

@@ -22,13 +22,13 @@
                 </form>
             </div>
                 <li>
-                    <a>Les packs</a>
+                    <a href="/les-packs">Les packs</a>
                 </li>
                 <li>
-                    <a>L'équipe</a>
+                    <a href="equipe">L'équipe</a>
                 </li>
                 <li>
-                    <a>Presse</a>
+                    <a href="/media/CP_Encas_d_amour.pdf">Presse</a>
                 </li>
                 <li>
                     <a href="mailto:contact@encasdamour.fr">contact@encasdamour.fr</a>

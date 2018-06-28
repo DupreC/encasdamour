@@ -78,7 +78,7 @@ $data_ambiance = get_ambiance($pdo);
                     <h5><?=$value['nom']?></h5>
                     <p><?=$value['intro']?></p>
                 </div>
-                <a class="button-simple" href="/ambiance?ambiance=<?=$value['code_nom']?>">Je choisie</a>
+                <a class="button-simple" href="/ambiance?ambiance=<?=$value['code_nom']?>">Je choisis</a>
             </li>
             <?php
             };

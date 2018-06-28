@@ -1,3 +1,36 @@
+<script>
+    window.fbMessengerPlugins = window.fbMessengerPlugins || {
+        init: function () {
+            FB.init({
+                appId            : '1678638095724206',
+                autoLogAppEvents : true,
+                xfbml            : true,
+                version          : 'v2.10'
+            });
+        }, callable: []
+    };
+    window.fbAsyncInit = window.fbAsyncInit || function () {
+        window.fbMessengerPlugins.callable.forEach(function (item) { item(); });
+        window.fbMessengerPlugins.init();
+    };
+    setTimeout(function () {
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    }, 0);
+</script>
+
+<div
+        class="fb-customerchat"
+        page_id="251794062063770"
+        ref="">
+</div>
+
 <?php
 include '../header_pages.php';
 include "../functions/php/main.php";
@@ -19,27 +52,37 @@ $data_menu = get_menu($pdo);
 
         <div class="row bloc_ambiance">
             <ul>
-                <li class="col-sm-offset-1 col-sm-5">
-                    <div class="col-sm-offset-2 col-sm-10">
+                <li class="desktop col-md-offset-1 col-md-5">
+                    <div class="col-md-offset-2 col-md-10">
                         <p class="grande_photo"><img src="./img/img-ambiances/<?=$data_ambiance['photo1']?>" alt="grande_photos"></p>
                         <p class="petites_photos"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo1']?>" alt="photos1"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo2']?>" alt="photos2"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo3']?>" alt="photos4"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo2']?>" alt="photos2"></p>
-                        <div class="sos">
-                            <h3>SOS</h3>
-                            <h4>Tu as un doute ? Par ici le coup de pouce ! </h4>
-                            <p>On sait que c’est pas toujours facile de se lancer quand on est pas certain que ça va plaire. Alors, on a mis en place un quiz que tu peux envoyer ni vu ni connu à ton ou ta partenaire. Celui-ci est complètement neutre et n’éveille pas les supsons.</p>
-                            <p class="quizz"><a href="#" class="button-simple">Envoyer le quiz</a></p>
-                        </div>
+<!--                        <div class="sos">-->
+<!--                            <h3>SOS</h3>-->
+<!--                            <h4>Tu as un doute ? Par ici le coup de pouce ! </h4>-->
+<!--                            <p>On sait que c’est pas toujours facile de se lancer quand on est pas certain que ça va plaire. Alors, on a mis en place un quiz que tu peux envoyer ni vu ni connu à ton ou ta partenaire. Celui-ci est complètement neutre et n’éveille pas les supsons.</p>-->
+<!--                            <p class="quizz"><a href="#" class="button-simple">Envoyer le quiz</a></p>-->
+<!--                        </div>-->
                     </div>
                 </li>
-                <li class="col-sm-6 infos">
-                <div class="col-sm-10">
+                <li class="col-md-6 infos">
+                <div class="col-md-10">
                         <div class="row">
-                            <div class="col-sm-9">
+                            <div class="tablette col-md-offset-2 col-md-10">
+                                <p class="grande_photo"><img src="./img/img-ambiances/<?=$data_ambiance['photo1']?>" alt="grande_photos"></p>
+                                <p class="petites_photos"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo1']?>" alt="photos1"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo2']?>" alt="photos2"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo3']?>" alt="photos4"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo2']?>" alt="photos2"></p>
+                                <!--                        <div class="sos">-->
+                                <!--                            <h3>SOS</h3>-->
+                                <!--                            <h4>Tu as un doute ? Par ici le coup de pouce ! </h4>-->
+                                <!--                            <p>On sait que c’est pas toujours facile de se lancer quand on est pas certain que ça va plaire. Alors, on a mis en place un quiz que tu peux envoyer ni vu ni connu à ton ou ta partenaire. Celui-ci est complètement neutre et n’éveille pas les supsons.</p>-->
+                                <!--                            <p class="quizz"><a href="#" class="button-simple">Envoyer le quiz</a></p>-->
+                                <!--                        </div>-->
+                            </div>
+                            <div class="col-md-9">
                                 <p><span class="button-simple"><?=$data_ambiance['tag1']?></span><span class="button-simple"><?=$data_ambiance['tag2']?></span><span class="button-simple"><?=$data_ambiance['tag3']?></span></p>
                                 <h2><?=$data_ambiance['nom']?></h2>
                                 <p class="intro"><?=$data_ambiance['intro']?></p>
                             </div>
-                            <p class="col-sm-3 prix">40€<br><span>/personne</span></p>
+                            <p class="col-md-3 prix">40€<br><span>/personne</span></p>
                         </div>
                         <p class="line"></p>
                         <h3>DESCRIPTION </h3>
@@ -77,38 +120,33 @@ $data_menu = get_menu($pdo);
     </div>
 </div>
 
-<div class="bloc_form" style="position: relative">
+<div class="bloc_form desktop tablette" style="position: relative">
     <h3 class="reserver">Réservez</h3>
     <div class="contain_form slider-one-active">
         <div class="steps">
             <div class="step step-one">
                 <div class="img-fil_ariane">
-                    <img src="./img/menu.png" alt="menu">
-                    <span>menu</span>
+                    <img src="./img/choix_menu.png" alt="menu">
                 </div>
             </div>
             <div class="step step-two">
                 <div class="img-fil_ariane">
-                    <img src="./img/localisation.png" alt="localisation">
-                    <span>Localisation</span>
+                    <img src="./img/choix_adresse.png" alt="localisation">
                 </div>
             </div>
             <div class="step step-three">
                 <div class="img-fil_ariane">
-                    <img src="./img/date_heure.png" alt="date_heure">
-                    <span>Date & heure</span>
+                    <img src="./img/choix_date.png" alt="date_heure">
                 </div>
             </div>
             <div class="step step-four">
                 <div class="img-fil_ariane">
-                    <img src="./img/toi.png" alt="toi">
-                    <span>Toi</span>
+                    <img src="./img/choix_toi.png" alt="toi">
                 </div>
             </div>
             <div class="step step-five">
                 <div class="img-fil_ariane">
-                    <img src="./img/recap.png" alt="recap">
-                    <span>Récapitulatif</span>
+                    <img src="./img/choix_recap.png" alt="recap">
                 </div>
             </div>
         </div>
@@ -245,6 +283,13 @@ $data_menu = get_menu($pdo);
     <script src="http://weareoutman.github.io/clockpicker/dist/jquery-clockpicker.min.js"></script>
     <script>
         $('.clockpicker').clockpicker();
+        $('.petites_photos img').on({
+            'click': function () {
+                var src = ($(this).attr('src'));
+                $('.grande_photo img').attr('src', src);
+            }
+        });
+
     </script>
 <?php
 include '../footer.php';
