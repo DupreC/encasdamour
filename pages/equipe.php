@@ -1,52 +1,59 @@
 <?php
 include '../header_pages.php';
 ?>
-<div class="fil_ariane">
+    <link rel="stylesheet" href="./css/style_pages_bleu.css">
+    <div class="container">
+<div class="fil_ariane col-md-2 col-md-offset-0 col-md-3 col-md-offset-0">
     <?php
     include_once "../functions/php/main.php";
-       define('NOM_SITE', 'accueil', true);
-       get_fil_ariane(array('final' => 'equipe'));
+       define('NOM_SITE', 'Accueil', true);
+       get_fil_ariane(array('final' => 'L\'équipe'));
     ?>
 </div>
-<div class="row bloc_equipe no-padding">
-    <h2>L’équipe d’amour</h2>
-    <p class="col-md-8 col-md-offset-2">Encas D’amour c’est des copains qui ont toujours eu du mal à trouver le cadeau qui va faire plaisir à leurs amoureux et amoureuses.
-        Nous proposons donc des expériences dinatoires pour permettre à tous les amoureux de se retrouver entre eux le temps d’une soirée. Faire de votre soirée romantique un expérience intime et parfaite, la qualité d’un restaurant en plus, c’est notre objectif.
-    </p>
+    <div class="row bloc_equipe no-padding">
+        <div class="cercle1_equipe"><img src="./img/cercle_1"></div>
+        <div class="cercle2_equipe"><img src="./img/cercle_2"></div>
+    <h2>L'équipe d’amour</h2>
+    <h3 class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">Il n'y a pas de hasard, il n'y a que des rendez-vous.</h3>
+    <p class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">Paul Eluard</p>
+        <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
     <ul class="row">
-        <li class="col-md-2 col-md-offset-2"><img src="" alt="ux">
-            <h4>LES UX</h4>
-            <p><strong>Les ampathiques</strong>
-                <br>Celui qui dessine le contour et qui s’assure que les princes et princesses soient heureux pour toujours. </p>
+        <li class="col-md-4 col-sm-4 col-xs-8 col-md-offset-0 col-sm-offset-0 col-xs-offset-2"><img src="http://via.placeholder.com/180x180" alt="ux">
+            <h4>LES EMPATHIQUES</h4>
+            <h5>Les ux designers</h5>
+            <p>Ceux qui dessinent le contour et qui s’assurent que tout le monde soit heureux.</p>
         </li>
-        <li class="col-md-2"><img src="" alt="graphistes">
-            <h4>Les graphistes</h4>
-            <p><strong>LES DESSINATEURS</strong>
-                <br>Ceux qui colorient avec leurs palettes et qui font de jolies dessins </p>
+        <li class="col-md-4 col-sm-4 col-xs-8 col-md-offset-0 col-sm-offset-0 col-xs-offset-2"><img src="http://via.placeholder.com/180x180" alt="graphistes">
+            <h4>LES DESSINATEURS</h4>
+            <h5>Les graphistes</h5>
+            <p>Ceux qui colorient avec leurs palettes et qui font de jolis dessins </p>
         </li>
-        <li class="col-md-2"><img src="" alt="motion">
-            <h4>LE MOTION</h4>
-            <p><strong>LE MAGICIEN</strong>
-                <br>Celui qui fait bouger les dessins</p>
-        </li>
-        <li class="col-md-2"><img src="" alt="genis_fous">
-            <h4>Les développeurs</h4>
-            <p><strong>Les génis fous</strong>
-                <br>Ceux qui frabriquent internet</p>
+        <li class="col-md-4 col-sm-4 col-xs-8 col-md-offset-0 col-sm-offset-0 col-xs-offset-2"><img src="http://via.placeholder.com/180x180" alt="motion">
+            <h4>LE MAGICIEN</h4>
+            <h5>LE MOTION DESIGNER</h5>
+            <p>Celui qui fait bouger les images</p>
         </li>
     </ul>
-     <ul class="row">
-         <li class="col-md-2 col-md-offset-4"><img src="" alt="cm">
-             <h4>La community manager</h4>
-             <p><strong>La naratrice</strong>
-                 <br>Celle qui vous lit de jolies histoires</p>
+    <ul class="row">
+        <li class="col-md-4 col-sm-4 col-xs-8 col-md-offset-0 col-sm-offset-0 col-xs-offset-2"><img src="http://via.placeholder.com/180x180" alt="genie_fou">
+            <h4>LE GENIE FOU</h4>
+            <h5>LE DEVELOPPEUR</h5>
+            <p>Celui qui fabrique internet</p>
+        </li>
+         <li class="col-md-4 col-sm-4 col-xs-8 col-md-offset-0 col-sm-offset-0 col-xs-offset-2"><img src="http://via.placeholder.com/180x180" alt="cm">
+             <h4>LA NARRATRICE</h4>
+             <h5>LA COMMUNITY MANAGER</h5>
+             <p>Celle qui vous lit de jolies histoires</p>
          </li>
-         <li class="col-md-2"><img src="" alt="chef_de_projet">
-             <h4>Le chef de projet</h4>
-             <p><strong>Le morionnettiste</strong>
-                 <br>Celui qui tire les ficelles</p>
+         <li class="col-md-4 col-sm-4 col-xs-8 col-md-offset-0 col-sm-offset-0 col-xs-offset-2"><img src="http://via.placeholder.com/180x180" alt="chef_de_projet">
+             <h4>LE MARIONNETTISTE</h4>
+             <h5>LE CHEF DE PROJET</h5>
+             <p>Celui qui tire les ficelles</p>
          </li>
      </ul>
+        </div>
+    </div>
 </div>
+<div class="equipe_forme2"><img src="./img/forme2.png"></div>
 <?php
 include '../footer.php';

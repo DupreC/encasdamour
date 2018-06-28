@@ -21,9 +21,12 @@
                     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input name="b_d4efdf95ebcd8195d51a30992_fef3a2338e" tabindex="-1" value="" type="text"></div>
                 </form>
             </div>
-    <!--            <li>-->
-    <!--                <a>L'équipe</a>-->
-    <!--            </li>-->
+                <li>
+                    <a>Les packs</a>
+                </li>
+                <li>
+                    <a>L'équipe</a>
+                </li>
                 <li>
                     <a>Presse</a>
                 </li>
@@ -39,7 +42,7 @@
     </ul>
     <ul class="row last_bloc">
             <li class="mention_legales"><a href="/mentions-legales">Mentions légales</a></li>
-<!--            <li><a href="#">CGU-CGV</a></li>-->
+            <li><a href="/CGU-CGV">CGU-CGV</a></li>
             <li><a href="/plan-site">Plan du site</a></li>
         </ul>
 </footer>
