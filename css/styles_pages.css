@@ -977,6 +977,7 @@ input.valid{
 /*****************Footer*********************/
 footer{
     background-color: transparent;
+    position:relative;
 }
 
 @media screen and (max-width: 990px) {
