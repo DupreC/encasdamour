@@ -1,6 +1,17 @@
 ﻿<!doctype html>
 <html lang="fr" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#">
 <head>
+    <!-- Hotjar Tracking Code for http://encasdamour.fr/ -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:925135,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
     <meta charset="UTF-8">
     <meta name="description" content="Encas d'amour, le service de livraison de dîner romantique et intimiste pour se retrouver entre amoureux.">
     <meta property="og:title" content="Encas d'amour le plus romantique des dîners">
@@ -15,6 +26,7 @@
     <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -29,17 +41,27 @@
 <div  class="container">
     <header class="row">
         <div class="desktop">
-            <ul class="col-md-8 flex nav">
-                <li><h1><a href="/"><img src="img/logo_rose1.png" alt="encasdamour"></a></h1></li>
-                <li><a class="js-scrollTo" href="#explication">Comment ça marche ?</a></li>
-                <li><a class="js-scrollTo" href="#ambiance">Les ambiances</a></li>
-                <!--        <li><a class="button-simple" href="choix-ambiances">Tentez l’expérience</a></li>-->
+            <ul class="col-md-10 flex nav">
+                <li class="logo"><h1><a href="/"><img src="img/logo_rose1.png" alt="encasdamour"></a></h1></li>
+<!--                <li class="js-scrollTo"><a href="#explication">Comment ça marche ?</a></li>-->
+                <li class="packs">
+                    <a href="/les-packs">Les packs</a>
+                    <ul>
+                        <li><a href="/ambiance?ambiance=hymne_a_lamour">Hymne à l’amour </a></li>
+                        <li><a href="/ambiance?ambiance=passion_ardente">Passion ardente</a></li>
+                        <li><a href="/ambiance?ambiance=sous_les_projecteurs">Sous les projecteurs</a></li>
+                        <li><a href="/ambiance?ambiance=espieglerie">Espièglerie</a></li>
+                        <li><a href="/ambiance?ambiance=je_taime_moi_non_plus">Je t’aime moi non plus</a></li>
+                    </ul>
+                </li>
+                <li class=""><a href="/equipe">L’équipe</a></li>
+                <li class="button_experience"><a class="button-simple" href="/les-packs">Tentez l’expérience</a></li>
             </ul>
             <ul class="col-md-2 right flex rs">
                 <li><p>Suivez-nous</p></li>
-                <li><a href="https://www.facebook.com/encasdamour"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://twitter.com/Encasdamour"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://www.instagram.com/encas_damour/"><i class="fab fa-instagram"></i></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/encasdamour"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a target="_blank" href="https://twitter.com/Encasdamour"><i class="fab fa-twitter"></i></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/encas_damour/"><i class="fab fa-instagram"></i></a></li>
             </ul>
         </div>
         <div class="tablette">
@@ -52,13 +74,20 @@
                 </div>
                 <nav>
                     <ul role="navigation" class="hidden">
-                        <li><a href="/" class="logo_burger-menu"><img src="img/logo_rose1.png" alt="encasdamour"></a></li>
-                        <li><a class="js-scrollTo" href="#explication">Comment ça marche ?</a></li>
-                        <li><a  class="js-scrollTo" href="#ambiance">Les ambiances </a></li>
-                        <li><a href="#">Presse</a></li>
+                        <li><a href="/index.php"><img src="img/logo_rose1.png" alt="encasdamour"></a></li>
+                        <li><a href="/les-packs">Les packs</a></li>
+                        <ul class="sous-menu">
+                            <li><a href="/ambiance?ambiance=hymne_a_lamour">Hymne à l’amour </a></li>
+                            <li><a href="/ambiance?ambiance=passion_ardente">Passion ardente</a></li>
+                            <li><a href="/ambiance?ambiance=sous_les_projecteurs">Sous les projecteurs</a></li>
+                            <li><a href="/ambiance?ambiance=espieglerie">Espièglerie</a></li>
+                            <li><a href="/ambiance?ambiance=je_taime_moi_non_plus">Je t’aime moi non plus</a></li>
+                        </ul>
+                        <li><a href="/equipe">L'équipe</a></li>
+                        <li><a target="_blank" href="/media/CP_Encas_d_amour.pdf">Presse</a></li>
                         <li><a href="mailto:contact@encasdamour.fr">contact@encasdamour.fr</a></li>
-                        <li><a href="/mentions-legales">Mentions légales</a></li>
-                        <p>Suis nous sur nos réseaux !  </p>
+                        <li><a href="/metions-legales">Mentions légales</a></li>
+                        <p>Suis nous sur nos réseaux !</p>
                         <ul class="rs"  >
                             <li><a href="https://www.facebook.com/encasdamour"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="https://twitter.com/Encasdamour"><i class="fab fa-twitter"></i></a></li>

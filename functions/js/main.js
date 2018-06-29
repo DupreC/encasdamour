@@ -279,14 +279,18 @@ $(document).ready(function () {
     });
 });
 /////////////////////////////////////////////////
-// switch images
+// switch logo_home
 /////////////////////////////////////////////////
-var calcul;
-$('.petite_photo').on({
-    'click': function () {
-        var src = ($(this).attr('src'));
-        $('.grande_photo').attr('src', src);
-    }
+$(function(){
+    $("h1 img").on({
+        mouseenter: function(){
+            $(this).attr('src','img/logo.gif');
+        },
+        mouseleave: function(){
+            $(this).attr('src','img/logo_rose1.png');
+        }
+    });
+
 });
 /////////////////////////////////////////////
 // choix menus

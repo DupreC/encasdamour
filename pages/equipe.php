@@ -1,18 +1,18 @@
 <?php
 include '../header_pages.php';
 ?>
-    <link rel="stylesheet" href="./css/style_pages_bleu.css">
-    <div class="container">
-<div class="fil_ariane col-md-2 col-md-offset-0 col-md-3 col-md-offset-0">
-    <?php
-    include_once "../functions/php/main.php";
-       define('NOM_SITE', 'Accueil', true);
-       get_fil_ariane(array('final' => 'L\'équipe'));
-    ?>
-</div>
+<link rel="stylesheet" href="./css/style_pages_bleu.css">
+<div class="container">
     <div class="row bloc_equipe no-padding">
-        <div class="cercle1_equipe"><img src="./img/cercle_1"></div>
-        <div class="cercle2_equipe"><img src="./img/cercle_2"></div>
+        <div class="fil_ariane col-md-2 col-md-offset-0 col-md-3 col-sm-offset-2">
+            <?php
+            include_once "../functions/php/main.php";
+            define('NOM_SITE', 'Accueil', true);
+            get_fil_ariane(array('final' => 'L\'équipe'));
+            ?>
+        </div>
+        <div class="cercle1_equipe"><img src="./img/cercle_1.png" alt="cercle1"></div>
+        <div class="cercle2_equipe"><img src="./img/cercle_2.png" alt="cercle2"></div>
     <h2>L'équipe d’amour</h2>
     <h3 class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">Il n'y a pas de hasard, il n'y a que des rendez-vous.</h3>
     <p class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">Paul Eluard</p>
@@ -54,7 +54,7 @@ include '../header_pages.php';
         </div>
     </div>
 </div>
-<div class="equipe_forme2"><img src="./img/forme2.png"></div>
+<div class="equipe_forme2"><img src="./img/Forme2.png"></div>
 <script>
     $(function(){
         $("#UX-Photo").on({
