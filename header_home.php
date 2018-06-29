@@ -1,6 +1,17 @@
 ﻿<!doctype html>
 <html lang="fr" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#">
 <head>
+    <!-- Hotjar Tracking Code for http://encasdamour.fr/ -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:925135,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
     <meta charset="UTF-8">
     <meta name="description" content="Encas d'amour, le service de livraison de dîner romantique et intimiste pour se retrouver entre amoureux.">
     <meta property="og:title" content="Encas d'amour le plus romantique des dîners">
@@ -15,6 +26,7 @@
     <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -31,7 +43,7 @@
         <div class="desktop">
             <ul class="col-md-10 flex nav">
                 <li class="logo"><h1><a href="/"><img src="img/logo_rose1.png" alt="encasdamour"></a></h1></li>
-                <li class="js-scrollTo"><a href="#explication">Comment ça marche ?</a></li>
+<!--                <li class="js-scrollTo"><a href="#explication">Comment ça marche ?</a></li>-->
                 <li class="packs">
                     <a href="/les-packs">Les packs</a>
                     <ul>

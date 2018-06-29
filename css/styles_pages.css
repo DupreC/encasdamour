@@ -2,10 +2,14 @@ body{
     background-color: #fff;
     background-image: url("../img/forme_header_mages.png");
     background-position: top right;
-    background-size: 30%;
+    background-size: 28%;
 }
 .background-body{
     background-color: #FEF5F0;
+    background-image: url(../img/forme_header_mages.png);
+    background-position: top right;
+    background-size: 28%;
+    background-repeat: no-repeat;
 }
 /***********************Header************************/
 
@@ -22,10 +26,6 @@ header .nav li .button-simple:hover{
     background-color: #FFA0A4;
     color: #fff;
 }
-header .nav li:hover{
-    border-bottom: 3px solid #FFA0A4;
-}
-
 /***********************Page_ambiance************************/
 /***************ambiance**************/
 .bloc_ambiance {
@@ -35,7 +35,7 @@ header .nav li:hover{
     padding: 40px 0;
     background-color: #fff;
     margin-top: 15px;
-    height: 670px;
+    height: 710px;
 }
 .bloc_ambiance .grande_photo{
     width: 100%;
@@ -110,7 +110,7 @@ header .nav li:hover{
     color: #4D43B0;
     font-size: 8px;
     font-weight: 600;
-    padding: 5px 10px;
+    padding: 5px 11px;
     text-transform: uppercase;
     margin-right: 5px;
     margin-bottom: 10px;
@@ -126,7 +126,7 @@ header .nav li:hover{
 }
 .bloc_ambiance ul .infos .intro{
     line-height: 20px;
-    font-size: 15px;
+    font-size: 14px;
     color: #4D43B0;
     margin-bottom: 25px;
 }
@@ -187,6 +187,9 @@ header .nav li:hover{
     position: relative;
     margin-left: 30px;
 }
+.bloc_ambiance ul .sens p:first-child{
+    text-transform: uppercase;
+}
 .bloc_ambiance ul .sens p:last-child{
     line-height: 16px;
     font-size: 9px;
@@ -196,9 +199,8 @@ header .nav li:hover{
 .bloc_ambiance ul .sens p:last-child span{
     line-height: 20px;
     font-size: 10px;
-    color: #6D5FFC;
+    color: #4D43B0;
     font-weight: 600;
-    text-transform: lowercase;
 }
 .bloc_ambiance ul .sens .icon:before{
     content: url("../img/picto_ouie.png");
@@ -238,12 +240,18 @@ header .nav li:hover{
     font-size: 12px;
 }
 
+/***************bloc-packs**************/
+.bloc_pack{
+    margin-top: 120px;
+}
+
 /***************form_ambiance**************/
 .bloc_form{
     position: relative;
     height: 1300px;
 }
 .bloc_form h3{
+    margin-top: 50px;
     font-weight: 600;
     font-size: 25px;
     text-align: center;
@@ -355,7 +363,7 @@ button:active,
 }
 .line {
     width: 80%;
-    height: 5px;
+    height: 2px;
     background: #ddd;
     position: relative;
     border-radius: 10px;
@@ -892,6 +900,44 @@ input.valid{
     padding: 0;
     margin: auto;
 }
+.commande_bot{
+    height: 300px;
+    padding: 5px;
+    background-color: #4D43B0;
+}
+.commande_bot .text_bot{
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+    padding: 18pt;
+    background-image: url("../img/edgard.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-color: #fff;
+    border-radius: 4px;
+    background-size: 12%;
+    background-position-x: 94%;
+    position: relative;
+}
+
+.commande_bot .text_bot h4{
+    font-size: 21px;
+    text-align: center;
+    color: #4D43B0;
+}
+.commande_bot .text_bot p{
+    font-size: 14px;
+    text-align: center;
+    color: #4D43B0;
+}
+
+.commande_bot .text_bot img{
+    position: absolute;
+    right: 1.5%;
+    width: 30px;
+    height: auto;
+    top: 97%;
+}
 
 /*****************Mentions légales*********************/
 .bloc_mentions-legales h2{
@@ -912,7 +958,7 @@ input.valid{
     margin-bottom: 40px;
 }
 
-/*****************Mentions légales*********************/
+/*****************Plan site*********************/
 .bloc_plan-site{
     text-align: center;
 }
@@ -974,6 +1020,11 @@ input.valid{
 footer{
     background-color: transparent;
     position:relative;
+}
+@media screen and (min-width: 1599px) {
+    .background-body {
+        background-size: 32%;
+    }
 }
 @media screen and (max-width:1280px) {
     .bloc_ambiance > ul > li {

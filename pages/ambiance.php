@@ -1,7 +1,14 @@
-
 <?php
 include '../header_pages.php';
 ?>
+    <style>
+        footer{
+            background-color: #4D43B0;
+        }
+        footer ul #mc_embed_signup_scroll h3 {
+             color: #fff;
+        }
+    </style>
 <?php
 include "../functions/php/main.php";
 $ambiance = $_GET['ambiance'];
@@ -34,7 +41,7 @@ $data_menu = get_menu($pdo);
 <!--                        </div>-->
                     </div>
                 </li>
-                <li class="col-md-6 infos">
+                <li class="col-md-5 infos">
                 <div class="col-md-10">
                         <div class="row">
                             <div class="tablette col-md-offset-2 col-md-10">
@@ -47,12 +54,12 @@ $data_menu = get_menu($pdo);
                                 <!--                            <p class="quizz"><a href="#" class="button-simple">Envoyer le quiz</a></p>-->
                                 <!--                        </div>-->
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-md-10">
                                 <p><span class="button-simple"><?=$data_ambiance['tag1']?></span><span class="button-simple"><?=$data_ambiance['tag2']?></span><span class="button-simple"><?=$data_ambiance['tag3']?></span></p>
                                 <h2><?=$data_ambiance['nom']?></h2>
                                 <p class="intro"><?=$data_ambiance['intro']?></p>
                             </div>
-                            <p class="col-md-3 prix">40€<br><span>/personne</span></p>
+                            <p class="col-md-2 prix">40€<br><span>/personne</span></p>
                         </div>
                         <p class="line"></p>
                         <h3>DESCRIPTION </h3>
@@ -62,23 +69,23 @@ $data_menu = get_menu($pdo);
                         <p>Nous avons sélectionnés les meilleurs éléments pour te proposer une expérience unique et adaptée aux besoins de ton couple. </p>
                         <ul class="sens">
                             <li>
-                                <p class="icon ouie">Pour l’ouïe</p>
+                                <p class="icon ouie"><img src="picto_ouie.png" alt="">Pour l’ouïe</p>
                                 <p class="inclus"><span>Une playlist adaptée</span></p>
                             </li>
                             <li>
-                                <p class="icon vue">Pour la vue</p>
+                                <p class="icon vue"><img src="picto_vue.png" alt="">Pour la vue</p>
                                 <p class="inclus"><span><?=$data_ambiance['vue1']?></span><br>(guirlandes, bougeoires, nappes, décoration florale)</p>
                             </li>
                             <li>
-                                <p class="icon odorat">Pour  l’odorat</p>
+                                <p class="icon odorat"><img src="picto_odorat.png" alt="">Pour  l’odorat</p>
                                 <p class="inclus"><span><?=$data_ambiance['odorat']?></span></p>
                             </li>
                             <li>
-                                <p class="icon gout">Pour le goût</p>
-                                <p class="inclus"><span>menu</span><br>(parmi trois propositions)</p>
+                                <p class="icon gout"><img src="picto_gout.png" alt="">Pour le goût</p>
+                                <p class="inclus"><span>Un menu</span><br>(parmi quatre propositions)</p>
                             </li>
                             <li>
-                                <p class="icon toucher">Pour le toucher</p>
+                                <p class="icon toucher"><img src="picto_touch" alt="">Pour le toucher</p>
                                 <p class="inclus"><span><?=$data_ambiance['toucher']?></span><br></p>
                             </li>
                         </ul>
@@ -91,7 +98,7 @@ $data_menu = get_menu($pdo);
 </div>
 
 <div class="bloc_form desktop tablette" style="position: relative">
-    <h3 class="reserver">Réservez</h3>
+    <h3 class="reserver">Par ici la réservation</h3>
     <div class="contain_form slider-one-active">
         <div class="steps">
             <div class="step step-one">
@@ -172,7 +179,7 @@ $data_menu = get_menu($pdo);
                 <form class="slider-form slider-two">
                     <a class="retour">< Retour</a>
                     <div class="row" id="code_postal">
-                        <h4>Où souhaitez-vous être livré ?</h4>
+                        <h4>Quelle est l’adresse de livraison ?</h4>
                         <div id="locationField">
                             <input class="adresse" required id="autocomplete" placeholder="33 rue du paradis, 75000, PARIS" type="text">
                         </div>
@@ -181,7 +188,7 @@ $data_menu = get_menu($pdo);
                 </form>
                 <form class="slider-form slider-three">
                     <a class="retour">< Retour</a>
-                    <h4>Choisissez une date et un horaire</h4>
+                    <h4>Quand et à quelle heure souhaites-tu être livré(e) ?</h4>
                     <?php include 'modules/calendrier.php';?>
                     <h5><label for="time">À quelle heure ?</label></h5>
                     <div class="input-group clockpicker" data-placement="right" data-align="top" data-autoclose="true">
@@ -205,7 +212,7 @@ $data_menu = get_menu($pdo);
                 <form class="slider-form slider-five recap" action="./functions/php/commande.php" method="post">
                     <a class="retour">< Retour</a>
                     <div class="row">
-                        <h4>Récapitulatif de ta résa</h4>
+                        <h4>Récapitulatif de ta BoxPack</h4>
                         <ul class="col-sm-8 col-sm-offset-2">
                             <li>
                                 <p class="recap_titre">Pack </p>
@@ -245,6 +252,13 @@ $data_menu = get_menu($pdo);
                 </form>
             </div>
         </div>
+    </div>
+</div>
+<div class="commande_bot">
+    <div class="text_bot">
+        <h4>Hey !</h4>
+        <p>Passes ta réservation ici, grâce à Edgar !</p>
+        <img src="./img/fleche_bot.png" alt="fleche_bot">
     </div>
 </div>
     <link rel="stylesheet" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css">

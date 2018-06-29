@@ -15,7 +15,7 @@ $data_ambiance = get_ambiance($pdo);
             ?>
         </div>
         <div class="bloc_pack">
-            <h3>Nos packs d’amour</h3>
+<!--            <h3>Nos packs d’amour</h3>-->
             <div class="row">
                 <img class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1 boxpack" src="./img/boxpack.png" alt="boxpack">
                 <div class="col-sm-5 col-sm-offset-1">

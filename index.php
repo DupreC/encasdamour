@@ -7,7 +7,7 @@ $data_ambiance = get_ambiance($pdo);
     <div class="bloc_accueil_home row no-padding">
         <div class="col-sm-6 no-padding">
             <div class="col-md-10 right no-padding">
-                <h2>Cherches plus, ton plus beau cadeau, c’est nous !</h2>
+                <h2>Ne cherches plus, <br> ton plus beau cadeau, <br> c’est nous ! </h2>
                 <p class="col-md-11">On te livre tout ce dont tu as besoin pour un moment en amoureux unique et inoubliable. </p>
                 <a class="button-simple" href="/les-packs">Tentez l’expérience</a>
             </div>
