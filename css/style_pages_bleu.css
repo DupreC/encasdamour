@@ -58,6 +58,9 @@
     width:100%;
     border-radius:2%;
 }
+.bloc_equipe ul{
+    margin-bottom:34px;
+}
 .cercle1_equipe{
     position: absolute;
     left: 50px;
@@ -151,6 +154,7 @@
         font-weight: normal;
         font-size: 18px;
         margin-bottom: 42px;
+        font-family:Pacifico;
     }
     .bloc_equipe p{
         font-weight: 600;
@@ -168,18 +172,18 @@
         font-weight: 600;
         line-height: normal;
         font-size: 13px;
-        margin-top:0;
+        margin-top:5px;
 
     }
     .bloc_equipe ul li p{
         font-weight: normal;
-        font-size: 15px;
+        font-size: 10px;
         color: #FFFFFF;
-        margin-top:0;
+        margin-top:-10px;
         margin-bottom:41px;
     }
     .bloc_equipe ul{
-        margin-bottom:70px;
+        margin-bottom:20px;
     }
     .bloc_equipe ul li img{
         width:100%;
