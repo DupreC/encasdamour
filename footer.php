@@ -22,13 +22,13 @@
                 </form>
             </div>
                 <li>
-                    <a>Les packs</a>
+                    <a href="/les-packs">Les packs</a>
                 </li>
                 <li>
-                    <a>L'équipe</a>
+                    <a href="/equipe">L'équipe</a>
                 </li>
                 <li>
-                    <a>Presse</a>
+                    <a target="_blank" href="/media/CP_Encas_d_amour.pdf">Presse</a>
                 </li>
                 <li>
                     <a href="mailto:contact@encasdamour.fr">contact@encasdamour.fr</a>
@@ -36,13 +36,13 @@
         </ul>
     </div>
     <ul class="row rs">
-        <li><a href="https://www.facebook.com/encasdamour"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="https://twitter.com/Encasdamour"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="https://www.instagram.com/encas_damour/"><i class="fab fa-instagram"></i></a></li>
+        <li><a target="_blank" href="https://www.facebook.com/encasdamour"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a target="_blank" href="https://twitter.com/Encasdamour"><i class="fab fa-twitter"></i></a></li>
+        <li><a target="_blank" href="https://www.instagram.com/encas_damour/"><i class="fab fa-instagram"></i></a></li>
     </ul>
     <ul class="row last_bloc">
             <li class="mention_legales"><a href="/mentions-legales">Mentions légales</a></li>
-            <li><a href="/CGU-CGV">CGU-CGV</a></li>
+<!--            <li><a href="/CGU-CGV">CGU-CGV</a></li>-->
             <li><a href="/plan-site">Plan du site</a></li>
         </ul>
 </footer>

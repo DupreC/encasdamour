@@ -2,13 +2,14 @@
 include '../header_pages.php';
 include_once "../functions/php/main.php";
 ?>
-<div class="fil_ariane">
-<?php
-define('NOM_SITE', 'accueil', true);
-get_fil_ariane(array('final' => 'Mentions légales'));
-?>
-</div>
-<div class="bloc_mentions-legales col-md-8 col-md-offset-2">
+<div class="container">
+<div class="bloc_mentions-legales col-sm-8 col-sm-offset-2">
+    <div class="fil_ariane">
+        <?php
+        define('NOM_SITE', 'accueil', true);
+        get_fil_ariane(array('final' => 'Mentions légales'));
+        ?>
+    </div>
     <h2>Mentions légales</h2>
     <h3>Mentions légales</h3>
     <p>
@@ -31,6 +32,8 @@ get_fil_ariane(array('final' => 'Mentions légales'));
         <br>
         Toute reproduction, distribution, modification, adaptation, retransmission ou publication, même partielle, de ces différents éléments est strictement interdite sans l’accord exprès par écrit de ENCAS D’AMOUR. Cette représentation ou reproduction, par quelque procédé que ce soit, constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle. Le non-respect de cette interdiction constitue une contrefaçon pouvant engager la responsabilité civile et pénale du contrefacteur. En outre, les propriétaires des Contenus copiés pourraient intenter une action en justice à votre encontre.
     </p>
+</div>
+</div>
 </div>
 <?php
 include '../footer.php';
