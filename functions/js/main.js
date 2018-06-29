@@ -182,8 +182,8 @@ $fourButton.on("click", function(e){
     if ($mail.test($("#email").val()) && $( ".slider-four #name" ).val() != "" && $( ".slider-four #phone" ).val().length == 10) {
         $(this).text("Saving...").delay(900).queue(function(){
             $ctr.addClass("five slider-five-active").removeClass("four slider-four-active");
-            $(".bloc_form").css("height", "850px");
-            $(".slider").css("height", "650px");
+            $(".bloc_form").css("height", "1300px");
+            $(".slider").css("height", "1100px");
             ScrollToReserver('reserver');
             $( this ).dequeue();
     });
@@ -196,43 +196,55 @@ $fourButton.on("click", function(e){
         var phone = $('#phone').val();
         var menu="";
         var menus="";
+        var image="";
+        var images="";
         
         if ($('.menu_dolce_vita input').val() ==1){
             menu += "1x "+$('.menu_dolce_vita h5').html()+'\n';
+            image = $('.menu_dolce_vita .photo').attr('src');
         }else if ($('.menu_dolce_vita input').val() ==2){
             menu += "2x "+$('.menu_dolce_vita h5').html();
+            image = $('.menu_dolce_vita .photo').attr('src');
         }
         if ($('.menu_shanghai input').val() ==1){
             if (menu != ""){
                 menus = "1x "+$('.menu_shanghai h5').html()+'\n';
+                images = $('.menu_shanghai .photo').attr('src');
             }else {
                 menu += "1x " + $('.menu_shanghai h5').html() + '\n';
+                image = $('.menu_shanghai .photo').attr('src');
             }
         }else if ($('.menu_shanghai input').val() ==2){
             menu += "2x "+$('.menu_shanghai h5').html();
+            image = $('.menu_shanghai .photo').attr('src');
         }
         if ($('.menu_dune_de_sable input').val() ==1){
             if (menu != ""){
                 menus = "1x "+$('.menu_dune_de_sable h5').html()+'\n';
+                images = $('.menu_dune_de_sable .photo').attr('src');
             }else {
                 menu += "1x " + $('.menu_dune_de_sable h5').html() + '\n';
+                image = $('.menu_dune_de_sable .photo').attr('src');
             }
         }else if ($('.menu_dune_de_sable input').val() ==2){
             menu += "2x "+$('.menu_dune_de_sable h5').html();
+            image = $('.menu_dune_de_sable .photo').attr('src');
         }
         if ($('.menu_art_de_vivre input').val() ==1){
             if (menu != ""){
                 menus = "1x "+$('.menu_art_de_vivre h5').html()+'\n';
+                images = $('.menu_art_de_vivre  .photo').attr('src');
             }else {
                 menu += "1x " + $('.menu_art_de_vivre h5').html() + '\n';
+                image = $('.menu_art_de_vivre  .photo').attr('src');
             }
         }else if ($('.menu_art_de_vivre input').val() ==2){
             menu += "2x "+$('.menu_art_de_vivre h5').html();
+            image = $('.menu_art_de_vivre  .photo').attr('src');
         }
 
-        $('.recap .input_menu').prepend('<input name="menu" type="text" readonly value="'+menu+'"><br><input class="menus" name="menus" type="text" readonly value="'+menus+'">');
-        $('.recap .input_date').prepend('<input name="date_time " type="text" readonly value="'+jour+' '+mois+'">');
-        $('.recap .input_heure').prepend('<input name="heure" type="text" readonly value="'+heure+'">');
+        $('.recap .input_menu').prepend('<div><img src="'+image+'" alt=""><input name="menu" type="text" readonly value="'+menu+'"></div><div><img src="\'+images+\'" alt=""><input class="menus" name="menus" type="text" readonly value="'+menus+'"></div>');
+        $('.recap .input_date').prepend('<input name="date_time " type="text" readonly value="'+jour+' '+mois+'"><input name="heure" type="text" readonly value="\'+heure+\'">');
         $('.recap .input_adresse').prepend('<input name="adresse" type="text" readonly value="'+adresse+'">');
         $('.recap .input_nom').prepend('<input name="nom" type="text" readonly value="'+name+'">');
         $('.recap .input_email').prepend('<input name="email" type="text" readonly value="'+email+'">');

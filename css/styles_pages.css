@@ -35,7 +35,7 @@ header .nav li .button-simple:hover{
     padding: 40px 0;
     background-color: #fff;
     margin-top: 15px;
-    height: 710px;
+    height: 690px;
 }
 .bloc_ambiance .grande_photo{
     width: 100%;
@@ -185,7 +185,10 @@ header .nav li .button-simple:hover{
     color: #4F4F4F;
     font-weight: 600;
     position: relative;
-    margin-left: 30px;
+}
+.bloc_ambiance ul .sens img{
+    margin-right: 5px;
+    width: 28px;
 }
 .bloc_ambiance ul .sens p:first-child{
     text-transform: uppercase;
@@ -201,28 +204,6 @@ header .nav li .button-simple:hover{
     font-size: 10px;
     color: #4D43B0;
     font-weight: 600;
-}
-.bloc_ambiance ul .sens .icon:before{
-    content: url("../img/picto_ouie.png");
-    position: absolute;
-    top: -5px;
-    left: -33px;
-}
-.bloc_ambiance ul .sens .vue:before{
-    content: url("../img/picto_vue.png");
-    position: absolute;
-}
-.bloc_ambiance ul .sens .odorat:before{
-    content: url("../img/picto_odorat.png");
-    position: absolute;
-}
-.bloc_ambiance ul .sens .gout:before{
-    content: url("../img/picto_gout.png");
-    position: absolute;
-}
-.bloc_ambiance ul .sens .toucher:before{
-    content: url("../img/picto_touch.png");
-    position: absolute;
 }
 
 /***************service**************/
@@ -857,49 +838,39 @@ input.valid{
 }
 /***recapitulatif***/
 .recap ul li {
+    border-top: 1px solid #4D43B0;
+}
+.recap ul li div{
     display: flex;
-    justify-content: space-between;
-    border-bottom: 0.5px solid #E0E0E0;
-    height: 60px;
+    text-align: left;
 }
-.recap ul li:first-child{
-    border-top: 0.5px solid #E0E0E0;
-}
-.recap ul li p {
-    margin: auto 0;
-}
-.recap ul li .recap_titre {
-    font-weight: 600;
-    line-height: 54px;
-    font-size: 13px;
-    text-transform: uppercase;
-    color: #868E95;
-}
-.recap ul li .recap_text {
-    font-size: 12px;
-    color: #000000;
-}
-.recap ul li [type="text"] {
-    background: transparent;
+.recap ul li .slider-form [type="text"]{
+    background-color: transparent;
     border: none;
-    width: 300px;
-    text-align: right;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
     padding: 0;
-    margin: auto;
-    word-wrap: break-word;
-    text-overflow: ellipsis;
-    -webkit-border-radius: initial;
-    -moz-border-radius: initial;
-    border-radius: initial;
+    margin: 0;
 }
-.recap ul li [type="text"]:focus{
-    background: transparent;
+.recap ul li .slider-form [type="text"]:focus{
+    background-color: transparent;
     border: none;
-    width: 300px;
-    text-align: right;
-    padding: 0;
-    margin: auto;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
 }
+.recap ul .input_menu{
+    flex-direction: column;
+}
+.recap ul .input_menu img{
+    width: 110px;
+}
+.recap ul .input_menu div{
+    flex-direction: column;
+}
+/***Edgar bot***/
+
 .commande_bot{
     height: 300px;
     padding: 5px;

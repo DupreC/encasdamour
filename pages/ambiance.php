@@ -2,11 +2,14 @@
 include '../header_pages.php';
 ?>
     <style>
-        footer{
-            background-color: #4D43B0;
-        }
-        footer ul #mc_embed_signup_scroll h3 {
-             color: #fff;
+        @media screen and (max-width:768px) {
+            footer {
+                background-color: #4D43B0;
+            }
+
+            footer ul #mc_embed_signup_scroll h3 {
+                color: #fff;
+            }
         }
     </style>
 <?php
@@ -69,23 +72,23 @@ $data_menu = get_menu($pdo);
                         <p>Nous avons sélectionnés les meilleurs éléments pour te proposer une expérience unique et adaptée aux besoins de ton couple. </p>
                         <ul class="sens">
                             <li>
-                                <p class="icon ouie"><img src="picto_ouie.png" alt="">Pour l’ouïe</p>
+                                <p class="icon ouie"><img src="./img/picto_ouie.png" alt="ouie">Pour l’ouïe</p>
                                 <p class="inclus"><span>Une playlist adaptée</span></p>
                             </li>
                             <li>
-                                <p class="icon vue"><img src="picto_vue.png" alt="">Pour la vue</p>
+                                <p class="icon vue"><img src="./img/picto_vue.png" alt="vue">Pour la vue</p>
                                 <p class="inclus"><span><?=$data_ambiance['vue1']?></span><br>(guirlandes, bougeoires, nappes, décoration florale)</p>
                             </li>
                             <li>
-                                <p class="icon odorat"><img src="picto_odorat.png" alt="">Pour  l’odorat</p>
+                                <p class="icon odorat"><img src="./img/picto_odorat.png" alt="odorat">Pour  l’odorat</p>
                                 <p class="inclus"><span><?=$data_ambiance['odorat']?></span></p>
                             </li>
                             <li>
-                                <p class="icon gout"><img src="picto_gout.png" alt="">Pour le goût</p>
+                                <p class="icon gout"><img src="./img/picto_gout.png" alt="gout">Pour le goût</p>
                                 <p class="inclus"><span>Un menu</span><br>(parmi quatre propositions)</p>
                             </li>
                             <li>
-                                <p class="icon toucher"><img src="picto_touch" alt="">Pour le toucher</p>
+                                <p class="icon toucher"><img src="./img/picto_touch.png" alt="toucher">Pour le toucher</p>
                                 <p class="inclus"><span><?=$data_ambiance['toucher']?></span><br></p>
                             </li>
                         </ul>
@@ -144,7 +147,7 @@ $data_menu = get_menu($pdo);
                             <?php
                             foreach ($data_menu as $value) {
                             ?>
-                            <li class="col-sm-5 col-sm-offset-1 <?=$value['code_menu']?>"><img src="./img/<?=$value['photo']?>" alt="<?=$value['nom']?>">
+                            <li class="col-sm-5 col-sm-offset-1 <?=$value['code_menu']?>"><img class="photo" src="./img/<?=$value['photo']?>" alt="<?=$value['nom']?>">
                                 <h5 class="nom_menu"><?=$value['nom']?></h5>
                                 <ul>
                                     <li>
@@ -214,38 +217,46 @@ $data_menu = get_menu($pdo);
                     <div class="row">
                         <h4>Récapitulatif de ta BoxPack</h4>
                         <ul class="col-sm-8 col-sm-offset-2">
+                            <h5>Ton pack </h5>
                             <li>
-                                <p class="recap_titre">Pack </p>
-                                <p class="recap_text pack"><input name="pack" type="text" readonly value="<?=$data_ambiance['nom']?>"></p>
+                                <div class="recap_text pack"><img src="./img/img-ambiances/<?=$data_ambiance['photo1']?>" alt="pack"><div><input name="pack" type="text" readonly value="<?=$data_ambiance['nom']?>"><span><?=$data_ambiance['intro']?></span></div></div>
                             </li>
+                            <h5>Tes menus</h5>
                             <li>
                                 <p class="recap_titre">Menu</p>
-                                <p class="recap_text input_menu"></p>
+                                <div class="recap_text input_menu"></div>
                             </li>
+                            <h5>La Date et l’heure de ta livraison</h5>
                             <li>
                                 <p class="recap_titre">Date</p>
-                                <p class="recap_text input_date"></p>
+                                <div class="recap_text input_date"></div>
+                                <div class="recap_text input_heure"></div>
                             </li>
-                            <li>
-                                <p class="recap_titre">Heure</p>
-                                <p class="recap_text input_heure"></p>
-                            </li>
+                            <h5>l’Adresse de livraison</h5>
                             <li>
                                 <p class="recap_titre">Adresse</p>
-                                <p class="recap_text input_adresse"></p>
+                                <div class="recap_text input_adresse"></div>
                             </li>
-                            <li>
-                                <p class="recap_titre">PRÉNOM ET NOM</p>
-                                <p class="recap_text input_nom"></p>
+                            <h5>tes informations personnelles</h5>
+                            <li><div>
+                                    <p class="recap_titre">PRÉNOM ET NOM</p>
+                                    <div class="recap_text input_nom"></div>
+                                 </div>
+                                <div>
+                                    <p class="recap_titre">email</p>
+                                    <div class="recap_text input_email"></div>
+                                </div>
+                                <div>
+                                    <p class="recap_titre">téléphone</p>
+                                    <div class="recap_text input_phone"></div>
+                                </div>
                             </li>
-                            <li>
-                                <p class="recap_titre">email</p>
-                                <p class="recap_text input_email"></p>
-                            </li>
-                            <li>
-                                <p class="recap_titre">téléphone</p>
-                                <p class="recap_text input_phone"></p>
-                            </li>
+                            <div class="prix">
+                                <p>Prix du pack complet :<span>80,00 EUR</span></p>
+                                <p>Frais de livraison :<span>4,00 EUR</span></p>
+                                <p>Total :<span>84,00 EUR</span></p>
+                                <p><span>GRATUIT</span></p>
+                            </div>
                         </ul>
                     </div>
                     <button class="row five button-simple">Valider et réserver</button>
@@ -254,7 +265,7 @@ $data_menu = get_menu($pdo);
         </div>
     </div>
 </div>
-<div class="commande_bot">
+<div class="commande_bot mobile">
     <div class="text_bot">
         <h4>Hey !</h4>
         <p>Passes ta réservation ici, grâce à Edgar !</p>
@@ -262,9 +273,9 @@ $data_menu = get_menu($pdo);
     </div>
 </div>
     <link rel="stylesheet" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css">
-    <link rel="stylesheet" href="http://weareoutman.github.io/clockpicker/dist/bootstrap-clockpicker.min.css">
+    <link rel="stylesheet" href="https://weareoutman.github.io/clockpicker/dist/bootstrap-clockpicker.min.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACNkob18sCtX5tS7PyfPvPD4HpQC-tOlQ&libraries=places&callback=initAutocomplete" async defer></script>
-    <script src="http://weareoutman.github.io/clockpicker/dist/jquery-clockpicker.min.js"></script>
+    <script src="https://weareoutman.github.io/clockpicker/dist/jquery-clockpicker.min.js"></script>
     <script>
         $('.clockpicker').clockpicker();
         $('.petites_photos img').on({
@@ -273,7 +284,6 @@ $data_menu = get_menu($pdo);
                 $('.grande_photo img').attr('src', src);
             }
         });
-
     </script>
 <?php
 include '../footer.php';
