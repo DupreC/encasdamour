@@ -61,6 +61,9 @@ header .nav li .button-simple:hover{
     border-radius:4px ;
     margin: 5px;
 }
+.bloc_ambiance .petites_photos img{
+    cursor: pointer;
+}
 
 .bloc_ambiance .sos{
     background: #4D43B0;
@@ -229,7 +232,7 @@ header .nav li .button-simple:hover{
 /***************form_ambiance**************/
 .bloc_form{
     position: relative;
-    height: 1300px;
+    height: 1350px;
 }
 .bloc_form h3{
     margin-top: 50px;
@@ -246,6 +249,12 @@ header .nav li .button-simple:hover{
 }
 
 /***stepbystep****/
+.retour1,
+.retour2,
+.retour3,
+.retour4{
+    cursor: pointer;
+}
 * {
     font-size: 16px;
 }
@@ -268,7 +277,7 @@ button:active,
 .contain_form {
     width: 700px;
     position: absolute;
-    top: 54%;
+    top: 57%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -423,6 +432,7 @@ button:active,
     -webkit-transform: translate(0px) scale(1);
     -ms-transform: translate(0px) scale(1);
     transform: translate(0px) scale(1);
+    height: 1250px;
 }
 
 .contain_form.slider-one-active .slider-two,
@@ -840,11 +850,55 @@ input.valid{
 .recap ul li {
     border-top: 1px solid #4D43B0;
 }
+.recap ul h5{
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #4D43B0;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
 .recap ul li div{
     display: flex;
     text-align: left;
+    margin: auto 0;
 }
-.recap ul li .slider-form [type="text"]{
+.recap ul li{
+    padding: 15px 0;
+}
+.recap ul li .pack div{
+    flex-direction: column;
+}
+.recap ul li .pack div span{
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #828282;
+}
+.recap ul li .input_menu{
+    flex-direction: column;
+}
+.recap ul li .input_menu div{
+    flex-direction: initial;
+    padding: 15px 0;
+}
+.recap ul li .input_menu div:last-child{
+    flex-direction: column;
+    margin-left: 127px;
+}
+.recap ul li .input_menu div img{
+    width: 155px;
+}
+.recap .recap_titre{
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #4F4F4F;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.slider-form .recap_text input{
     background-color: transparent;
     border: none;
     -webkit-border-radius: 0;
@@ -852,22 +906,80 @@ input.valid{
     border-radius: 0;
     padding: 0;
     margin: 0;
+    font-weight: 300;
+    font-size: 15px;
+    color: #4F4F4F;
+    pointer-events: none;
 }
-.recap ul li .slider-form [type="text"]:focus{
+.slider-form .recap_text input:focus{
     background-color: transparent;
     border: none;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
 }
-.recap ul .input_menu{
-    flex-direction: column;
+.slider-form .pack input,
+.slider-form .input_menu input{
+    margin-left: 15px;
 }
-.recap ul .input_menu img{
+.recap ul img{
     width: 110px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.recap ul .input_date input{
+    padding: 10px 20px;
+    width: 40%;
+    background: #4D43B0;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 13px;
+    text-align: center;
+    margin-right: 15px;
+}
+.recap ul .input_date input:focus{
+    background: #4D43B0;
+    border-radius: 3px;
+    color: #fff;
+}
+.recap ul .input_date input:last-child{
+    width: 20%;
 }
 .recap ul .input_menu div{
     flex-direction: column;
+}
+.recap ul .info_perso div{
+    flex-direction: column;
+}
+.recap ul .info_perso>div{
+    border-bottom: 1px solid #E0E0E0;
+    margin: 5px 0;
+    padding-bottom: 5px;
+}
+.recap ul .prix {
+    flex-direction: column;
+}
+.recap ul .prix div{
+    justify-content: space-between;
+    float: right;
+    width: 60%;
+}
+.recap ul .prix div p{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.recap ul .prix div .rayer{
+    text-decoration:line-through;
+}
+.recap ul .prix div p:last-child{
+    justify-content: end;
+    font-weight: 600;
+    font-size: 15px;
+    color: #4D43B0;
 }
 /***Edgar bot***/
 
@@ -916,6 +1028,7 @@ input.valid{
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 40px;
+    text-align: center;
 }
 .bloc_mentions-legales h3{
     color: #4D43B0;
@@ -947,6 +1060,17 @@ input.valid{
 }
 .bloc_plan-site h3:last-child{
     margin-bottom: 40px;
+}
+.bloc_plan-site h4{
+    margin-bottom: 15px;
+}
+.bloc_plan-site ul{
+    margin-bottom: 15px;
+    margin-top: -10px;
+}
+.bloc_plan-site ul li a{
+    font-size: 12px;
+    color: #000000;
 }
 
     /*****************Remerciment commande*********************/
@@ -981,7 +1105,7 @@ input.valid{
     margin-top: 60px;
     background-color: #202E77;
     border: none;
-    padding: 11px 24px;
+        padding: 11px 24px;
 }
 .remerciement a:hover{
     color: #fff;
@@ -1001,12 +1125,20 @@ footer{
     .bloc_ambiance > ul > li {
         height: 730px;
     }
+    .bloc_ambiance ul .sens li {
+        height: 50px;
+    }
     .bloc_ambiance ul .sens p:last-child {
         margin-left: 0;
+        width: 60%;
     }
     .bloc_ambiance .grande_photo,
     .bloc_ambiance .petites_photos {
         text-align: center;
+    }
+    .bloc_ambiance .petites_photos {
+        text-align: center;
+        height: 52px;
     }
     .bloc_ambiance ul .infos>p:last-child {
         text-align: center;
@@ -1066,7 +1198,6 @@ footer{
         flex-direction: column;
     }
     .bloc_ambiance ul .sens li p {
-        margin: 0 0 0 35px;
         padding: 0;
         font-size: 9px;
         width: 100%;

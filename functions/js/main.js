@@ -8,40 +8,10 @@ function gtag() {
 gtag('js', new Date());
 gtag('config', 'UA-119987436-2');
 /////////////////////////////////////////////////
-// Mailchimp
-/////////////////////////////////////////////////
-(function ($) {
-    window.fnames = new Array();
-    window.ftypes = new Array();
-    fnames[0] = 'EMAIL';
-    ftypes[0] = 'email';
-    $.extend($.validator.messages, {
-        required: "Ce champ est requis.",
-        remote: "Remplis ce champ pour continuer.",
-        email: "Entre une adresse email valide.",
-        url: "Entre une URL valide.",
-        date: "Entre une date valide.",
-        dateISO: "Entre une date valide (ISO).",
-        number: "Entre un nombre valide.",
-        digits: "Entre (seulement) une valeur numérique.",
-        creditcard: "Entre un numéro de carte de crédit valide.",
-        equalTo: "Entre une nouvelle fois la même valeur.",
-        accept: "Entre une valeur avec une extension valide.",
-        maxlength: $.validator.format("N'entrer pas plus de {0} caractères."),
-        minlength: $.validator.format("Entre au moins {0} caractères."),
-        rangelength: $.validator.format("Entre entre {0} et {1} caractères."),
-        range: $.validator.format("Entre une valeur entre {0} et {1}."),
-        max: $.validator.format("Entre une valeur inférieure ou égale à {0}."),
-        min: $.validator.format("Entre une valeur supérieure ou égale à {0}.")
-    });
-}(jQuery));
-var $mcj = jQuery.noConflict(true);
-
-/////////////////////////////////////////////////
 // Code postal predictif
 /////////////////////////////////////////////////
 var placeSearch, autocomplete;
-
+var fillInAddress ="";
 function initAutocomplete() {
     // Create the autocomplete object, restricting the search to geographical
     // location types.
@@ -56,21 +26,21 @@ function initAutocomplete() {
 
 // Bias the autocomplete object to the user's geographical location,
 // as supplied by the browser's 'navigator.geolocation' object.
-function geolocate() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) {
-            var geolocation = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
-            var circle = new google.maps.Circle({
-                center: geolocation,
-                radius: position.coords.accuracy
-            });
-            autocomplete.setBounds(circle.getBounds());
-        });
-    }
-}
+// function geolocate() {
+//     if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(function (position) {
+//             var geolocation = {
+//                 lat: position.coords.latitude,
+//                 lng: position.coords.longitude
+//             };
+//             var circle = new google.maps.Circle({
+//                 center: geolocation,
+//                 radius: position.coords.accuracy
+//             });
+//             autocomplete.setBounds(circle.getBounds());
+//         });
+//     }
+// }
 
 
 /////////////////////////////////////////////////
@@ -81,14 +51,14 @@ function ScrollToReserver(classe) {
         scrollTop: ($('.'+classe).offset().top)
     },500);
 }
-var $firstButton = $(".first"),
-    $secondButton = $(".second"),
-    $thirdButton = $(".third"),
-    $fourButton = $(".four"),
-    $firstRetour = $(".slider-two .retour"),
-    $secondRetour = $(".slider-three .retour"),
-    $thirdRetour = $(".slider-four .retour"),
-    $fourRetour = $(".slider-five .retour"),
+var $firstButton = $(".first_button"),
+    $secondButton = $(".second_button"),
+    $thirdButton = $(".third_button"),
+    $fourButton = $(".four_button"),
+    $firstRetour = $(".retour1"),
+    $secondRetour = $(".retour2"),
+    $thirdRetour = $(".retour3"),
+    $fourRetour = $(".retour4"),
     $input = $("input"),
     $name = $(".name"),
     $more = $(".more"),
@@ -97,15 +67,15 @@ var $firstButton = $(".first"),
     $ctr = $(".contain_form"),
     $mail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 $firstRetour.on("click", function(e){
-        $ctr.addClass("one slider-one-active").removeClass("two slider-two-active");
-        $(".bloc_form").css("height", "1300px");
-        $(".slider").css("height", "1200px");
+        $ctr.addClass("one slider-one-active").removeClass("two slider-two-active three slider-three-active four slider-four-active five slider-five-active ");
+        $(".bloc_form").css("height", "1350px");
+        $(".slider").css("height", "1250px");
         ScrollToReserver('reserver');
         $firstButton.text("Valider");
         e.preventDefault();
 });
 $secondRetour.on("click", function(e){
-        $ctr.addClass("two slider-two-active").removeClass("three slider-three-active");
+        $ctr.addClass("two slider-two-active").removeClass("three slider-three-active one slider-one-active four slider-four-active five slider-five-active ");
         $(".bloc_form").css("height", "500px");
         $(".slider").css("height", "300px");
         ScrollToReserver('reserver');
@@ -113,17 +83,17 @@ $secondRetour.on("click", function(e){
         e.preventDefault();
 });
 $thirdRetour.on("click", function(e){
-        $ctr.addClass("three slider-three-active").removeClass("four slider-four-active");
-        $(".bloc_form").css("height", "1300px");
-        $(".slider").css("height", "1200px");
+        $ctr.addClass("three slider-three-active").removeClass("four slider-four-active two slider-two-active one slider-one-active five slider-five-active ");
+        $(".bloc_form").css("height", "850px");
+        $(".slider").css("height", "650px");
         ScrollToReserver('reserver');
         $thirdButton.text("Valider");
         e.preventDefault();
 });
 $fourRetour.on("click", function(e){
-        $ctr.addClass("four slider-four-active").removeClass("five slider-five-active");
-        $(".bloc_form").css("height", "1300px");
-        $(".slider").css("height", "1200px");
+        $ctr.addClass("four slider-four-active").removeClass("five slider-five-active three slider-three-active two slider-two-active one slider-one-active");
+        $(".bloc_form").css("height", "650px");
+        $(".slider").css("height", "450px");
         ScrollToReserver('reserver');
         $fourButton.text("Valider");
         e.preventDefault();
@@ -182,8 +152,8 @@ $fourButton.on("click", function(e){
     if ($mail.test($("#email").val()) && $( ".slider-four #name" ).val() != "" && $( ".slider-four #phone" ).val().length == 10) {
         $(this).text("Saving...").delay(900).queue(function(){
             $ctr.addClass("five slider-five-active").removeClass("four slider-four-active");
-            $(".bloc_form").css("height", "1300px");
-            $(".slider").css("height", "1100px");
+            $(".bloc_form").css("height", "1650px");
+            $(".slider").css("height", "1450px");
             ScrollToReserver('reserver');
             $( this ).dequeue();
     });
@@ -198,7 +168,8 @@ $fourButton.on("click", function(e){
         var menus="";
         var image="";
         var images="";
-        
+        var commentaire=$('.comentaires').val();
+
         if ($('.menu_dolce_vita input').val() ==1){
             menu += "1x "+$('.menu_dolce_vita h5').html()+'\n';
             image = $('.menu_dolce_vita .photo').attr('src');
@@ -242,15 +213,17 @@ $fourButton.on("click", function(e){
             menu += "2x "+$('.menu_art_de_vivre h5').html();
             image = $('.menu_art_de_vivre  .photo').attr('src');
         }
-
-        $('.recap .input_menu').prepend('<div><img src="'+image+'" alt=""><input name="menu" type="text" readonly value="'+menu+'"></div><div><img src="\'+images+\'" alt=""><input class="menus" name="menus" type="text" readonly value="'+menus+'"></div>');
-        $('.recap .input_date').prepend('<input name="date_time " type="text" readonly value="'+jour+' '+mois+'"><input name="heure" type="text" readonly value="\'+heure+\'">');
-        $('.recap .input_adresse').prepend('<input name="adresse" type="text" readonly value="'+adresse+'">');
-        $('.recap .input_nom').prepend('<input name="nom" type="text" readonly value="'+name+'">');
-        $('.recap .input_email').prepend('<input name="email" type="text" readonly value="'+email+'">');
-        $('.recap .input_phone').prepend('<input name="phone" type="text" readonly value="'+phone+'">');
+        $('.recap .input_menu').empty().prepend('<div><img src="'+image+'" alt=""><input name="menu" type="text" readonly value="'+menu+'"></div><div><img src="'+images+'" alt=""><input class="menus" name="menus" type="text" readonly value="'+menus+'"></div><div class="text_commentaire"><p class="recap_titre">Informations supplémentaires</p><p>'+commentaire+'</p></div>');
+        $('.recap .input_date').empty().prepend('<input name="date_time" type="text" readonly value="'+jour+' '+mois+'"><input name="heure" type="text" readonly value="'+heure+'">');
+        $('.recap .input_adresse').empty().prepend('<input name="adresse" type="text" readonly value="'+adresse+'">');
+        $('.recap .input_nom').empty().prepend('<input name="nom" type="text" readonly value="'+name+'">');
+        $('.recap .input_email').empty().prepend('<input name="email" type="text" readonly value="'+email+'">');
+        $('.recap .input_phone').empty().prepend('<input name="phone" type="text" readonly value="'+phone+'">');
         if (menus == ""){
             $('.recap .menus').hide();
+        }
+        if (commentaire == ""){
+            $('.recap .text_commentaire').hide();
         }
     } else{
         $( ".slider-three input" ).each().addClass("invalid");
@@ -259,17 +232,6 @@ $fourButton.on("click", function(e){
     }
     e.preventDefault();
 });
-
-/////////////////////////////////////////////
-//Menu burger
-/////////////////////////////////////////////
-$(".menu-toggle").on('click', function () {
-    $(this).toggleClass("on");
-    $('.menu-section').toggleClass("on");
-    $("nav ul").toggleClass('hidden');
-});
-
-
 /////////////////////////////////////////////
 // addclass image home bloc ambiance
 /////////////////////////////////////////////

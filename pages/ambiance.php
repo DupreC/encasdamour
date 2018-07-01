@@ -11,6 +11,9 @@ include '../header_pages.php';
                 color: #fff;
             }
         }
+        header .nav .packs{
+            border-bottom: 3px solid #FFA0A4;
+        }
     </style>
 <?php
 include "../functions/php/main.php";
@@ -106,22 +109,22 @@ $data_menu = get_menu($pdo);
         <div class="steps">
             <div class="step step-one">
                 <div class="img-fil_ariane">
-                    <img src="./img/choix_menu.png" alt="menu">
+                    <img class="retour1" src="./img/choix_menu.png" alt="menu">
                 </div>
             </div>
             <div class="step step-two">
                 <div class="img-fil_ariane">
-                    <img src="./img/choix_adresse.png" alt="localisation">
+                    <img class="retour2" src="./img/choix_adresse.png" alt="localisation">
                 </div>
             </div>
             <div class="step step-three">
                 <div class="img-fil_ariane">
-                    <img src="./img/choix_date.png" alt="date_heure">
+                    <img class="retour3" src="./img/choix_date.png" alt="date_heure">
                 </div>
             </div>
             <div class="step step-four">
                 <div class="img-fil_ariane">
-                    <img src="./img/choix_toi.png" alt="toi">
+                    <img class="retour4" src="./img/choix_toi.png" alt="toi">
                 </div>
             </div>
             <div class="step step-five">
@@ -174,33 +177,33 @@ $data_menu = get_menu($pdo);
                             ?>
                         </ul>
                         <h5>Des besoins spécifiques ? Dis-le nous ici !</h5>
-                        <textarea placeholder="Ex : Ma copine est allergique aux arachides, je n’aime pas les tomates..." name="ameliorer" id="ameliorer"></textarea>
+                        <textarea placeholder="Ex : Ma copine est allergique aux arachides, je n’aime pas les tomates..." name="ameliorer" class="comentaires"></textarea>
                     </div>
                     <span class="error">Choisis deux menus</span>
-                    <button class="first button-simple">Valider</button>
+                    <button class="first_button button-simple">Valider</button>
                 </div>
                 <form class="slider-form slider-two">
-                    <a class="retour">< Retour</a>
+                    <a class="retour retour1">< Retour</a>
                     <div class="row" id="code_postal">
                         <h4>Quelle est l’adresse de livraison ?</h4>
                         <div id="locationField">
                             <input class="adresse" required id="autocomplete" placeholder="33 rue du paradis, 75000, PARIS" type="text">
                         </div>
                     </div>
-                    <button class="row second button-simple">Valider</button>
+                    <button class="row second_button button-simple">Valider</button>
                 </form>
                 <form class="slider-form slider-three">
-                    <a class="retour">< Retour</a>
+                    <a class="retour retour2">< Retour</a>
                     <h4>Quand et à quelle heure souhaites-tu être livré(e) ?</h4>
                     <?php include 'modules/calendrier.php';?>
                     <h5><label for="time">À quelle heure ?</label></h5>
                     <div class="input-group clockpicker" data-placement="right" data-align="top" data-autoclose="true">
                         <input required type="text" class="form-control heure" placeholder="18:45">
                     </div>
-                    <button class="row third button-simple">Valider</button>
+                    <button class="row third_button button-simple">Valider</button>
                 </form>
                 <form class="slider-form slider-four row">
-                    <a class="retour">< Retour</a>
+                    <a class="retour retour3">< Retour</a>
                     <div class="contact col-sm-8 col-sm-offset-2">
                         <h4>Quelques infos pour pouvoir te contacter</h4>
                         <h5>Prénom et nom</h5>
@@ -209,36 +212,35 @@ $data_menu = get_menu($pdo);
                         <input required id="email"  type="email" placeholder="Firmin.Dustriel@gmail.com">
                         <h5>Numéro de téléphone</h5>
                         <input required id="phone"  type="tel" placeholder="0636656565"  pattern="^0\d(\s|-)?(\d{2}(\s|-)?){4}$"><br>
-                        <button class="row four button-simple">Valider</button>
+                        <button class="row four_button button-simple">Valider</button>
                     </div>
                 </form>
                 <form class="slider-form slider-five recap" action="./functions/php/commande.php" method="post">
-                    <a class="retour">< Retour</a>
+                    <a class="retour retour4">< Retour</a>
                     <div class="row">
                         <h4>Récapitulatif de ta BoxPack</h4>
                         <ul class="col-sm-8 col-sm-offset-2">
-                            <h5>Ton pack </h5>
+                            <h5>Ton pack</h5>
                             <li>
                                 <div class="recap_text pack"><img src="./img/img-ambiances/<?=$data_ambiance['photo1']?>" alt="pack"><div><input name="pack" type="text" readonly value="<?=$data_ambiance['nom']?>"><span><?=$data_ambiance['intro']?></span></div></div>
                             </li>
-                            <h5>Tes menus</h5>
+                            <h5>Tes menus <a class="retour1">Modifier</a></h5>
                             <li>
-                                <p class="recap_titre">Menu</p>
                                 <div class="recap_text input_menu"></div>
                             </li>
-                            <h5>La Date et l’heure de ta livraison</h5>
-                            <li>
-                                <p class="recap_titre">Date</p>
-                                <div class="recap_text input_date"></div>
-                                <div class="recap_text input_heure"></div>
-                            </li>
-                            <h5>l’Adresse de livraison</h5>
+                            <h5>L’Adresse de livraison <a class="retour2">Modifier</a></h5>
                             <li>
                                 <p class="recap_titre">Adresse</p>
                                 <div class="recap_text input_adresse"></div>
                             </li>
-                            <h5>tes informations personnelles</h5>
-                            <li><div>
+                            <h5>La Date et l’heure de ta livraison <a class="retour3">Modifier</a></h5>
+                            <li>
+                            <div class="recap_text input_date"></div>
+                            <div class="recap_text input_heure"></div>
+                            </li>
+                            <h5>Tes informations personnelles <a class="retour4">Modifier</a></h5>
+                            <li class="info_perso">
+                                <div>
                                     <p class="recap_titre">PRÉNOM ET NOM</p>
                                     <div class="recap_text input_nom"></div>
                                  </div>
@@ -252,10 +254,12 @@ $data_menu = get_menu($pdo);
                                 </div>
                             </li>
                             <div class="prix">
-                                <p>Prix du pack complet :<span>80,00 EUR</span></p>
-                                <p>Frais de livraison :<span>4,00 EUR</span></p>
-                                <p>Total :<span>84,00 EUR</span></p>
-                                <p><span>GRATUIT</span></p>
+                                <div>
+                                    <p>Prix du pack complet :<span>80,00 EUR</span></p>
+                                    <p>Frais de livraison :<span>4,00 EUR</span></p>
+                                    <p>Total :<span class="rayer">84,00 EUR</span></p>
+                                    <p><span>GRATUIT</span></p>
+                                </div>
                             </div>
                         </ul>
                     </div>

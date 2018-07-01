@@ -3,7 +3,7 @@
 // Insert commande
 /////////////////////////////////////////////////
 try{
-    $pdo = new PDO('mysql:dbname=duprec_encasdamour;host:localhost:3306;charset=utf8','root','');
+    $pdo = new PDO('mysql:dbname=duprec_encasdamour;host:localhost:3306;charset=utf8','duprec_colin','dromar971');
     $pdo->exec('SET NAMES utf8');
 } catch( PDOException $e){
     die("Erreur! ".$e->getMessage());

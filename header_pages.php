@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/styles_pages.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles_pages.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -58,7 +58,6 @@
          logged_in_greeting="Hey ! Passe ta réservation ici !"
          logged_out_greeting="Hey ! Passe ta réservation ici !">
     </div>
-
 </head>
 <body>
 <div class="background-body">
@@ -122,3 +121,13 @@
             </div>
         </header>
     </div>
+<script>
+    /////////////////////////////////////////////
+    //Menu burger
+    /////////////////////////////////////////////
+    $(".menu-toggle").on('click', function () {
+        $(this).toggleClass("on");
+        $('.menu-section').toggleClass("on");
+        $("nav ul").toggleClass('hidden');
+    });
+</script>

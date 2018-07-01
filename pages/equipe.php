@@ -2,6 +2,11 @@
 include '../header_pages.php';
 ?>
 <link rel="stylesheet" href="./css/style_pages_bleu.css">
+    <style>
+        header .nav .equipe{
+            border-bottom: 3px solid #FFA0A4;
+        }
+    </style>
 <div class="container">
     <div class="row bloc_equipe no-padding">
         <div class="fil_ariane col-md-2 col-md-offset-0 col-md-3 col-sm-offset-2">
