@@ -2,11 +2,17 @@
 include '../header_pages.php';
 ?>
     <style>
-        footer{
-            background-color: #4D43B0;
+        @media screen and (max-width:768px) {
+            footer {
+                background-color: #4D43B0;
+            }
+
+            footer ul #mc_embed_signup_scroll h3 {
+                color: #fff;
+            }
         }
-        footer ul #mc_embed_signup_scroll h3 {
-             color: #fff;
+        header .nav .packs{
+            border-bottom: 3px solid #FFA0A4;
         }
     </style>
 <?php
@@ -69,23 +75,23 @@ $data_menu = get_menu($pdo);
                         <p>Nous avons sélectionnés les meilleurs éléments pour te proposer une expérience unique et adaptée aux besoins de ton couple. </p>
                         <ul class="sens">
                             <li>
-                                <p class="icon ouie"><img src="picto_ouie.png" alt="">Pour l’ouïe</p>
+                                <p class="icon ouie"><img src="./img/picto_ouie.png" alt="ouie">Pour l’ouïe</p>
                                 <p class="inclus"><span>Une playlist adaptée</span></p>
                             </li>
                             <li>
-                                <p class="icon vue"><img src="picto_vue.png" alt="">Pour la vue</p>
+                                <p class="icon vue"><img src="./img/picto_vue.png" alt="vue">Pour la vue</p>
                                 <p class="inclus"><span><?=$data_ambiance['vue1']?></span><br>(guirlandes, bougeoires, nappes, décoration florale)</p>
                             </li>
                             <li>
-                                <p class="icon odorat"><img src="picto_odorat.png" alt="">Pour  l’odorat</p>
+                                <p class="icon odorat"><img src="./img/picto_odorat.png" alt="odorat">Pour  l’odorat</p>
                                 <p class="inclus"><span><?=$data_ambiance['odorat']?></span></p>
                             </li>
                             <li>
-                                <p class="icon gout"><img src="picto_gout.png" alt="">Pour le goût</p>
+                                <p class="icon gout"><img src="./img/picto_gout.png" alt="gout">Pour le goût</p>
                                 <p class="inclus"><span>Un menu</span><br>(parmi quatre propositions)</p>
                             </li>
                             <li>
-                                <p class="icon toucher"><img src="picto_touch" alt="">Pour le toucher</p>
+                                <p class="icon toucher"><img src="./img/picto_touch.png" alt="toucher">Pour le toucher</p>
                                 <p class="inclus"><span><?=$data_ambiance['toucher']?></span><br></p>
                             </li>
                         </ul>
@@ -103,22 +109,22 @@ $data_menu = get_menu($pdo);
         <div class="steps">
             <div class="step step-one">
                 <div class="img-fil_ariane">
-                    <img src="./img/choix_menu.png" alt="menu">
+                    <img class="retour1" src="./img/choix_menu.png" alt="menu">
                 </div>
             </div>
             <div class="step step-two">
                 <div class="img-fil_ariane">
-                    <img src="./img/choix_adresse.png" alt="localisation">
+                    <img class="retour2" src="./img/choix_adresse.png" alt="localisation">
                 </div>
             </div>
             <div class="step step-three">
                 <div class="img-fil_ariane">
-                    <img src="./img/choix_date.png" alt="date_heure">
+                    <img class="retour3" src="./img/choix_date.png" alt="date_heure">
                 </div>
             </div>
             <div class="step step-four">
                 <div class="img-fil_ariane">
-                    <img src="./img/choix_toi.png" alt="toi">
+                    <img class="retour4" src="./img/choix_toi.png" alt="toi">
                 </div>
             </div>
             <div class="step step-five">
@@ -144,7 +150,7 @@ $data_menu = get_menu($pdo);
                             <?php
                             foreach ($data_menu as $value) {
                             ?>
-                            <li class="col-sm-5 col-sm-offset-1 <?=$value['code_menu']?>"><img src="./img/<?=$value['photo']?>" alt="<?=$value['nom']?>">
+                            <li class="col-sm-5 col-sm-offset-1 <?=$value['code_menu']?>"><img class="photo" src="./img/<?=$value['photo']?>" alt="<?=$value['nom']?>">
                                 <h5 class="nom_menu"><?=$value['nom']?></h5>
                                 <ul>
                                     <li>
@@ -171,33 +177,33 @@ $data_menu = get_menu($pdo);
                             ?>
                         </ul>
                         <h5>Des besoins spécifiques ? Dis-le nous ici !</h5>
-                        <textarea placeholder="Ex : Ma copine est allergique aux arachides, je n’aime pas les tomates..." name="ameliorer" id="ameliorer"></textarea>
+                        <textarea placeholder="Ex : Ma copine est allergique aux arachides, je n’aime pas les tomates..." name="ameliorer" class="comentaires"></textarea>
                     </div>
                     <span class="error">Choisis deux menus</span>
-                    <button class="first button-simple">Valider</button>
+                    <button class="first_button button-simple">Valider</button>
                 </div>
                 <form class="slider-form slider-two">
-                    <a class="retour">< Retour</a>
+                    <a class="retour retour1">< Retour</a>
                     <div class="row" id="code_postal">
                         <h4>Quelle est l’adresse de livraison ?</h4>
                         <div id="locationField">
                             <input class="adresse" required id="autocomplete" placeholder="33 rue du paradis, 75000, PARIS" type="text">
                         </div>
                     </div>
-                    <button class="row second button-simple">Valider</button>
+                    <button class="row second_button button-simple">Valider</button>
                 </form>
                 <form class="slider-form slider-three">
-                    <a class="retour">< Retour</a>
+                    <a class="retour retour2">< Retour</a>
                     <h4>Quand et à quelle heure souhaites-tu être livré(e) ?</h4>
                     <?php include 'modules/calendrier.php';?>
                     <h5><label for="time">À quelle heure ?</label></h5>
                     <div class="input-group clockpicker" data-placement="right" data-align="top" data-autoclose="true">
                         <input required type="text" class="form-control heure" placeholder="18:45">
                     </div>
-                    <button class="row third button-simple">Valider</button>
+                    <button class="row third_button button-simple">Valider</button>
                 </form>
                 <form class="slider-form slider-four row">
-                    <a class="retour">< Retour</a>
+                    <a class="retour retour3">< Retour</a>
                     <div class="contact col-sm-8 col-sm-offset-2">
                         <h4>Quelques infos pour pouvoir te contacter</h4>
                         <h5>Prénom et nom</h5>
@@ -206,46 +212,55 @@ $data_menu = get_menu($pdo);
                         <input required id="email"  type="email" placeholder="Firmin.Dustriel@gmail.com">
                         <h5>Numéro de téléphone</h5>
                         <input required id="phone"  type="tel" placeholder="0636656565"  pattern="^0\d(\s|-)?(\d{2}(\s|-)?){4}$"><br>
-                        <button class="row four button-simple">Valider</button>
+                        <button class="row four_button button-simple">Valider</button>
                     </div>
                 </form>
                 <form class="slider-form slider-five recap" action="./functions/php/commande.php" method="post">
-                    <a class="retour">< Retour</a>
+                    <a class="retour retour4">< Retour</a>
                     <div class="row">
                         <h4>Récapitulatif de ta BoxPack</h4>
                         <ul class="col-sm-8 col-sm-offset-2">
+                            <h5>Ton pack</h5>
                             <li>
-                                <p class="recap_titre">Pack </p>
-                                <p class="recap_text pack"><input name="pack" type="text" readonly value="<?=$data_ambiance['nom']?>"></p>
+                                <div class="recap_text pack"><img src="./img/img-ambiances/<?=$data_ambiance['photo1']?>" alt="pack"><div><input name="pack" type="text" readonly value="<?=$data_ambiance['nom']?>"><span><?=$data_ambiance['intro']?></span></div></div>
                             </li>
+                            <h5>Tes menus <a class="retour1">Modifier</a></h5>
                             <li>
-                                <p class="recap_titre">Menu</p>
-                                <p class="recap_text input_menu"></p>
+                                <div class="recap_text input_menu"></div>
                             </li>
-                            <li>
-                                <p class="recap_titre">Date</p>
-                                <p class="recap_text input_date"></p>
-                            </li>
-                            <li>
-                                <p class="recap_titre">Heure</p>
-                                <p class="recap_text input_heure"></p>
-                            </li>
+                            <h5>L’Adresse de livraison <a class="retour2">Modifier</a></h5>
                             <li>
                                 <p class="recap_titre">Adresse</p>
-                                <p class="recap_text input_adresse"></p>
+                                <div class="recap_text input_adresse"></div>
                             </li>
+                            <h5>La Date et l’heure de ta livraison <a class="retour3">Modifier</a></h5>
                             <li>
-                                <p class="recap_titre">PRÉNOM ET NOM</p>
-                                <p class="recap_text input_nom"></p>
+                            <div class="recap_text input_date"></div>
+                            <div class="recap_text input_heure"></div>
                             </li>
-                            <li>
-                                <p class="recap_titre">email</p>
-                                <p class="recap_text input_email"></p>
+                            <h5>Tes informations personnelles <a class="retour4">Modifier</a></h5>
+                            <li class="info_perso">
+                                <div>
+                                    <p class="recap_titre">PRÉNOM ET NOM</p>
+                                    <div class="recap_text input_nom"></div>
+                                 </div>
+                                <div>
+                                    <p class="recap_titre">email</p>
+                                    <div class="recap_text input_email"></div>
+                                </div>
+                                <div>
+                                    <p class="recap_titre">téléphone</p>
+                                    <div class="recap_text input_phone"></div>
+                                </div>
                             </li>
-                            <li>
-                                <p class="recap_titre">téléphone</p>
-                                <p class="recap_text input_phone"></p>
-                            </li>
+                            <div class="prix">
+                                <div>
+                                    <p>Prix du pack complet :<span>80,00 EUR</span></p>
+                                    <p>Frais de livraison :<span>4,00 EUR</span></p>
+                                    <p>Total :<span class="rayer">84,00 EUR</span></p>
+                                    <p><span>GRATUIT</span></p>
+                                </div>
+                            </div>
                         </ul>
                     </div>
                     <button class="row five button-simple">Valider et réserver</button>
@@ -254,7 +269,7 @@ $data_menu = get_menu($pdo);
         </div>
     </div>
 </div>
-<div class="commande_bot">
+<div class="commande_bot mobile">
     <div class="text_bot">
         <h4>Hey !</h4>
         <p>Passes ta réservation ici, grâce à Edgar !</p>
@@ -262,9 +277,9 @@ $data_menu = get_menu($pdo);
     </div>
 </div>
     <link rel="stylesheet" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css">
-    <link rel="stylesheet" href="http://weareoutman.github.io/clockpicker/dist/bootstrap-clockpicker.min.css">
+    <link rel="stylesheet" href="https://weareoutman.github.io/clockpicker/dist/bootstrap-clockpicker.min.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACNkob18sCtX5tS7PyfPvPD4HpQC-tOlQ&libraries=places&callback=initAutocomplete" async defer></script>
-    <script src="http://weareoutman.github.io/clockpicker/dist/jquery-clockpicker.min.js"></script>
+    <script src="https://weareoutman.github.io/clockpicker/dist/jquery-clockpicker.min.js"></script>
     <script>
         $('.clockpicker').clockpicker();
         $('.petites_photos img').on({
@@ -273,7 +288,6 @@ $data_menu = get_menu($pdo);
                 $('.grande_photo img').attr('src', src);
             }
         });
-
     </script>
 <?php
 include '../footer.php';

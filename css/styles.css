@@ -97,13 +97,14 @@ header ul li:first-child{
 }
 header .nav h1{
     height: 60px;
-    margin: -20px 0 0 0;
+    margin: -50px 0 0 0;
 }
 header .nav h1 img{
-    height: 60px;
+    width: 165px;
+    height: auto;
 }
 header .nav li a{
-    color: #FF6B77;
+    color: #fff;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -125,7 +126,7 @@ header .nav li .button-simple:hover{
 header .nav li{
     border-bottom: 3px solid transparent;
 }
-header .nav .pack:hover{
+header .nav .packs:hover{
     border-bottom: 3px solid #FFA0A4;
 }
 header .nav logo:hover{
@@ -232,6 +233,9 @@ header .rs li img{
     margin-top: -30px;
     margin-bottom: 30px;
 }
+.bloc_accueil_home .img_header img{
+    width: 100%;
+}
 .bloc_accueil_home .cercle{
     position: relative;
 }
@@ -242,13 +246,46 @@ header .rs li img{
     z-index: 10;
 }
 .bloc_accueil_home .cercle img:first-child{
-    top: 373px;
-    left: 79px;
+    top: 565px;
+    left: 0;
 }
 .bloc_accueil_home .cercle img:last-child{
-    top: 329px;
-    left: 47px
+    top: 513px;
+    left: -37px;
 }
+
+/***************C'est quoi ?**************/
+.bloc_cestquoi {
+    margin-top: 160px;
+}
+.bloc_cestquoi h3{
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: Pacifico;
+    margin: 120px 0 20px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 45px;
+
+}
+.bloc_cestquoi h3 strong{
+    font-size: 23px;
+    line-height: 30px;
+    letter-spacing: 0;
+    text-transform: initial;
+    color: #FF6B77;
+    font-weight: 500;
+    font-family: Poppins;
+}
+
+.bloc_cestquoi p{
+    font-weight: 300;
+    line-height: 20px;
+    font-size: 12px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
 
 /***************explication**************/
 .bloc_explication_home{
@@ -306,11 +343,11 @@ header .rs li img{
 }
 .bloc_explication_home .ellipse img:first-child{
     left: 100px;
-    top: 1245px;
+    top: 1745px;
 }
 .bloc_explication_home .ellipse img:last-child{
     left: 165px;
-    top: 1215px;
+    top: 1715px;
 }
 .bloc_explication_home ul li p{
     font-size: 12px;
@@ -327,7 +364,7 @@ header .rs li img{
     position: absolute;
     width: 100%;
     left: 0;
-    top: 1410px;
+    top: 1970px;
     z-index: -5;
     height: 900px;
 }
@@ -507,6 +544,11 @@ footer> .last_bloc li a:first-child{
 /******************************************************************************/
 /**************************Responsive******************************************/
 /******************************************************************************/
+@media screen and (min-width: 1599px) {
+    footer ul li {
+        margin: 70px 30px 30px;
+    }
+}
 @media screen and (max-width: 1280px){
     header ul li {
         margin: auto 2px;
@@ -542,25 +584,30 @@ footer> .last_bloc li a:first-child{
         width: 125%;
     }
     .bloc_accueil_home .cercle img:first-child {
-        top: 290px;
-        left: 64px;
+        top: 440px;
+        left: 29px;
     }
     .bloc_accueil_home .cercle img:last-child {
-        top: 250px;
-        left: 26px;
-        width: 100%;
+        top: 400px;
+        left: -3px;
+        width: 80%;
+    }
+    .bloc_cestquoi h3 {
+        margin: 70px 0 20px;
     }
     .bloc_explication_home .ellipse img:first-child{
-        top: 1135px;
+        top: 1600px;
+        z-index: -1;
     }
     .bloc_explication_home .ellipse img:last-child{
-        top: 1310px;
+        top: 1560px;
+        z-index: -1;
     }
     .bloc_explication_home ul li img {
         margin-top: 15px;
     }
     .bloc_choix-ambiances_home .background {
-        top: 1220px;
+        top: 1780px;
     }
     .bloc_choix-ambiances_home h3 {
         margin-top: 40px;
@@ -617,7 +664,7 @@ footer> .last_bloc li a:first-child{
         position: absolute;
     }
     h1 img{
-        width: 90px;
+        width: 125px;
     }
     .bloc_accueil_home h2 {
         font-size: 31px;
@@ -650,6 +697,13 @@ footer> .last_bloc li a:first-child{
         left: 23px;
         width: 90%;
     }
+    .bloc_cestquoi{
+        text-align: center;
+    }
+    .bloc_cestquoi img{
+        width: 50%;
+        margin: 30px auto;
+    }
     .bloc_explication_home ul li {
         margin-left: 6.333%;
     }
@@ -667,20 +721,20 @@ footer> .last_bloc li a:first-child{
         width: 320px;
     }
     .bloc_explication_home .ellipse img:first-child {
-        top: 977px;
+        top: 1677px;
         width: 90px;
         left: 76px;
         z-index: -1;
     }
     .bloc_explication_home .ellipse img:last-child {
-        top: 943px;
+        top: 1643px;
         left: 127px;
         width: 60px;
         z-index: -1;
      }
     .bloc_choix-ambiances_home .background {
         margin-top: 95px;
-        top: 860px;
+        top: 1650px;
         height: 700px;
         width: 100%;
     }
@@ -718,6 +772,9 @@ footer> .last_bloc li a:first-child{
     header ul li {
         margin: 0;
         display: block;
+    }
+    header nav img {
+        width: 165px;
     }
     header nav .rs {
         display: block !important;
@@ -827,7 +884,7 @@ footer> .last_bloc li a:first-child{
     body{
         background-image: url("../img/forme_rs.png");
         background-position: top right;
-        background-size: 40%;
+        background-size: 35%;
     }
     .mobile{
         display: block;
@@ -871,9 +928,9 @@ footer> .last_bloc li a:first-child{
         /*top: -43px;*/
         /*right: -88px;*/
     /*}*/
-    #mc_embed_signup div.mce_inline_error {
-        right: 51%;
-    }
+    /*#mc_embed_signup div.mce_inline_error {*/
+        /*right: 51%;*/
+    /*}*/
     .bloc_accueil_home .img_header img {
         width: 170px;
         margin-top: 10px;
@@ -894,8 +951,11 @@ footer> .last_bloc li a:first-child{
         max-width: 360px;
         padding-top: 10px;
     }
-    .bloc_explication_home h3 {
+    .bloc_cestquoi h3 {
         margin-top: 0;
+    }
+    .bloc_explication_home h3 {
+        margin-top: 60px;
     }
     .bloc_explication_home ul li {
         margin: 20px auto;
@@ -960,7 +1020,6 @@ footer> .last_bloc li a:first-child{
     footer {
         margin-top: -22px;
         background-size: 202% 100%;
-        background-color: #FEF5F0;
     }
     footer ul h3 {
         margin: -15px 0 25px;
@@ -977,7 +1036,7 @@ footer> .last_bloc li a:first-child{
     }
     footer ul .button-simple {
         position: relative;
-        right: -87px;
+        right: -90px;
         top: -43px;
      }
     footer ul:first-child li {

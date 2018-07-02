@@ -2,6 +2,11 @@
 include '../header_pages.php';
 ?>
     <link rel="stylesheet" href="./css/style_pages_bleu.css">
+    <style>
+        header .nav .packs{
+            border-bottom: 3px solid #FFA0A4;
+        }
+    </style>
 <?php
 include "../functions/php/main.php";
 $data_ambiance = get_ambiance($pdo);

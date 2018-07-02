@@ -2,14 +2,19 @@
 include '../header_pages.php';
 include_once "../functions/php/main.php";
 ?>
+    <style>
+        .background-body{
+            background-color: #fff;
+        }
+    </style>
 <div class="container">
-<div class="bloc_mentions-legales col-sm-8 col-sm-offset-2">
-    <div class="fil_ariane">
+    <div class="fil_ariane col-sm-offset-1">
         <?php
         define('NOM_SITE', 'accueil', true);
         get_fil_ariane(array('final' => 'Mentions légales'));
         ?>
     </div>
+    <div class="bloc_mentions-legales col-sm-8 col-sm-offset-2">
     <h2>Mentions légales</h2>
     <h3>Mentions légales</h3>
     <p>

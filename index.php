@@ -6,19 +6,29 @@ $data_ambiance = get_ambiance($pdo);
 <div class="container">
     <div class="bloc_accueil_home row no-padding">
         <div class="col-sm-6 no-padding">
-            <div class="col-md-10 right no-padding">
+            <div class="col-md-10 no-padding">
                 <h2>Ne cherches plus, <br> ton plus beau cadeau, <br> c’est nous ! </h2>
                 <p class="col-md-11">On te livre tout ce dont tu as besoin pour un moment en amoureux unique et inoubliable. </p>
                 <a class="button-simple" href="/les-packs">Tentez l’expérience</a>
             </div>
         </div>
         <div class="col-sm-1 cercle">
-            <img class="desktop tablette" src="img/cercle_1.png" alt="cercle_1">
-            <img class="desktop tablette" src="img/cercle_2.png" alt="cercle_2">
+            <img class="desktop" src="img/cercle_1.png" alt="cercle_1">
+            <img class="desktop" src="img/cercle_2.png" alt="cercle_2">
         </div>
         <div class="col-sm-5 img_header">
-            <img class="mobile" src="img/cercles.png" alt="cercles">
-            <img class="desktop tablette"  src="img/img_header.png" alt="img_header">
+            <img class="mobile" src="img/illu_header.png" alt="cercles">
+            <img class="desktop tablette"  src="img/illu_header.png" alt="img_header">
+        </div>
+    </div>
+    <div class="bloc_cestquoi row">
+        <img class="col-md-offset-1 col-md-4 desktop" src="img/illu_quoi.png" alt="c'est quoi">
+        <div class="col-lg-offset-1 col-lg-5 col-md-6 row no-padding">
+            <h3>Les complices de ton diner romantique<br><strong>C’est quoi Encas d’Amour ?</strong></h3>
+            <p class="col-sm-10 col-sm-offset-1 col-md-offset-0 col-md-12">Encas d'Amour c'est ton meilleur acolyte pour l'organisation d'une soirée parfaite entre amoureux . On se charge de sélectionner les meilleurs produits (menus, fleurs, bougies, textiles de table...), qu'on te livre dans une superbe BoxPack.<br>
+                Tu peux choisir la BoxPack qui correspond le plus à la personnalité de ton couple, pour des retrouvailles uniques.<br>
+                Une fois réservé, tu n'as plus qu'à profiter de ce moment hors du temps avec ta moitié !</p>
+            <img class="mobile tablette" src="img/illu_quoi.png" alt="c'est quoi">
         </div>
     </div>
     <div id="explication" class="bloc_explication_home row">
