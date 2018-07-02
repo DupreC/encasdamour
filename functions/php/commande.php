@@ -33,20 +33,50 @@ else
 $message_txt = "Salut à tous, voici un e-mail envoyé par un script PHP.";
 $message_html = "
 <html>
-    <head></head>
-    <body>
-    <h1>Bonjour ".$_POST["nom"]." !</h1>
-    <p>Ta réservation a bien été pris en compte par le service Encas d’amour. <br>
-On revient très vite vers toi pour te dire si tu fais partie de notre sélection de beta testeurs pour bénéficier d’un dîner gratuit. ! </p>
-<br>
-<h2>Récapitulation de la réservation </h2>
-<p>".$_POST["nom"].",<br>".$_POST["pack"]."<br>".$_POST["menu"]."<br>".$_POST["date_time"]."<br>".$_POST["heure"]." </p>
-<br>
-<p>Nous restons à ta disposition par e-mail si tu souhaite communiquer avec nous. [Nous contacter]</p>
-<br>
-<p>Bien à toi et à  l’amour  </p>
-<p>Signature : L’équipe d’amour.</p>
-    </body>
+<head>
+    <meta charset=\"UTF-8\">
+</head>
+<body>
+    <img src='Group.png'>
+    <h1>Salut ".$_POST["nom"]." !</h1>
+    <p>Ta réservation a bien été prise en compte par le service d’Encas d’amour. <br>
+On revient très vite vers toi pour te dire si tu fais partie de notre sélection de beta testeurs pour bénéficier d’une Boxpack gratuite ! </p>
+<h3>Récapitulation de ta réservation - <strong>N° NDR3498</strong></h3>
+<ul>
+    <li>
+        <h4>Ta boxpack</h4>
+        <p></p>
+    </li>
+        <h4>tes menus</h4>
+    <li>
+        <p>".$_POST["menu"]."</p>
+        <p>".$_POST["menus"]."</p>
+        <p></p>
+    </li>
+        <h4>La Date et l’heure de ta livraison</h4>
+    <li>
+        <p>".$_POST["date_time"]."<span>".$_POST["heure"]."</span></p>
+    </li>
+</ul>
+<div class='prix'>
+    <div>
+        <p>Prix du pack complet :<span>80,00 EUR</span></p>
+        <p>Frais de livraison :<span>4,00 EUR</span></p>
+        <p>Total :<span class='rayer'>84,00 EUR</span></p>
+        <p><span>GRATUIT</span></p>
+    </div>
+</div>
+<div>
+    <h2>Bien à toi et à  l’amour  !</h2>
+      <h3>L’équipe Encas d’amour</h3>
+      <img src='/' alt='/'>
+      <ul>
+                <li><a target='_blank' href='https://www.facebook.com/encasdamour'><i class='fab fa-facebook-f'></i></a></li>
+                <li><a target='_blank' href='https://twitter.com/Encasdamour'><i class='fab fa-twitter'></i></a></li>
+                <li><a target='_blank' href='https://www.instagram.com/encas_damour/'><i class='fab fa-instagram'></i></a></li>
+      </ul>  
+</div>
+</body>
 </html>";
 
 //==========
