@@ -42,19 +42,12 @@
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
         }, 0);
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
     </script>
     <!-- Your customer chat code -->
     <div class="fb-customerchat"
          attribution=setup_tool
          page_id="251794062063770"
-         theme_color="#4D43B0"
+         theme_color="#FF6B77"
          logged_in_greeting="Hey ! Passe ta réservation ici !"
          logged_out_greeting="Hey ! Passe ta réservation ici !">
     </div>

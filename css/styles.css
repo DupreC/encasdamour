@@ -97,11 +97,12 @@ header ul li:first-child{
 }
 header .nav h1{
     height: 60px;
-    margin: -50px 0 0 0;
+    margin: -50px 0 0 -20px;
 }
 header .nav h1 img{
     width: 165px;
     height: auto;
+    margin-left: -45px;
 }
 header .nav li a{
     color: #fff;
@@ -280,8 +281,8 @@ header .rs li img{
 
 .bloc_cestquoi p{
     font-weight: 300;
-    line-height: 20px;
-    font-size: 12px;
+    line-height: 22px;
+    font-size: 14px;
     color: #FFFFFF;
     margin-bottom: 30px;
 }
@@ -477,6 +478,7 @@ footer ul .button-simple{
     top: 55px;
     right: 347px;
     padding: 11px 24px;
+    border-radius: 25px;
 }
 footer ul #mc_embed_signup_scroll p{
     border: 1px solid #555555;
@@ -607,7 +609,7 @@ footer> .last_bloc li a:first-child{
         margin-top: 15px;
     }
     .bloc_choix-ambiances_home .background {
-        top: 1780px;
+        top: 1825px;
     }
     .bloc_choix-ambiances_home h3 {
         margin-top: 40px;
@@ -734,7 +736,7 @@ footer> .last_bloc li a:first-child{
      }
     .bloc_choix-ambiances_home .background {
         margin-top: 95px;
-        top: 1650px;
+        top: 1715px;
         height: 700px;
         width: 100%;
     }
