@@ -3,7 +3,7 @@
 // Insert commande
 /////////////////////////////////////////////////
 try{
-    $pdo = new PDO('mysql:dbname=duprec_encasdamour;host:localhost:3306;charset=utf8','duprec_colin','dromar971');
+    $pdo = new PDO('mysql:dbname=duprec_encasdamour;host:localhost:3306;charset=utf8','root','');
     $pdo->exec('SET NAMES utf8');
 } catch( PDOException $e){
     die("Erreur! ".$e->getMessage());
@@ -36,8 +36,6 @@ $message_html = "
 <html>
 <head>
     <meta charset='UTF-8'>
-    <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,900' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
 </head>
 <body style='max-width: 540px;width: 100%;'>
     <img src='https://encasdamour.fr/img/bandeau.png'>

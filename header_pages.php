@@ -16,7 +16,6 @@
     <link rel="icon" href="img/favicon.ico" type="image/png">
     <title>Encas d'amour</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
     <script>
         window.fbMessengerPlugins = window.fbMessengerPlugins || {
             init: function () {

@@ -436,7 +436,36 @@ header .rs li img{
 
 
 /***********************Footer************************/
-
+#cookieChoiceInfo{
+    padding: 50px 40px 10px 94px !important;
+    background-image: url("../img/cookie.png");
+    background-repeat: no-repeat;
+    background-position-x: 40px;
+    background-position-y: 10px;
+    text-align: left !important;
+}
+#cookieChoiceInfo span{
+    color: #868E95;
+    float: left;
+}
+#cookieChoiceInfo a{
+    padding: 10px 20px;
+    background-color: #4D43B0;
+    color: #fff !important;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    margin-top: 5px;
+    display: block;
+    width: 110px;
+    float: right;
+}
+#cookieChoiceInfo a:hover{
+    background-color: #6D5FFC;
+}
+#cookieChoiceInfo a:first-child{
+    margin-left: 0 !important;
+}
 footer{
     margin-top: 80px;
     text-align: center;

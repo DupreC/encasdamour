@@ -46,34 +46,36 @@
             <li><a href="/plan-site">Plan du site</a></li>
         </ul>
 </footer>
+<script src="functions/js/cookiechoices.js"></script>
 <script>
-    (function ($) {
-        window.fnames = new Array();
-        window.ftypes = new Array();
-        fnames[0] = 'EMAIL';
-        ftypes[0] = 'email';
-        $.extend($.validator.messages, {
-            required: "Ce champ est requis.",
-            remote: "Remplis ce champ pour continuer.",
-            email: "Entre une adresse email valide.",
-            url: "Entre une URL valide.",
-            date: "Entre une date valide.",
-            dateISO: "Entre une date valide (ISO).",
-            number: "Entre un nombre valide.",
-            digits: "Entre (seulement) une valeur numérique.",
-            creditcard: "Entre un numéro de carte de crédit valide.",
-            equalTo: "Entre une nouvelle fois la même valeur.",
-            accept: "Entre une valeur avec une extension valide.",
-            maxlength: $.validator.format("N'entrer pas plus de {0} caractères."),
-            minlength: $.validator.format("Entre au moins {0} caractères."),
-            rangelength: $.validator.format("Entre entre {0} et {1} caractères."),
-            range: $.validator.format("Entre une valeur entre {0} et {1}."),
-            max: $.validator.format("Entre une valeur inférieure ou égale à {0}."),
-            min: $.validator.format("Entre une valeur supérieure ou égale à {0}.")
-        });
-    }(jQuery));
-    var $mcj = jQuery.noConflict(true);
+    // (function ($) {
+    //     window.fnames = new Array();
+    //     window.ftypes = new Array();
+    //     fnames[0] = 'EMAIL';
+    //     ftypes[0] = 'email';
+    //     $.extend($.validator.messages, {
+    //         required: "Ce champ est requis.",
+    //         remote: "Remplis ce champ pour continuer.",
+    //         email: "Entre une adresse email valide.",
+    //         url: "Entre une URL valide.",
+    //         date: "Entre une date valide.",
+    //         dateISO: "Entre une date valide (ISO).",
+    //         number: "Entre un nombre valide.",
+    //         digits: "Entre (seulement) une valeur numérique.",
+    //         creditcard: "Entre un numéro de carte de crédit valide.",
+    //         equalTo: "Entre une nouvelle fois la même valeur.",
+    //         accept: "Entre une valeur avec une extension valide.",
+    //         maxlength: $.validator.format("N'entrer pas plus de {0} caractères."),
+    //         minlength: $.validator.format("Entre au moins {0} caractères."),
+    //         rangelength: $.validator.format("Entre entre {0} et {1} caractères."),
+    //         range: $.validator.format("Entre une valeur entre {0} et {1}."),
+    //         max: $.validator.format("Entre une valeur inférieure ou égale à {0}."),
+    //         min: $.validator.format("Entre une valeur supérieure ou égale à {0}.")
+    //     });
+    // }(jQuery));
+    // var $mcj = jQuery.noConflict(true);
 
+document.addEventListener('DOMContentLoaded', function(event){cookieChoices.showCookieConsentBar('En poursuivant ta navigation sur ce site, tu acceptes l’utilisation de cookies ou autres traceurs, ceci afin de vous proposer une meilleure expérience sur notre site. ', 'J’accepte', 'https://encasdamour.fr/mentions-legales');});
 </script>
 </body>
 </html>
