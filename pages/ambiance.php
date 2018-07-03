@@ -33,9 +33,9 @@ $data_menu = get_menu($pdo);
             </style>
         <script src="./functions/js/main.js"></script>
 
-        <div class="row bloc_ambiance">
-            <ul>
-                <li class="desktop col-md-offset-1 col-md-5">
+        <div class="bloc_ambiance">
+            <ul class="row col-md-offset-1 col-md-10">
+                <li class="desktop col-md-6 no-padding">
                     <div class="col-md-offset-2 col-md-10">
                         <p class="grande_photo"><img src="./img/img-ambiances/<?=$data_ambiance['photo1']?>" alt="grande_photos"></p>
                         <p class="petites_photos"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo1']?>" alt="photos1"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo2']?>" alt="photos2"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo3']?>" alt="photos4"><img class="petite_photo" src="./img/img-ambiances/<?=$data_ambiance['photo4']?>" alt="photos4"></p>
@@ -47,7 +47,7 @@ $data_menu = get_menu($pdo);
 <!--                        </div>-->
                     </div>
                 </li>
-                <li class="col-md-5 infos">
+                <li class="col-md-6 infos">
                 <div class="col-md-10">
                         <div class="row">
                             <div class="tablette col-md-offset-2 col-md-10">

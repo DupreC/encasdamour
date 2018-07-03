@@ -70,6 +70,9 @@ img{
 .fil_ariane{
     color: #FF6B77;
 }
+#_hj_feedback_container{
+    display: none;
+}
 /***********************Header************************/
 
 header ul{
@@ -97,11 +100,18 @@ header ul li:first-child{
 }
 header .nav h1{
     height: 60px;
-    margin: -50px 0 0 0;
+    margin: -50px 0 0 -20px;
 }
 header .nav h1 img{
     width: 165px;
     height: auto;
+    margin-left: -22px;
+}
+header .nav h1 video{
+    display: none;
+    width: 165px;
+    height: auto;
+    margin-left: -22px;
 }
 header .nav li a{
     color: #fff;
@@ -280,8 +290,8 @@ header .rs li img{
 
 .bloc_cestquoi p{
     font-weight: 300;
-    line-height: 20px;
-    font-size: 12px;
+    line-height: 22px;
+    font-size: 14px;
     color: #FFFFFF;
     margin-bottom: 30px;
 }
@@ -426,7 +436,36 @@ header .rs li img{
 
 
 /***********************Footer************************/
-
+#cookieChoiceInfo{
+    padding: 50px 40px 10px 94px !important;
+    background-image: url("../img/cookie.png");
+    background-repeat: no-repeat;
+    background-position-x: 40px;
+    background-position-y: 10px;
+    text-align: left !important;
+}
+#cookieChoiceInfo span{
+    color: #868E95;
+    float: left;
+}
+#cookieChoiceInfo a{
+    padding: 10px 20px;
+    background-color: #4D43B0;
+    color: #fff !important;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    margin-top: 5px;
+    display: block;
+    width: 110px;
+    float: right;
+}
+#cookieChoiceInfo a:hover{
+    background-color: #6D5FFC;
+}
+#cookieChoiceInfo a:first-child{
+    margin-left: 0 !important;
+}
 footer{
     margin-top: 80px;
     text-align: center;
@@ -477,6 +516,7 @@ footer ul .button-simple{
     top: 55px;
     right: 347px;
     padding: 11px 24px;
+    border-radius: 25px;
 }
 footer ul #mc_embed_signup_scroll p{
     border: 1px solid #555555;
@@ -607,7 +647,7 @@ footer> .last_bloc li a:first-child{
         margin-top: 15px;
     }
     .bloc_choix-ambiances_home .background {
-        top: 1780px;
+        top: 1825px;
     }
     .bloc_choix-ambiances_home h3 {
         margin-top: 40px;
@@ -734,7 +774,7 @@ footer> .last_bloc li a:first-child{
      }
     .bloc_choix-ambiances_home .background {
         margin-top: 95px;
-        top: 1650px;
+        top: 1715px;
         height: 700px;
         width: 100%;
     }

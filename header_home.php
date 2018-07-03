@@ -35,15 +35,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
 	<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-119987436-2"></script>
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
 </head>
 <body>
 <div  class="container">
     <header class="row">
         <div class="desktop">
             <ul class="col-md-10 flex nav">
-                <li class="logo"><h1><a href="/"><img src="img/logo_rose1.png" alt="encasdamour"></a></h1></li>
-<!--                <li class="js-scrollTo"><a href="#explication">Comment ça marche ?</a></li>-->
+                <li class="logo">
+                    <h1><a href="/">
+                            <img src="img/logo_rose1.png" alt="encasdamour">
+                            <video id="video" preload loop>
+                                <source src="img/logo.webm" type="video/webm">
+                                No video support
+                            </video>
+                        </a>
+                    </h1>
+                </li>
                 <li class="packs">
                     <a href="/les-packs">Les packs</a>
                     <ul>

@@ -20,7 +20,7 @@ include_once "../functions/php/main.php";
     <p>
         Encas d’amour <br>
         Adresse : 10 rue du coeur - 75002 PARIS - France <br>
-        Email : hello@encasdamour.fr <br>
+        Email : contact@encasdamour.fr <br>
         Nom de l’url du site : www.encasdamour.fr
     </p>
     <h3>Hébergement</h3>

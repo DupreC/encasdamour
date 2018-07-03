@@ -255,17 +255,18 @@ $(document).ready(function () {
 /////////////////////////////////////////////////
 // switch logo_home
 /////////////////////////////////////////////////
-$(function(){
-    $("h1 img").on({
-        mouseenter: function(){
-            $(this).attr('src','img/logo.gif');
-        },
-        mouseleave: function(){
-            $(this).attr('src','img/logo_rose1.png');
-        }
-    });
-
-});
+// $(document).ready(function() {
+//     $('h1')
+//         .mouseover(function() {
+//             $(this).find('img').hide();
+//         })
+//         .mouseout(function() {
+//             $(this).find('img').show();
+//             $('video').trigger('load').hide();
+//         });
+//
+//     $('#option').mouseover(function() {$('#video').show().trigger('play')})
+// });
 /////////////////////////////////////////////
 // choix menus
 /////////////////////////////////////////////

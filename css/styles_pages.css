@@ -15,6 +15,7 @@ body{
 
 header .nav li a {
     color: #FF6B77;
+    font-family: Poppins;
 }
 header .nav li a:hover{
     color: #FFA0A4;
@@ -31,11 +32,16 @@ header .nav li .button-simple:hover{
 .bloc_ambiance {
     margin-bottom: 80px;
 }
-.bloc_ambiance>ul>li{
+.bloc_ambiance>ul{
     padding: 40px 0;
     background-color: #fff;
     margin-top: 15px;
-    height: 690px;
+    margin-bottom: 80px;
+}
+.bloc_ambiance>ul>li{
+    padding: 0;
+    background-color: #fff;
+    margin-top: 15px;
 }
 .bloc_ambiance .grande_photo{
     width: 100%;
@@ -672,7 +678,7 @@ input.valid{
 .slider-form .retour{
     position: absolute;
     top: 11px;
-    left: 60px;
+    left: 25px;
     font-weight: 500;
     font-size: 13px;
     color: #4D43B0;
@@ -1122,23 +1128,23 @@ footer{
     }
 }
 @media screen and (max-width:1280px) {
-    .bloc_ambiance > ul > li {
-        height: 730px;
-    }
     .bloc_ambiance ul .sens li {
-        height: 50px;
+        height: 75px;
     }
     .bloc_ambiance ul .sens p:last-child {
         margin-left: 0;
-        width: 60%;
+        width: 59%;
     }
     .bloc_ambiance .grande_photo,
     .bloc_ambiance .petites_photos {
         text-align: center;
     }
     .bloc_ambiance .petites_photos {
-        text-align: center;
-        height: 52px;
+        text-align: right;
+        height: 50px;
+    }
+    .bloc_ambiance .petites_photos img:last-child {
+        margin-right: 0;
     }
     .bloc_ambiance ul .infos>p:last-child {
         text-align: center;
