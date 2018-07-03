@@ -107,6 +107,12 @@ header .nav h1 img{
     height: auto;
     margin-left: -22px;
 }
+header .nav h1 video{
+    display: none;
+    width: 165px;
+    height: auto;
+    margin-left: -22px;
+}
 header .nav li a{
     color: #fff;
     font-size: 14px;

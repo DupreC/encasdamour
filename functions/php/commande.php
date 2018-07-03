@@ -29,52 +29,53 @@ else
 {
     $passage_ligne = "\n";
 }
+$Ncommande = rand(10000, 999999);
 //=====Déclaration des messages au format texte et au format HTML.
 $message_txt = "Salut à tous, voici un e-mail envoyé par un script PHP.";
 $message_html = "
 <html>
 <head>
-    <meta charset=\"UTF-8\">
+    <meta charset='UTF-8'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,900' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
 </head>
-<body>
-    <img src='Group.png'>
-    <h1>Salut ".$_POST["nom"]." !</h1>
-    <p>Ta réservation a bien été prise en compte par le service d’Encas d’amour. <br>
+<body style='max-width: 540px;width: 100%;'>
+    <img src='https://encasdamour.fr/img/bandeau.png'>
+    <h1 style='font-weight: bold;line-height: normal;font-size: 18px;color: #4D43B0;'>Salut ".$_POST["nom"]." </h1>
+    <p style='font-size: 12px; color: #979797; width: 100%;'>Ta réservation a bien été prise en compte par le service d’Encas d’amour. <br>
 On revient très vite vers toi pour te dire si tu fais partie de notre sélection de beta testeurs pour bénéficier d’une Boxpack gratuite ! </p>
-<h3>Récapitulation de ta réservation - <strong>N° NDR3498</strong></h3>
-<ul>
-    <li>
-        <h4>Ta boxpack</h4>
-        <p></p>
+<h3 style='font-weight:600;font-size:15px;color:#4D43B0;'>Récapitulation de ta réservation - <strong>N° NDR\".$Ncommande.\"</strong></h3>
+<ul style='margin-left: 0;padding-left: 0;'>
+    <li style='margin-left: 0;list-style: none;border-top: 1px solid #4D43B0;padding: 10px 0;width: 100%'>
+        <h4 style='font-weight: 600;font-size: 11px;text-transform: uppercase;color: #4D43B0;'>Ta boxpack</h4>
+        <p style='font-size: 12px; color: #979797; width: 100%;'>".$_POST["pack"]."</p>
     </li>
-        <h4>tes menus</h4>
-    <li>
-        <p>".$_POST["menu"]."</p>
-        <p>".$_POST["menus"]."</p>
-        <p></p>
+        <h4 style='font-weight: 600;font-size: 11px;text-transform: uppercase;color: #4D43B0;'>Tes menus</h4>
+    <li style='margin-left: 0;list-style: none;border-top: 1px solid #4D43B0;padding: 10px 0;width: 100%'>
+        <p style='font-size: 12px; color: #979797; width: 100%;'>".$_POST["menu"]."</p>
+        <p style='font-size: 12px; color: #979797; width: 100%;'>".$_POST["menus"]."</p>
+        <p style='font-size: 12px; color: #979797; width: 100%;'></p>
     </li>
-        <h4>La Date et l’heure de ta livraison</h4>
-    <li>
-        <p>".$_POST["date_time"]."<span>".$_POST["heure"]."</span></p>
+        <h4 style='font-weight: 600;font-size: 11px;text-transform: uppercase;color: #4D43B0;'>La Date et l’heure de ta livraison</h4>
+    <li style='margin-left: 0;list-style: none;border-top: 1px solid #4D43B0;border-bottom: 1px solid #4D43B0;padding: 10px 0;width: 100%'>
+        <p style='font-size: 12px; color: #979797; width: 100%;'><span style='padding: 10px 20px;width: 40%;background: #4D43B0;border-radius: 3px;color: #fff;font-weight: 600;line-height: normal;font-size: 13px;text-align: center;margin-right: 15px;'>".$_POST["date_time"]."</span><span style='font-size: 12px; color: #979797; width: 100%;'><span style='padding: 10px 20px;width: 40%;background: #4D43B0;border-radius: 3px;color: #fff;font-weight: 600;line-height: normal;font-size: 13px;text-align: center;margin-right: 15px;'>".$_POST["heure"]."</span></p>
     </li>
 </ul>
 <div class='prix'>
-    <div>
-        <p>Prix du pack complet :<span>80,00 EUR</span></p>
-        <p>Frais de livraison :<span>4,00 EUR</span></p>
-        <p>Total :<span class='rayer'>84,00 EUR</span></p>
-        <p><span>GRATUIT</span></p>
+    <div style='width: 50%;float: right;'>
+        <p style='font-size: 12px; color: #979797; width: 100%;'>Prix du pack complet :<span style='float: right;'>80,00 EUR</span></p>
+        <p style='font-size: 12px; color: #979797; width: 100%;'>Frais de livraison :<span style='float: right;'>4,00 EUR</span></p>
+        <p style='font-size: 12px; color: #979797; width: 100%;'>Total :<span style='float: right;text-decoration:line-through;'>84,00 EUR</span></p>
+        <p style='font-size: 12px; color: #979797; width: 100%;'><span style='float: right;font-size: 15px;color: #4D43B0;font-weight: 600;'>GRATUIT</span></p>
     </div>
 </div>
-<div>
-    <h2>Bien à toi et à  l’amour  !</h2>
-      <h3>L’équipe Encas d’amour</h3>
-      <img src='/' alt='/'>
-      <ul>
-                <li><a target='_blank' href='https://www.facebook.com/encasdamour'><i class='fab fa-facebook-f'></i></a></li>
-                <li><a target='_blank' href='https://twitter.com/Encasdamour'><i class='fab fa-twitter'></i></a></li>
-                <li><a target='_blank' href='https://www.instagram.com/encas_damour/'><i class='fab fa-instagram'></i></a></li>
-      </ul>  
+<div style='text-align: center;clear: both'>
+      <img src='https://encasdamour.fr/img/img_signature.png' alt='img_signature'>
+      <p style='width: 100%;'>
+        <span><a target='_blank' href='https://www.facebook.com/encasdamour'><img src='https://encasdamour.fr/img/facebook_icono.png' alt='facebook'></a></span>
+        <span><a target='_blank' href='https://twitter.com/Encasdamour'><img src='https://encasdamour.fr/img/twitter_icono.png' alt='facebook'></a></span>
+        <span><a target='_blank' href='https://www.instagram.com/encas_damour/'><img src='https://encasdamour.fr/img/instagral_icono.png' alt='facebook'></a></span>
+      </p>  
 </div>
 </body>
 </html>";
